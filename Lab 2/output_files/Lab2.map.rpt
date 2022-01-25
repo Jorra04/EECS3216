@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Tue Jan 25 14:55:59 2022
+Tue Jan 25 18:03:06 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 25 14:55:59 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 25 18:03:06 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; Lab2                                                      ;
 ; Top-level Entity Name              ; Lab2                                                      ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 243                                                       ;
-;     Total combinational functions  ; 243                                                       ;
+; Total logic elements               ; 233                                                       ;
+;     Total combinational functions  ; 233                                                       ;
 ;     Dedicated logic registers      ; 105                                                       ;
 ; Total registers                    ; 105                                                       ;
 ; Total pins                         ; 13                                                        ;
@@ -169,13 +169,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; Lab2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab2/Lab2.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; Lab2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 2/Lab2.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -183,16 +183,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 243       ;
+; Estimated Total logic elements              ; 233       ;
 ;                                             ;           ;
-; Total combinational functions               ; 243       ;
+; Total combinational functions               ; 233       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 73        ;
+;     -- 4 input functions                    ; 63        ;
 ;     -- 3 input functions                    ; 4         ;
 ;     -- <=2 input functions                  ; 166       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 150       ;
+;     -- normal mode                          ; 140       ;
 ;     -- arithmetic mode                      ; 93        ;
 ;                                             ;           ;
 ; Total registers                             ; 105       ;
@@ -205,8 +205,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 105       ;
-; Total fan-out                               ; 1103      ;
-; Average fan-out                             ; 2.95      ;
+; Total fan-out                               ; 1063      ;
+; Average fan-out                             ; 2.92      ;
 +---------------------------------------------+-----------+
 
 
@@ -215,7 +215,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |Lab2                      ; 243 (243)           ; 105 (105)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 13   ; 0            ; 0          ; |Lab2               ; Lab2        ; work         ;
+; |Lab2                      ; 233 (233)           ; 105 (105)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 13   ; 0            ; 0          ; |Lab2               ; Lab2        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -250,20 +250,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; threshold[8]                            ; 3       ;
-; threshold[13]                           ; 3       ;
-; threshold[14]                           ; 3       ;
-; threshold[15]                           ; 3       ;
-; threshold[16]                           ; 3       ;
-; threshold[18]                           ; 3       ;
-; threshold[20]                           ; 3       ;
-; threshold[21]                           ; 3       ;
-; threshold[22]                           ; 3       ;
-; threshold[23]                           ; 3       ;
-; threshold[24]                           ; 3       ;
-; threshold[26]                           ; 3       ;
+; threshold[8]                            ; 2       ;
+; threshold[13]                           ; 2       ;
+; threshold[14]                           ; 2       ;
+; threshold[15]                           ; 2       ;
+; threshold[16]                           ; 2       ;
+; threshold[18]                           ; 2       ;
+; threshold[20]                           ; 2       ;
+; threshold[21]                           ; 2       ;
+; threshold[22]                           ; 2       ;
+; threshold[23]                           ; 2       ;
+; threshold[24]                           ; 2       ;
+; threshold[26]                           ; 2       ;
 ; i[3]                                    ; 5       ;
-; i[0]                                    ; 7       ;
+; i[0]                                    ; 8       ;
 ; Total number of inverted registers = 14 ;         ;
 +-----------------------------------------+---------+
 
@@ -290,19 +290,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     CLR               ; 32                          ;
 ;     ENA CLR           ; 42                          ;
 ;     ENA CLR SLD       ; 31                          ;
-; cycloneiii_lcell_comb ; 243                         ;
+; cycloneiii_lcell_comb ; 233                         ;
 ;     arith             ; 93                          ;
 ;         2 data inputs ; 92                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 150                         ;
+;     normal            ; 140                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 69                          ;
 ;         3 data inputs ; 3                           ;
-;         4 data inputs ; 73                          ;
+;         4 data inputs ; 63                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.40                        ;
-; Average LUT depth     ; 5.83                        ;
+; Average LUT depth     ; 5.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -321,33 +321,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Tue Jan 25 14:55:53 2022
+    Info: Processing started: Tue Jan 25 18:02:59 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lab2.v
-    Info (12023): Found entity 1: Lab2 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab2/Lab2.v Line: 1
+    Info (12023): Found entity 1: Lab2 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 2/Lab2.v Line: 1
 Info (12127): Elaborating entity "Lab2" for the top level hierarchy
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab2/Lab2.v Line: 26
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 2/Lab2.v Line: 26
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 243 logic cells
-Info (144001): Generated suppressed messages file C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab2/output_files/Lab2.map.smsg
+    Info (21061): Implemented 233 logic cells
+Info (144001): Generated suppressed messages file C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 2/output_files/Lab2.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Tue Jan 25 14:55:59 2022
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Tue Jan 25 18:03:06 2022
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab2/output_files/Lab2.map.smsg.
+The suppressed messages can be found in C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 2/output_files/Lab2.map.smsg.
 
 
