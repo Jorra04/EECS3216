@@ -1,0 +1,70 @@
+module Lab2(clk, sw, f, rst);
+
+	input sw, clk, rst;
+	output[9:0] f;
+	
+	reg[9:0] tmp;
+	reg[31:0] counter;
+	integer i;
+	integer threshold;
+	assign f = tmp;
+	reg tst;
+	
+	
+	
+	
+	
+	always @(posedge clk or negedge rst) begin
+		
+		if(~rst) begin
+			counter <= 0;
+			tmp <= 0;
+			i<= 9;
+			threshold <= 100000000;
+			
+		end else begin
+			if(sw) begin
+			
+				counter = counter + 1;
+				if(counter == 50000000) begin
+					counter = 0;
+					if(i == -1) begin
+						tmp = 0;
+						i = 9;
+					end else begin
+						tmp[i] = 1;
+						i = i - 1;
+					end
+				end
+			
+			
+			end else begin
+			
+				//If not switch do something
+				
+				counter = counter + 1;
+				if(counter == threshold) begin
+					counter = 0;
+					if(i == -1) begin
+						tmp = 0;
+						i = 9;
+						threshold = 100000000;
+					end else begin
+						tmp[i] = 1;
+						i = i - 1;
+						if(threshold != 25000000)
+							threshold = threshold/2;
+					end
+					
+					
+										
+				end
+			end
+			
+		
+		end
+		
+		
+	end
+
+endmodule
