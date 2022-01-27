@@ -36,14 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "f[8]",
-					"strict" : false
-				},
-				{
-					"name" : "f[9]",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
