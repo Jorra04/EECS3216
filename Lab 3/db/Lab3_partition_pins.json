@@ -4,27 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "lights[0]",
+					"name" : "leftLights[0]",
 					"strict" : false
 				},
 				{
-					"name" : "lights[1]",
+					"name" : "leftLights[1]",
 					"strict" : false
 				},
 				{
-					"name" : "lights[2]",
+					"name" : "leftLights[2]",
 					"strict" : false
 				},
 				{
-					"name" : "lights[3]",
+					"name" : "rightLights[0]",
 					"strict" : false
 				},
 				{
-					"name" : "lights[4]",
+					"name" : "rightLights[1]",
 					"strict" : false
 				},
 				{
-					"name" : "lights[5]",
+					"name" : "rightLights[2]",
+					"strict" : false
+				},
+				{
+					"name" : "error[0]",
+					"strict" : false
+				},
+				{
+					"name" : "error[1]",
+					"strict" : false
+				},
+				{
+					"name" : "error[2]",
+					"strict" : false
+				},
+				{
+					"name" : "error[3]",
+					"strict" : false
+				},
+				{
+					"name" : "error[6]",
 					"strict" : false
 				},
 				{

@@ -67,18 +67,6 @@ set_location_assignment PIN_C10 -to sw0
 set_location_assignment PIN_C11 -to sw1
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw0
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw1
-set_location_assignment PIN_B11 -to lights[5]
-set_location_assignment PIN_A11 -to lights[4]
-set_location_assignment PIN_D14 -to lights[3]
-set_location_assignment PIN_A8 -to lights[0]
-set_location_assignment PIN_A9 -to lights[1]
-set_location_assignment PIN_A10 -to lights[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lights[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lights[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lights[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lights[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lights[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lights[0]
 set_location_assignment PIN_A7 -to rst
 set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to rst
 set_global_assignment -name ENABLE_OCT_DONE ON
@@ -89,4 +77,30 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_C14 -to error[6]
+set_location_assignment PIN_E15 -to error[5]
+set_location_assignment PIN_C15 -to error[4]
+set_location_assignment PIN_C16 -to error[3]
+set_location_assignment PIN_E16 -to error[2]
+set_location_assignment PIN_D17 -to error[1]
+set_location_assignment PIN_C17 -to error[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to error[0]
+set_location_assignment PIN_B11 -to leftLights[2]
+set_location_assignment PIN_A11 -to leftLights[1]
+set_location_assignment PIN_D14 -to leftLights[0]
+set_location_assignment PIN_A10 -to rightLights[2]
+set_location_assignment PIN_A9 -to rightLights[1]
+set_location_assignment PIN_A8 -to rightLights[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leftLights[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leftLights[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leftLights[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rightLights[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rightLights[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rightLights[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

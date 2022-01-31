@@ -1,5 +1,5 @@
 Assembler report for Lab3
-Sun Jan 30 23:52:19 2022
+Mon Jan 31 15:21:46 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jan 30 23:52:19 2022 ;
+; Assembler Status      ; Successful - Mon Jan 31 15:21:46 2022 ;
 ; Revision Name         ; Lab3                                  ;
 ; Top-level Entity Name ; Lab3                                  ;
 ; Family                ; MAX 10                                ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-----------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                       ;
 +----------------+-----------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0028B944                                                                                    ;
-; Checksum       ; 0x0028B944                                                                                    ;
+; JTAG usercode  ; 0x0028D818                                                                                    ;
+; Checksum       ; 0x0028D818                                                                                    ;
 +----------------+-----------------------------------------------------------------------------------------------+
 
 
@@ -78,15 +78,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Sun Jan 30 23:52:16 2022
+    Info: Processing started: Mon Jan 31 15:21:44 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4691 megabytes
-    Info: Processing ended: Sun Jan 30 23:52:19 2022
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4690 megabytes
+    Info: Processing ended: Mon Jan 31 15:21:46 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

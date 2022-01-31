@@ -1,65 +1,77 @@
-module Lab3(lights, sw0, sw1, clk, rst);
+module Lab3(leftLights, rightLights, error, sw0, sw1, clk, rst);
 
-	output[5:0] lights;
+	output[2:0] leftLights, rightLights;
+	output[6:0] error;
 	input sw0, sw1, clk, rst;
 	
 	reg[31:0] counter = 0;
-	reg[5:0] tmp;
-	
-	integer threshold = 25000000;
+	reg[2:0] leftLights_tmp = 0;
+	reg[2:0] rightLights_tmp = 0;
+	reg[6:0] tmp_err;
 	integer rightLightsIndex = 2;
-	integer leftLightsIndex = 3;
-	assign lights = tmp;
+	integer leftLightsIndex = 0;
+	assign leftLights = leftLights_tmp;
+	assign rightLights = rightLights_tmp;
+	assign error = tmp_err;
+	
+	
 	
 	always@(posedge clk or negedge rst) begin
-	
+		
 		if(~rst) begin
-			
-			counter <= 0;
-			threshold = 25000000;
+			counter = 0;
 			rightLightsIndex = 2;
-			leftLightsIndex = 3;
+			leftLightsIndex = 0;
+			tmp_err = 7'b1111111;
+			leftLights_tmp = 3'b000;
+			rightLights_tmp = 3'b000;
 			
-		end else begin
+		end else begin		
 			
-			if(sw0 && sw1) begin //Both Switches on.
+			if((sw0 == 1) && (sw1 == 1)) begin //Both on, error
+				tmp_err = 7'b0110000;
+				leftLights_tmp = 3'b000;
+				rightLights_tmp = 3'b000;
+				rightLightsIndex = 2;
+				leftLightsIndex = 0;
 				counter = 0;
-				tmp[5] = 1;
-				tmp[4] = 0;
-				tmp[3] = 1;
-				tmp[2] = 1;
-				tmp[1] = 0;
-				tmp[0] = 1;
-			end else if(sw0 && !sw1) begin //sw0 on sw1 off.
-				
+			end else if((sw0 == 1) && (sw1 == 0)) begin //Right Turn Signal
 				counter = counter + 1;
-				if(counter == threshold) begin
+				tmp_err = 7'b1111111;
+				leftLightsIndex = 0;
+
+				if(counter == 25000000) begin
 					counter = 0;
 					if(rightLightsIndex == -1) begin
+						rightLights_tmp = 3'b000;
 						rightLightsIndex = 2;
-						tmp = 0;
 					end else begin
-						tmp[rightLightsIndex] = 1;
+						rightLights_tmp[rightLightsIndex] = 1;
 						rightLightsIndex = rightLightsIndex - 1;
 					end
 				end
-				
-				
-			end else if(!sw0 && sw1) begin //sw0 off sw1 on.
+			end else if((sw0 == 0) && (sw1 == 1)) begin //Left Turn Signal
 				counter = counter + 1;
-				if(counter == threshold) begin
+				tmp_err = 7'b1111111;
+				rightLightsIndex = 2;
+				
+				if(counter == 25000000) begin
 					counter = 0;
-					if(leftLightsIndex == 6) begin
-						leftLightsIndex = 3;
-						tmp = 0;
+					if(leftLightsIndex == 3) begin
+						leftLights_tmp = 3'b000;
+						leftLightsIndex = 0;
 					end else begin
-						tmp[leftLightsIndex] = 1;
+						leftLights_tmp[leftLightsIndex] = 1;
 						leftLightsIndex = leftLightsIndex + 1;
 					end
 				end
-			end else begin //Both Switches off.
+			end else if((sw0 == 0) && (sw1 == 0)) begin //Both off
 				counter = 0;
-				tmp = 6'b111111;
+				rightLightsIndex = 2;
+				leftLightsIndex = 0;
+				tmp_err = 7'b1111111;
+				leftLights_tmp = 3'b000;
+				rightLights_tmp = 3'b000;
 			end
 		
 		end

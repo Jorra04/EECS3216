@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sun Jan 30 23:52:15 2022
+Fitter Status : Successful - Mon Jan 31 15:21:42 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : Lab3
 Top-level Entity Name : Lab3
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 246 / 49,760 ( < 1 % )
-    Total combinational functions : 245 / 49,760 ( < 1 % )
-    Dedicated logic registers : 102 / 49,760 ( < 1 % )
-Total registers : 102
-Total pins : 10 / 360 ( 3 % )
+Total logic elements : 259 / 49,760 ( < 1 % )
+    Total combinational functions : 259 / 49,760 ( < 1 % )
+    Dedicated logic registers : 103 / 49,760 ( < 1 % )
+Total registers : 103
+Total pins : 17 / 360 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

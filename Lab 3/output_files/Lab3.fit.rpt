@@ -1,5 +1,5 @@
 Fitter report for Lab3
-Sun Jan 30 23:52:15 2022
+Mon Jan 31 15:21:42 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -66,18 +66,18 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                                 ;
 +------------------------------------+-----------------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jan 30 23:52:15 2022                     ;
+; Fitter Status                      ; Successful - Mon Jan 31 15:21:42 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                                      ;
 ; Top-level Entity Name              ; Lab3                                                      ;
 ; Family                             ; MAX 10                                                    ;
 ; Device                             ; 10M50DAF484C7G                                            ;
 ; Timing Models                      ; Final                                                     ;
-; Total logic elements               ; 246 / 49,760 ( < 1 % )                                    ;
-;     Total combinational functions  ; 245 / 49,760 ( < 1 % )                                    ;
-;     Dedicated logic registers      ; 102 / 49,760 ( < 1 % )                                    ;
-; Total registers                    ; 102                                                       ;
-; Total pins                         ; 10 / 360 ( 3 % )                                          ;
+; Total logic elements               ; 259 / 49,760 ( < 1 % )                                    ;
+;     Total combinational functions  ; 259 / 49,760 ( < 1 % )                                    ;
+;     Dedicated logic registers      ; 103 / 49,760 ( < 1 % )                                    ;
+; Total registers                    ; 103                                                       ;
+; Total pins                         ; 17 / 360 ( 5 % )                                          ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                           ;
@@ -152,13 +152,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.12        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.2%      ;
-;     Processors 3-12        ;   1.1%      ;
+;     Processors 2-12        ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -168,8 +167,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 387 ) ; 0.00 % ( 0 / 387 )         ; 0.00 % ( 0 / 387 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 387 ) ; 0.00 % ( 0 / 387 )         ; 0.00 % ( 0 / 387 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 416 ) ; 0.00 % ( 0 / 416 )         ; 0.00 % ( 0 / 416 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 416 ) ; 0.00 % ( 0 / 416 )         ; 0.00 % ( 0 / 416 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -192,7 +191,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 371 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 400 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -208,28 +207,28 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 246 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 144                    ;
-;     -- Register only                        ; 1                      ;
-;     -- Combinational with a register        ; 101                    ;
+; Total logic elements                        ; 259 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 156                    ;
+;     -- Register only                        ; 0                      ;
+;     -- Combinational with a register        ; 103                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 98                     ;
-;     -- 3 input functions                    ; 6                      ;
-;     -- <=2 input functions                  ; 141                    ;
-;     -- Register only                        ; 1                      ;
+;     -- 4 input functions                    ; 105                    ;
+;     -- 3 input functions                    ; 4                      ;
+;     -- <=2 input functions                  ; 150                    ;
+;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 152                    ;
+;     -- normal mode                          ; 166                    ;
 ;     -- arithmetic mode                      ; 93                     ;
 ;                                             ;                        ;
-; Total registers*                            ; 102 / 51,509 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 102 / 49,760 ( < 1 % ) ;
+; Total registers*                            ; 103 / 51,509 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 103 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
 ; Total LABs:  partially or completely used   ; 21 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 10 / 360 ( 3 % )       ;
+; I/O pins                                    ; 17 / 360 ( 5 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )         ;
 ;     -- Dedicated input pins                 ; 1 / 1 ( 100 % )        ;
 ;                                             ;                        ;
@@ -248,11 +247,11 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 3.3% / 2.8% / 3.9%     ;
-; Maximum fan-out                             ; 102                    ;
-; Highest non-global fan-out                  ; 97                     ;
-; Total fan-out                               ; 1083                   ;
-; Average fan-out                             ; 2.79                   ;
+; Peak interconnect usage (total/H/V)         ; 3.4% / 3.5% / 3.1%     ;
+; Maximum fan-out                             ; 103                    ;
+; Highest non-global fan-out                  ; 103                    ;
+; Total fan-out                               ; 1177                   ;
+; Average fan-out                             ; 2.83                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -265,29 +264,29 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 246 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 144                   ; 0                              ;
-;     -- Register only                        ; 1                     ; 0                              ;
-;     -- Combinational with a register        ; 101                   ; 0                              ;
+; Total logic elements                        ; 259 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 156                   ; 0                              ;
+;     -- Register only                        ; 0                     ; 0                              ;
+;     -- Combinational with a register        ; 103                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 98                    ; 0                              ;
-;     -- 3 input functions                    ; 6                     ; 0                              ;
-;     -- <=2 input functions                  ; 141                   ; 0                              ;
-;     -- Register only                        ; 1                     ; 0                              ;
+;     -- 4 input functions                    ; 105                   ; 0                              ;
+;     -- 3 input functions                    ; 4                     ; 0                              ;
+;     -- <=2 input functions                  ; 150                   ; 0                              ;
+;     -- Register only                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 152                   ; 0                              ;
+;     -- normal mode                          ; 166                   ; 0                              ;
 ;     -- arithmetic mode                      ; 93                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 102                   ; 0                              ;
-;     -- Dedicated logic registers            ; 102 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 103                   ; 0                              ;
+;     -- Dedicated logic registers            ; 103 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total LABs:  partially or completely used   ; 21 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 10                    ; 0                              ;
+; I/O pins                                    ; 17                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -302,8 +301,8 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1089                  ; 8                              ;
-;     -- Registered Connections               ; 234                   ; 0                              ;
+;     -- Total Connections                    ; 1183                  ; 8                              ;
+;     -- Registered Connections               ; 217                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -311,7 +310,7 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 4                     ; 0                              ;
-;     -- Output Ports                         ; 6                     ; 0                              ;
+;     -- Output Ports                         ; 13                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -335,25 +334,32 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard          ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
-; clk  ; P11   ; 3        ; 34           ; 0            ; 28           ; 102                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; rst  ; A7    ; 7        ; 49           ; 54           ; 28           ; 97                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
-; sw0  ; C10   ; 7        ; 51           ; 54           ; 28           ; 44                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; sw1  ; C11   ; 7        ; 51           ; 54           ; 21           ; 42                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; clk  ; P11   ; 3        ; 34           ; 0            ; 28           ; 103                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; rst  ; A7    ; 7        ; 49           ; 54           ; 28           ; 103                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
+; sw0  ; C10   ; 7        ; 51           ; 54           ; 28           ; 71                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; sw1  ; C11   ; 7        ; 51           ; 54           ; 21           ; 39                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                          ;
-+-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; lights[0] ; A8    ; 7        ; 46           ; 54           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; lights[1] ; A9    ; 7        ; 46           ; 54           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; lights[2] ; A10   ; 7        ; 51           ; 54           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; lights[3] ; D14   ; 7        ; 56           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; lights[4] ; A11   ; 7        ; 51           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; lights[5] ; B11   ; 7        ; 49           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-+-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; error[0]       ; C17   ; 7        ; 74           ; 54           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; error[1]       ; D17   ; 7        ; 74           ; 54           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; error[2]       ; E16   ; 7        ; 74           ; 54           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; error[3]       ; C16   ; 7        ; 62           ; 54           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; error[4]       ; C15   ; 7        ; 60           ; 54           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; error[5]       ; E15   ; 7        ; 74           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; error[6]       ; C14   ; 7        ; 58           ; 54           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; leftLights[0]  ; D14   ; 7        ; 56           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; leftLights[1]  ; A11   ; 7        ; 51           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; leftLights[2]  ; B11   ; 7        ; 49           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; rightLights[0] ; A8    ; 7        ; 46           ; 54           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; rightLights[1] ; A9    ; 7        ; 46           ; 54           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; rightLights[2] ; A10   ; 7        ; 51           ; 54           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
++----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -372,21 +378,21 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 +----------+----------------------------------------------------+--------------------------------+---------------------+------------------+
 
 
-+-----------------------------------------------------------+
-; I/O Bank Usage                                            ;
-+----------+-----------------+---------------+--------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
-+----------+-----------------+---------------+--------------+
-; 1A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ;
-; 1B       ; 4 / 24 ( 17 % ) ; 2.5V          ; --           ;
-; 2        ; 0 / 36 ( 0 % )  ; 2.5V          ; --           ;
-; 3        ; 1 / 48 ( 2 % )  ; 3.3V          ; --           ;
-; 4        ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ;
-; 5        ; 0 / 40 ( 0 % )  ; 2.5V          ; --           ;
-; 6        ; 0 / 60 ( 0 % )  ; 2.5V          ; --           ;
-; 7        ; 9 / 52 ( 17 % ) ; 3.3V          ; --           ;
-; 8        ; 4 / 36 ( 11 % ) ; 2.5V          ; --           ;
-+----------+-----------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ;
+; 1B       ; 4 / 24 ( 17 % )  ; 2.5V          ; --           ;
+; 2        ; 0 / 36 ( 0 % )   ; 2.5V          ; --           ;
+; 3        ; 1 / 48 ( 2 % )   ; 3.3V          ; --           ;
+; 4        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
+; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
+; 6        ; 0 / 60 ( 0 % )   ; 2.5V          ; --           ;
+; 7        ; 16 / 52 ( 31 % ) ; 3.3V          ; --           ;
+; 8        ; 4 / 36 ( 11 % )  ; 2.5V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -401,10 +407,10 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ; A5       ; 473        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A6       ; 471        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A7       ; 445        ; 7        ; rst                                            ; input  ; 3.3 V Schmitt Trigger ;         ; Column I/O ; Y               ; no       ; Off          ;
-; A8       ; 447        ; 7        ; lights[0]                                      ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
-; A9       ; 449        ; 7        ; lights[1]                                      ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
-; A10      ; 439        ; 7        ; lights[2]                                      ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
-; A11      ; 437        ; 7        ; lights[4]                                      ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; A8       ; 447        ; 7        ; rightLights[0]                                 ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; A9       ; 449        ; 7        ; rightLights[1]                                 ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; A10      ; 439        ; 7        ; rightLights[2]                                 ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; A11      ; 437        ; 7        ; leftLights[1]                                  ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A12      ; 435        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A13      ; 433        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A14      ; 425        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -470,7 +476,7 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ; B8       ; 451        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; B10      ; 448        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; B11      ; 443        ; 7        ; lights[5]                                      ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; B11      ; 443        ; 7        ; leftLights[2]                                  ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B12      ; 441        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; B14      ; 427        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -495,10 +501,10 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ; C11      ; 440        ; 7        ; sw1                                            ; input  ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C12      ; 436        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 426        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; C14      ; 424        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; C15      ; 418        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; C16      ; 416        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; C17      ; 391        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
+; C14      ; 424        ; 7        ; error[6]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; C15      ; 418        ; 7        ; error[4]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; C16      ; 416        ; 7        ; error[3]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; C17      ; 391        ; 7        ; error[0]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C18      ; 400        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C19      ; 397        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C20      ; 357        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -517,10 +523,10 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ; D11      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; D12      ; 438        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D13      ; 431        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; D14      ; 428        ; 7        ; lights[3]                                      ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; D14      ; 428        ; 7        ; leftLights[0]                                  ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D15      ; 404        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; D17      ; 389        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
+; D17      ; 389        ; 7        ; error[1]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D18      ; 385        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D19      ; 359        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D20      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
@@ -540,8 +546,8 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 ; E12      ; 429        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ; 430        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E14      ; 406        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; E15      ; 390        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; E16      ; 388        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
+; E15      ; 390        ; 7        ; error[5]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
+; E16      ; 388        ; 7        ; error[2]                                       ; output ; 3.3-V LVTTL           ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; E17      ; 366        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E18      ; 387        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E19      ; 352        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -882,18 +888,25 @@ The pin-out file can be found in C:/Users/Jorra/Documents/Coding Practice/School
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+------------------------------------+
-; I/O Assignment Warnings            ;
-+-----------+------------------------+
-; Pin Name  ; Reason                 ;
-+-----------+------------------------+
-; lights[0] ; Missing drive strength ;
-; lights[1] ; Missing drive strength ;
-; lights[2] ; Missing drive strength ;
-; lights[3] ; Missing drive strength ;
-; lights[4] ; Missing drive strength ;
-; lights[5] ; Missing drive strength ;
-+-----------+------------------------+
++-----------------------------------------+
+; I/O Assignment Warnings                 ;
++----------------+------------------------+
+; Pin Name       ; Reason                 ;
++----------------+------------------------+
+; leftLights[0]  ; Missing drive strength ;
+; leftLights[1]  ; Missing drive strength ;
+; leftLights[2]  ; Missing drive strength ;
+; rightLights[0] ; Missing drive strength ;
+; rightLights[1] ; Missing drive strength ;
+; rightLights[2] ; Missing drive strength ;
+; error[0]       ; Missing drive strength ;
+; error[1]       ; Missing drive strength ;
+; error[2]       ; Missing drive strength ;
+; error[3]       ; Missing drive strength ;
+; error[4]       ; Missing drive strength ;
+; error[5]       ; Missing drive strength ;
+; error[6]       ; Missing drive strength ;
++----------------+------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -901,235 +914,274 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-------------+--------------+
-; |Lab3                      ; 246 (246)   ; 102 (102)                 ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 10   ; 0            ; 144 (144)    ; 1 (1)             ; 101 (101)        ; 0          ; |Lab3               ; Lab3        ; work         ;
+; |Lab3                      ; 259 (259)   ; 103 (103)                 ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 17   ; 0            ; 156 (156)    ; 0 (0)             ; 103 (103)        ; 0          ; |Lab3               ; Lab3        ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                       ;
-+-----------+----------+---------------+---------------+-----------------------+-----+------+
-; Name      ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
-+-----------+----------+---------------+---------------+-----------------------+-----+------+
-; lights[0] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; lights[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; lights[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; lights[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; lights[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; lights[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; sw1       ; Input    ; (6) 868 ps    ; (6) 868 ps    ; --                    ; --  ; --   ;
-; sw0       ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; clk       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; rst       ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-+-----------+----------+---------------+---------------+-----------------------+-----+------+
++------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                            ;
++----------------+----------+---------------+---------------+-----------------------+-----+------+
+; Name           ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
++----------------+----------+---------------+---------------+-----------------------+-----+------+
+; leftLights[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; leftLights[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; leftLights[2]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; rightLights[0] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; rightLights[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; rightLights[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[0]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[1]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[2]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[3]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[4]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[5]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; error[6]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; sw1            ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; sw0            ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; clk            ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; rst            ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
++----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-----------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                            ;
-+-----------------------------+-------------------+---------+
-; Source Pin / Fanout         ; Pad To Core Index ; Setting ;
-+-----------------------------+-------------------+---------+
-; sw1                         ;                   ;         ;
-;      - tmp[0]~25            ; 0                 ; 6       ;
-;      - tmp[0]~27            ; 0                 ; 6       ;
-;      - tmp[1]~31            ; 0                 ; 6       ;
-;      - tmp[2]~34            ; 0                 ; 6       ;
-;      - tmp[2]~36            ; 0                 ; 6       ;
-;      - tmp[3]~40            ; 0                 ; 6       ;
-;      - tmp[4]~45            ; 0                 ; 6       ;
-;      - tmp[5]~48            ; 0                 ; 6       ;
-;      - always0~0            ; 0                 ; 6       ;
-;      - always0~2            ; 0                 ; 6       ;
-;      - counter~0            ; 0                 ; 6       ;
-;      - counter~1            ; 0                 ; 6       ;
-;      - counter~2            ; 0                 ; 6       ;
-;      - counter~3            ; 0                 ; 6       ;
-;      - counter~4            ; 0                 ; 6       ;
-;      - counter~5            ; 0                 ; 6       ;
-;      - counter~6            ; 0                 ; 6       ;
-;      - counter~7            ; 0                 ; 6       ;
-;      - counter~8            ; 0                 ; 6       ;
-;      - counter~9            ; 0                 ; 6       ;
-;      - counter~10           ; 0                 ; 6       ;
-;      - counter~11           ; 0                 ; 6       ;
-;      - counter~12           ; 0                 ; 6       ;
-;      - counter~13           ; 0                 ; 6       ;
-;      - counter~14           ; 0                 ; 6       ;
-;      - counter~15           ; 0                 ; 6       ;
-;      - counter~16           ; 0                 ; 6       ;
-;      - counter~17           ; 0                 ; 6       ;
-;      - counter~18           ; 0                 ; 6       ;
-;      - counter~19           ; 0                 ; 6       ;
-;      - counter~20           ; 0                 ; 6       ;
-;      - counter~21           ; 0                 ; 6       ;
-;      - counter~22           ; 0                 ; 6       ;
-;      - counter~23           ; 0                 ; 6       ;
-;      - counter~24           ; 1                 ; 6       ;
-;      - counter~25           ; 0                 ; 6       ;
-;      - counter~26           ; 1                 ; 6       ;
-;      - counter~27           ; 0                 ; 6       ;
-;      - counter~28           ; 0                 ; 6       ;
-;      - counter~29           ; 0                 ; 6       ;
-;      - counter~30           ; 0                 ; 6       ;
-;      - counter~31           ; 0                 ; 6       ;
-; sw0                         ;                   ;         ;
-;      - tmp[0]~25            ; 1                 ; 6       ;
-;      - tmp[0]~27            ; 1                 ; 6       ;
-;      - tmp[1]~29            ; 1                 ; 6       ;
-;      - tmp[1]~31            ; 1                 ; 6       ;
-;      - tmp[2]~34            ; 1                 ; 6       ;
-;      - tmp[2]~36            ; 1                 ; 6       ;
-;      - tmp[3]~40            ; 1                 ; 6       ;
-;      - tmp[4]~42            ; 1                 ; 6       ;
-;      - tmp[4]~45            ; 1                 ; 6       ;
-;      - tmp[5]~48            ; 1                 ; 6       ;
-;      - always0~0            ; 1                 ; 6       ;
-;      - always0~2            ; 1                 ; 6       ;
-;      - counter~0            ; 1                 ; 6       ;
-;      - counter~1            ; 1                 ; 6       ;
-;      - counter~2            ; 1                 ; 6       ;
-;      - counter~3            ; 1                 ; 6       ;
-;      - counter~4            ; 1                 ; 6       ;
-;      - counter~5            ; 1                 ; 6       ;
-;      - counter~6            ; 1                 ; 6       ;
-;      - counter~7            ; 1                 ; 6       ;
-;      - counter~8            ; 1                 ; 6       ;
-;      - counter~9            ; 1                 ; 6       ;
-;      - counter~10           ; 1                 ; 6       ;
-;      - counter~11           ; 1                 ; 6       ;
-;      - counter~12           ; 1                 ; 6       ;
-;      - counter~13           ; 1                 ; 6       ;
-;      - counter~14           ; 1                 ; 6       ;
-;      - counter~15           ; 1                 ; 6       ;
-;      - counter~16           ; 1                 ; 6       ;
-;      - counter~17           ; 1                 ; 6       ;
-;      - counter~18           ; 1                 ; 6       ;
-;      - counter~19           ; 1                 ; 6       ;
-;      - counter~20           ; 1                 ; 6       ;
-;      - counter~21           ; 1                 ; 6       ;
-;      - counter~22           ; 1                 ; 6       ;
-;      - counter~23           ; 1                 ; 6       ;
-;      - counter~24           ; 1                 ; 6       ;
-;      - counter~25           ; 1                 ; 6       ;
-;      - counter~26           ; 1                 ; 6       ;
-;      - counter~27           ; 1                 ; 6       ;
-;      - counter~28           ; 1                 ; 6       ;
-;      - counter~29           ; 1                 ; 6       ;
-;      - counter~30           ; 1                 ; 6       ;
-;      - counter~31           ; 1                 ; 6       ;
-; clk                         ;                   ;         ;
-; rst                         ;                   ;         ;
-;      - leftLightsIndex[2]   ; 0                 ; 6       ;
-;      - leftLightsIndex[3]   ; 0                 ; 6       ;
-;      - leftLightsIndex[4]   ; 0                 ; 6       ;
-;      - leftLightsIndex[5]   ; 0                 ; 6       ;
-;      - leftLightsIndex[6]   ; 0                 ; 6       ;
-;      - leftLightsIndex[7]   ; 0                 ; 6       ;
-;      - leftLightsIndex[8]   ; 0                 ; 6       ;
-;      - leftLightsIndex[9]   ; 0                 ; 6       ;
-;      - leftLightsIndex[10]  ; 0                 ; 6       ;
-;      - leftLightsIndex[11]  ; 0                 ; 6       ;
-;      - leftLightsIndex[12]  ; 0                 ; 6       ;
-;      - leftLightsIndex[13]  ; 0                 ; 6       ;
-;      - leftLightsIndex[14]  ; 0                 ; 6       ;
-;      - leftLightsIndex[15]  ; 0                 ; 6       ;
-;      - leftLightsIndex[16]  ; 0                 ; 6       ;
-;      - leftLightsIndex[17]  ; 0                 ; 6       ;
-;      - leftLightsIndex[18]  ; 0                 ; 6       ;
-;      - leftLightsIndex[19]  ; 0                 ; 6       ;
-;      - leftLightsIndex[20]  ; 0                 ; 6       ;
-;      - leftLightsIndex[21]  ; 0                 ; 6       ;
-;      - leftLightsIndex[22]  ; 0                 ; 6       ;
-;      - leftLightsIndex[23]  ; 0                 ; 6       ;
-;      - leftLightsIndex[24]  ; 0                 ; 6       ;
-;      - leftLightsIndex[25]  ; 0                 ; 6       ;
-;      - leftLightsIndex[26]  ; 0                 ; 6       ;
-;      - leftLightsIndex[27]  ; 0                 ; 6       ;
-;      - leftLightsIndex[28]  ; 0                 ; 6       ;
-;      - leftLightsIndex[29]  ; 0                 ; 6       ;
-;      - leftLightsIndex[30]  ; 0                 ; 6       ;
-;      - leftLightsIndex[31]  ; 0                 ; 6       ;
-;      - rightLightsIndex[0]  ; 0                 ; 6       ;
-;      - rightLightsIndex[2]  ; 0                 ; 6       ;
-;      - rightLightsIndex[3]  ; 0                 ; 6       ;
-;      - rightLightsIndex[4]  ; 0                 ; 6       ;
-;      - rightLightsIndex[5]  ; 0                 ; 6       ;
-;      - rightLightsIndex[6]  ; 0                 ; 6       ;
-;      - rightLightsIndex[7]  ; 0                 ; 6       ;
-;      - rightLightsIndex[8]  ; 0                 ; 6       ;
-;      - rightLightsIndex[9]  ; 0                 ; 6       ;
-;      - rightLightsIndex[10] ; 0                 ; 6       ;
-;      - rightLightsIndex[11] ; 0                 ; 6       ;
-;      - rightLightsIndex[12] ; 0                 ; 6       ;
-;      - rightLightsIndex[13] ; 0                 ; 6       ;
-;      - rightLightsIndex[14] ; 0                 ; 6       ;
-;      - rightLightsIndex[15] ; 0                 ; 6       ;
-;      - rightLightsIndex[16] ; 0                 ; 6       ;
-;      - rightLightsIndex[17] ; 0                 ; 6       ;
-;      - rightLightsIndex[18] ; 0                 ; 6       ;
-;      - rightLightsIndex[19] ; 0                 ; 6       ;
-;      - rightLightsIndex[20] ; 0                 ; 6       ;
-;      - rightLightsIndex[21] ; 0                 ; 6       ;
-;      - rightLightsIndex[22] ; 0                 ; 6       ;
-;      - rightLightsIndex[23] ; 0                 ; 6       ;
-;      - rightLightsIndex[24] ; 0                 ; 6       ;
-;      - rightLightsIndex[25] ; 0                 ; 6       ;
-;      - rightLightsIndex[26] ; 0                 ; 6       ;
-;      - rightLightsIndex[27] ; 0                 ; 6       ;
-;      - rightLightsIndex[28] ; 0                 ; 6       ;
-;      - rightLightsIndex[29] ; 0                 ; 6       ;
-;      - rightLightsIndex[30] ; 0                 ; 6       ;
-;      - rightLightsIndex[31] ; 0                 ; 6       ;
-;      - rightLightsIndex[1]  ; 0                 ; 6       ;
-;      - leftLightsIndex[0]   ; 0                 ; 6       ;
-;      - leftLightsIndex[1]   ; 0                 ; 6       ;
-;      - counter[0]           ; 0                 ; 6       ;
-;      - counter[1]           ; 0                 ; 6       ;
-;      - counter[2]           ; 0                 ; 6       ;
-;      - counter[3]           ; 0                 ; 6       ;
-;      - counter[6]           ; 0                 ; 6       ;
-;      - counter[5]           ; 0                 ; 6       ;
-;      - counter[4]           ; 0                 ; 6       ;
-;      - counter[7]           ; 0                 ; 6       ;
-;      - counter[11]          ; 0                 ; 6       ;
-;      - counter[10]          ; 0                 ; 6       ;
-;      - counter[9]           ; 0                 ; 6       ;
-;      - counter[8]           ; 0                 ; 6       ;
-;      - counter[12]          ; 0                 ; 6       ;
-;      - counter[13]          ; 0                 ; 6       ;
-;      - counter[14]          ; 0                 ; 6       ;
-;      - counter[15]          ; 0                 ; 6       ;
-;      - counter[16]          ; 0                 ; 6       ;
-;      - counter[18]          ; 0                 ; 6       ;
-;      - counter[17]          ; 0                 ; 6       ;
-;      - counter[19]          ; 0                 ; 6       ;
-;      - counter[20]          ; 0                 ; 6       ;
-;      - counter[21]          ; 0                 ; 6       ;
-;      - counter[22]          ; 0                 ; 6       ;
-;      - counter[23]          ; 0                 ; 6       ;
-;      - counter[24]          ; 0                 ; 6       ;
-;      - counter[25]          ; 0                 ; 6       ;
-;      - counter[26]          ; 0                 ; 6       ;
-;      - counter[27]          ; 0                 ; 6       ;
-;      - counter[28]          ; 0                 ; 6       ;
-;      - counter[29]          ; 0                 ; 6       ;
-;      - counter[30]          ; 0                 ; 6       ;
-;      - counter[31]          ; 0                 ; 6       ;
-;      - tmp[0]~27            ; 0                 ; 6       ;
-+-----------------------------+-------------------+---------+
++-------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                              ;
++-------------------------------+-------------------+---------+
+; Source Pin / Fanout           ; Pad To Core Index ; Setting ;
++-------------------------------+-------------------+---------+
+; sw1                           ;                   ;         ;
+;      - leftLights_tmp~10      ; 0                 ; 6       ;
+;      - leftLights_tmp~14      ; 0                 ; 6       ;
+;      - rightLights_tmp~0      ; 0                 ; 6       ;
+;      - rightLights_tmp~13     ; 0                 ; 6       ;
+;      - always0~0              ; 0                 ; 6       ;
+;      - Add2~4                 ; 0                 ; 6       ;
+;      - counter~0              ; 0                 ; 6       ;
+;      - counter~1              ; 0                 ; 6       ;
+;      - counter~2              ; 0                 ; 6       ;
+;      - counter~3              ; 0                 ; 6       ;
+;      - counter~4              ; 0                 ; 6       ;
+;      - counter~5              ; 0                 ; 6       ;
+;      - counter~6              ; 0                 ; 6       ;
+;      - counter~7              ; 0                 ; 6       ;
+;      - counter~8              ; 0                 ; 6       ;
+;      - counter~9              ; 0                 ; 6       ;
+;      - counter~10             ; 0                 ; 6       ;
+;      - counter~11             ; 0                 ; 6       ;
+;      - counter~12             ; 0                 ; 6       ;
+;      - counter~13             ; 0                 ; 6       ;
+;      - counter~14             ; 0                 ; 6       ;
+;      - counter~15             ; 0                 ; 6       ;
+;      - counter~16             ; 0                 ; 6       ;
+;      - counter~17             ; 0                 ; 6       ;
+;      - counter~18             ; 0                 ; 6       ;
+;      - counter~19             ; 0                 ; 6       ;
+;      - counter~20             ; 0                 ; 6       ;
+;      - counter~21             ; 0                 ; 6       ;
+;      - counter~22             ; 0                 ; 6       ;
+;      - counter~23             ; 0                 ; 6       ;
+;      - counter~24             ; 0                 ; 6       ;
+;      - counter~25             ; 0                 ; 6       ;
+;      - counter~26             ; 0                 ; 6       ;
+;      - counter~27             ; 0                 ; 6       ;
+;      - counter~28             ; 0                 ; 6       ;
+;      - counter~29             ; 0                 ; 6       ;
+;      - counter~30             ; 0                 ; 6       ;
+;      - counter~31             ; 0                 ; 6       ;
+;      - rightLightsIndex[28]~1 ; 0                 ; 6       ;
+; sw0                           ;                   ;         ;
+;      - leftLightsIndex[31]    ; 0                 ; 6       ;
+;      - leftLightsIndex[30]    ; 0                 ; 6       ;
+;      - leftLightsIndex[29]    ; 0                 ; 6       ;
+;      - leftLightsIndex[28]    ; 0                 ; 6       ;
+;      - leftLightsIndex[27]    ; 0                 ; 6       ;
+;      - leftLightsIndex[26]    ; 0                 ; 6       ;
+;      - leftLightsIndex[25]    ; 0                 ; 6       ;
+;      - leftLightsIndex[24]    ; 0                 ; 6       ;
+;      - leftLightsIndex[23]    ; 0                 ; 6       ;
+;      - leftLightsIndex[22]    ; 0                 ; 6       ;
+;      - leftLightsIndex[21]    ; 0                 ; 6       ;
+;      - leftLightsIndex[20]    ; 0                 ; 6       ;
+;      - leftLightsIndex[19]    ; 0                 ; 6       ;
+;      - leftLightsIndex[18]    ; 0                 ; 6       ;
+;      - leftLightsIndex[17]    ; 0                 ; 6       ;
+;      - leftLightsIndex[16]    ; 0                 ; 6       ;
+;      - leftLightsIndex[15]    ; 0                 ; 6       ;
+;      - leftLightsIndex[14]    ; 0                 ; 6       ;
+;      - leftLightsIndex[13]    ; 0                 ; 6       ;
+;      - leftLightsIndex[12]    ; 0                 ; 6       ;
+;      - leftLightsIndex[11]    ; 0                 ; 6       ;
+;      - leftLightsIndex[10]    ; 0                 ; 6       ;
+;      - leftLightsIndex[9]     ; 0                 ; 6       ;
+;      - leftLightsIndex[8]     ; 0                 ; 6       ;
+;      - leftLightsIndex[7]     ; 0                 ; 6       ;
+;      - leftLightsIndex[6]     ; 0                 ; 6       ;
+;      - leftLightsIndex[5]     ; 0                 ; 6       ;
+;      - leftLightsIndex[4]     ; 0                 ; 6       ;
+;      - leftLightsIndex[3]     ; 0                 ; 6       ;
+;      - leftLightsIndex[2]     ; 0                 ; 6       ;
+;      - leftLightsIndex[1]     ; 0                 ; 6       ;
+;      - leftLightsIndex[0]     ; 0                 ; 6       ;
+;      - leftLights_tmp~10      ; 0                 ; 6       ;
+;      - leftLights_tmp~14      ; 0                 ; 6       ;
+;      - rightLights_tmp~0      ; 0                 ; 6       ;
+;      - rightLights_tmp~13     ; 0                 ; 6       ;
+;      - always0~0              ; 0                 ; 6       ;
+;      - Add2~4                 ; 0                 ; 6       ;
+;      - counter~0              ; 0                 ; 6       ;
+;      - counter~1              ; 0                 ; 6       ;
+;      - counter~2              ; 0                 ; 6       ;
+;      - counter~3              ; 0                 ; 6       ;
+;      - counter~4              ; 0                 ; 6       ;
+;      - counter~5              ; 0                 ; 6       ;
+;      - counter~6              ; 0                 ; 6       ;
+;      - counter~7              ; 0                 ; 6       ;
+;      - counter~8              ; 0                 ; 6       ;
+;      - counter~9              ; 0                 ; 6       ;
+;      - counter~10             ; 0                 ; 6       ;
+;      - counter~11             ; 0                 ; 6       ;
+;      - counter~12             ; 0                 ; 6       ;
+;      - counter~13             ; 0                 ; 6       ;
+;      - counter~14             ; 0                 ; 6       ;
+;      - counter~15             ; 0                 ; 6       ;
+;      - counter~16             ; 0                 ; 6       ;
+;      - counter~17             ; 0                 ; 6       ;
+;      - counter~18             ; 0                 ; 6       ;
+;      - counter~19             ; 0                 ; 6       ;
+;      - counter~20             ; 0                 ; 6       ;
+;      - counter~21             ; 0                 ; 6       ;
+;      - counter~22             ; 0                 ; 6       ;
+;      - counter~23             ; 0                 ; 6       ;
+;      - counter~24             ; 0                 ; 6       ;
+;      - counter~25             ; 0                 ; 6       ;
+;      - counter~26             ; 0                 ; 6       ;
+;      - counter~27             ; 0                 ; 6       ;
+;      - counter~28             ; 0                 ; 6       ;
+;      - counter~29             ; 0                 ; 6       ;
+;      - counter~30             ; 0                 ; 6       ;
+;      - counter~31             ; 0                 ; 6       ;
+;      - rightLightsIndex[28]~1 ; 0                 ; 6       ;
+; clk                           ;                   ;         ;
+; rst                           ;                   ;         ;
+;      - rightLights_tmp[0]     ; 1                 ; 6       ;
+;      - rightLights_tmp[1]     ; 1                 ; 6       ;
+;      - rightLights_tmp[2]     ; 1                 ; 6       ;
+;      - leftLights_tmp[0]      ; 1                 ; 6       ;
+;      - leftLights_tmp[1]      ; 1                 ; 6       ;
+;      - leftLights_tmp[2]      ; 1                 ; 6       ;
+;      - leftLightsIndex[31]    ; 1                 ; 6       ;
+;      - leftLightsIndex[30]    ; 1                 ; 6       ;
+;      - leftLightsIndex[29]    ; 1                 ; 6       ;
+;      - leftLightsIndex[28]    ; 1                 ; 6       ;
+;      - leftLightsIndex[27]    ; 1                 ; 6       ;
+;      - leftLightsIndex[26]    ; 1                 ; 6       ;
+;      - leftLightsIndex[25]    ; 1                 ; 6       ;
+;      - leftLightsIndex[24]    ; 1                 ; 6       ;
+;      - leftLightsIndex[23]    ; 1                 ; 6       ;
+;      - leftLightsIndex[22]    ; 1                 ; 6       ;
+;      - leftLightsIndex[21]    ; 1                 ; 6       ;
+;      - leftLightsIndex[20]    ; 1                 ; 6       ;
+;      - leftLightsIndex[19]    ; 1                 ; 6       ;
+;      - leftLightsIndex[18]    ; 1                 ; 6       ;
+;      - leftLightsIndex[17]    ; 1                 ; 6       ;
+;      - leftLightsIndex[16]    ; 1                 ; 6       ;
+;      - leftLightsIndex[15]    ; 1                 ; 6       ;
+;      - leftLightsIndex[14]    ; 1                 ; 6       ;
+;      - leftLightsIndex[13]    ; 1                 ; 6       ;
+;      - leftLightsIndex[12]    ; 1                 ; 6       ;
+;      - leftLightsIndex[11]    ; 1                 ; 6       ;
+;      - leftLightsIndex[10]    ; 1                 ; 6       ;
+;      - leftLightsIndex[9]     ; 1                 ; 6       ;
+;      - leftLightsIndex[8]     ; 1                 ; 6       ;
+;      - leftLightsIndex[7]     ; 1                 ; 6       ;
+;      - leftLightsIndex[6]     ; 1                 ; 6       ;
+;      - leftLightsIndex[5]     ; 1                 ; 6       ;
+;      - leftLightsIndex[4]     ; 1                 ; 6       ;
+;      - leftLightsIndex[3]     ; 1                 ; 6       ;
+;      - leftLightsIndex[2]     ; 1                 ; 6       ;
+;      - leftLightsIndex[1]     ; 1                 ; 6       ;
+;      - leftLightsIndex[0]     ; 1                 ; 6       ;
+;      - tmp_err[0]             ; 1                 ; 6       ;
+;      - counter[28]            ; 1                 ; 6       ;
+;      - counter[27]            ; 1                 ; 6       ;
+;      - counter[26]            ; 1                 ; 6       ;
+;      - counter[25]            ; 1                 ; 6       ;
+;      - counter[24]            ; 1                 ; 6       ;
+;      - counter[23]            ; 1                 ; 6       ;
+;      - counter[22]            ; 1                 ; 6       ;
+;      - counter[21]            ; 1                 ; 6       ;
+;      - counter[20]            ; 1                 ; 6       ;
+;      - counter[19]            ; 1                 ; 6       ;
+;      - counter[18]            ; 1                 ; 6       ;
+;      - counter[17]            ; 1                 ; 6       ;
+;      - counter[16]            ; 1                 ; 6       ;
+;      - counter[15]            ; 1                 ; 6       ;
+;      - counter[14]            ; 1                 ; 6       ;
+;      - counter[13]            ; 1                 ; 6       ;
+;      - counter[12]            ; 1                 ; 6       ;
+;      - counter[11]            ; 1                 ; 6       ;
+;      - counter[10]            ; 1                 ; 6       ;
+;      - counter[9]             ; 1                 ; 6       ;
+;      - counter[8]             ; 1                 ; 6       ;
+;      - counter[7]             ; 1                 ; 6       ;
+;      - counter[6]             ; 1                 ; 6       ;
+;      - counter[5]             ; 1                 ; 6       ;
+;      - counter[4]             ; 1                 ; 6       ;
+;      - counter[3]             ; 1                 ; 6       ;
+;      - counter[2]             ; 1                 ; 6       ;
+;      - counter[1]             ; 1                 ; 6       ;
+;      - counter[0]             ; 1                 ; 6       ;
+;      - counter[29]            ; 1                 ; 6       ;
+;      - counter[30]            ; 1                 ; 6       ;
+;      - counter[31]            ; 1                 ; 6       ;
+;      - rightLightsIndex[31]   ; 1                 ; 6       ;
+;      - rightLightsIndex[30]   ; 1                 ; 6       ;
+;      - rightLightsIndex[29]   ; 1                 ; 6       ;
+;      - rightLightsIndex[28]   ; 1                 ; 6       ;
+;      - rightLightsIndex[27]   ; 1                 ; 6       ;
+;      - rightLightsIndex[26]   ; 1                 ; 6       ;
+;      - rightLightsIndex[25]   ; 1                 ; 6       ;
+;      - rightLightsIndex[24]   ; 1                 ; 6       ;
+;      - rightLightsIndex[23]   ; 1                 ; 6       ;
+;      - rightLightsIndex[22]   ; 1                 ; 6       ;
+;      - rightLightsIndex[21]   ; 1                 ; 6       ;
+;      - rightLightsIndex[20]   ; 1                 ; 6       ;
+;      - rightLightsIndex[19]   ; 1                 ; 6       ;
+;      - rightLightsIndex[18]   ; 1                 ; 6       ;
+;      - rightLightsIndex[17]   ; 1                 ; 6       ;
+;      - rightLightsIndex[16]   ; 1                 ; 6       ;
+;      - rightLightsIndex[15]   ; 1                 ; 6       ;
+;      - rightLightsIndex[14]   ; 1                 ; 6       ;
+;      - rightLightsIndex[13]   ; 1                 ; 6       ;
+;      - rightLightsIndex[12]   ; 1                 ; 6       ;
+;      - rightLightsIndex[11]   ; 1                 ; 6       ;
+;      - rightLightsIndex[10]   ; 1                 ; 6       ;
+;      - rightLightsIndex[9]    ; 1                 ; 6       ;
+;      - rightLightsIndex[8]    ; 1                 ; 6       ;
+;      - rightLightsIndex[7]    ; 1                 ; 6       ;
+;      - rightLightsIndex[6]    ; 1                 ; 6       ;
+;      - rightLightsIndex[5]    ; 1                 ; 6       ;
+;      - rightLightsIndex[4]    ; 1                 ; 6       ;
+;      - rightLightsIndex[1]    ; 1                 ; 6       ;
+;      - rightLightsIndex[3]    ; 1                 ; 6       ;
+;      - rightLightsIndex[2]    ; 1                 ; 6       ;
+;      - rightLightsIndex[0]    ; 1                 ; 6       ;
++-------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                        ;
-+-----------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name      ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; always0~1 ; LCCOMB_X50_Y52_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; always0~3 ; LCCOMB_X51_Y52_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk       ; PIN_P11            ; 102     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; rst       ; PIN_A7             ; 97      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; tmp[0]~27 ; LCCOMB_X51_Y51_N20 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+-----------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                     ;
++------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                   ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Add2~4                 ; LCCOMB_X50_Y51_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                    ; PIN_P11            ; 103     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; leftLights_tmp~14      ; LCCOMB_X50_Y51_N18 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rightLightsIndex[28]~3 ; LCCOMB_X50_Y51_N6  ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rightLights_tmp~13     ; LCCOMB_X49_Y53_N2  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rst                    ; PIN_A7             ; 103     ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; sw0                    ; PIN_C10            ; 71      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
++------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1137,7 +1189,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_P11  ; 102     ; 86                                   ; Global Clock         ; GCLK19           ; --                        ;
+; clk  ; PIN_P11  ; 103     ; 58                                   ; Global Clock         ; GCLK19           ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1146,25 +1198,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 346 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 1 / 5,382 ( < 1 % )     ;
-; C4 interconnects      ; 151 / 106,704 ( < 1 % ) ;
+; Block interconnects   ; 355 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 2 / 5,382 ( < 1 % )     ;
+; C4 interconnects      ; 116 / 106,704 ( < 1 % ) ;
 ; Direct links          ; 95 / 148,641 ( < 1 % )  ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 94 / 49,760 ( < 1 % )   ;
+; Local interconnects   ; 74 / 49,760 ( < 1 % )   ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 0 / 5,406 ( 0 % )       ;
-; R4 interconnects      ; 129 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 1 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 162 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.71) ; Number of LABs  (Total = 21) ;
+; Number of Logic Elements  (Average = 12.33) ; Number of LABs  (Total = 21) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 4                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 2                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
@@ -1172,35 +1224,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 12                           ;
+; 14                                          ; 1                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 13                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.48) ; Number of LABs  (Total = 21) ;
+; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 21) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 11                           ;
-; 1 Clock                            ; 12                           ;
-; 1 Clock enable                     ; 8                            ;
+; 1 Clock                            ; 11                           ;
+; 1 Clock enable                     ; 6                            ;
+; 1 Sync. clear                      ; 3                            ;
+; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.52) ; Number of LABs  (Total = 21) ;
+; Number of Signals Sourced  (Average = 17.24) ; Number of LABs  (Total = 21) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 4                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 3                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
@@ -1209,94 +1263,88 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 0                            ;
+; 16                                           ; 6                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 2                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 2                            ;
-; 32                                           ; 1                            ;
+; 27                                           ; 4                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 1                            ;
+; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.90) ; Number of LABs  (Total = 21) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 1                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 0                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 2                            ;
-; 16                                              ; 6                            ;
-; 17                                              ; 1                            ;
-+-------------------------------------------------+------------------------------+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++--------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 10.81) ; Number of LABs  (Total = 21) ;
++--------------------------------------------------+------------------------------+
+; 0                                                ; 0                            ;
+; 1                                                ; 4                            ;
+; 2                                                ; 1                            ;
+; 3                                                ; 0                            ;
+; 4                                                ; 0                            ;
+; 5                                                ; 1                            ;
+; 6                                                ; 0                            ;
+; 7                                                ; 0                            ;
+; 8                                                ; 0                            ;
+; 9                                                ; 0                            ;
+; 10                                               ; 0                            ;
+; 11                                               ; 1                            ;
+; 12                                               ; 3                            ;
+; 13                                               ; 1                            ;
+; 14                                               ; 2                            ;
+; 15                                               ; 0                            ;
+; 16                                               ; 8                            ;
++--------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 15.19) ; Number of LABs  (Total = 21) ;
+; Number of Distinct Inputs  (Average = 15.57) ; Number of LABs  (Total = 21) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
+; 4                                            ; 3                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 3                            ;
-; 17                                           ; 2                            ;
-; 18                                           ; 1                            ;
+; 17                                           ; 4                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 3                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 1                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1356,16 +1404,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 10        ; 0            ; 10        ; 0            ; 0            ; 10        ; 10        ; 0            ; 10        ; 10        ; 0            ; 0            ; 0            ; 0            ; 4            ; 0            ; 0            ; 4            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 10        ; 0            ; 0            ;
+; Total Pass         ; 17        ; 0            ; 17        ; 0            ; 0            ; 17        ; 17        ; 0            ; 17        ; 17        ; 0            ; 0            ; 0            ; 0            ; 4            ; 0            ; 0            ; 4            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 17        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 10           ; 0         ; 10           ; 10           ; 0         ; 0         ; 10           ; 0         ; 0         ; 10           ; 10           ; 10           ; 10           ; 6            ; 10           ; 10           ; 6            ; 10           ; 10           ; 10           ; 10           ; 10           ; 10           ; 10           ; 10           ; 10           ; 0         ; 10           ; 10           ;
+; Total Inapplicable ; 0         ; 17           ; 0         ; 17           ; 17           ; 0         ; 0         ; 17           ; 0         ; 0         ; 17           ; 17           ; 17           ; 17           ; 13           ; 17           ; 17           ; 13           ; 17           ; 17           ; 17           ; 17           ; 17           ; 17           ; 17           ; 17           ; 17           ; 0         ; 17           ; 17           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; lights[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; lights[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; lights[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; lights[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; lights[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; lights[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; leftLights[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; leftLights[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; leftLights[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; rightLights[0]     ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; rightLights[1]     ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; rightLights[2]     ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[0]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[1]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[2]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[3]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[4]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[5]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error[6]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw1                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw0                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1453,7 +1508,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 4
+Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 5
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1470,24 +1525,24 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin sw1 uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 4
-    Info (169178): Pin sw0 uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 4
-    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 4
-    Info (169178): Pin rst uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 4
+    Info (169178): Pin sw1 uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 5
+    Info (169178): Pin sw0 uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 5
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 5
+    Info (169178): Pin rst uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 5
 Info (144001): Generated suppressed messages file C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/output_files/Lab3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6233 megabytes
-    Info: Processing ended: Sun Jan 30 23:52:15 2022
+    Info: Peak virtual memory: 6235 megabytes
+    Info: Processing ended: Mon Jan 31 15:21:43 2022
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+
