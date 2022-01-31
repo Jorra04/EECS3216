@@ -1,0 +1,4 @@
+module Lab3(lights, sw0, sw1);
+
+
+endmodule;
