@@ -8,7 +8,6 @@ module Lab2(clk, sw, f, rst);
 	integer i;
 	integer threshold;
 	assign f = tmp;
-	reg tst;
 
 	always @(posedge clk or negedge rst) begin
 		
@@ -16,13 +15,14 @@ module Lab2(clk, sw, f, rst);
 			counter <= 0;
 			tmp <= 0;
 			i<= 7;
-			threshold <= 100000000;
+			threshold <= 100000000; //2 seconds
 			
 		end else begin
+			//If switch is on, complete sequence.
 			if(sw) begin
-			
+				threshold <= 100000000;
 				counter = counter + 1;
-				if(counter == 50000000) begin
+				if(counter >= 50000000) begin //Allows for switching mid sequence without hanging.
 					counter = 0;
 					if(i == -1) begin
 						tmp = 0;
@@ -36,7 +36,7 @@ module Lab2(clk, sw, f, rst);
 			
 			end else begin
 			
-				//If not switch do something
+				//If switch is off, complete 2nd sequence.
 				
 				counter = counter + 1;
 				if(counter == threshold) begin

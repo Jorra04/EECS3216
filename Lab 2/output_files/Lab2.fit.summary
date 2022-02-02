@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Jan 27 17:07:07 2022
+Fitter Status : Successful - Tue Feb 01 18:58:51 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : Lab2
 Top-level Entity Name : Lab2
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 231 / 49,760 ( < 1 % )
-    Total combinational functions : 231 / 49,760 ( < 1 % )
+Total logic elements : 232 / 49,760 ( < 1 % )
+    Total combinational functions : 232 / 49,760 ( < 1 % )
     Dedicated logic registers : 103 / 49,760 ( < 1 % )
 Total registers : 103
 Total pins : 11 / 360 ( 3 % )
