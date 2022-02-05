@@ -77,9 +77,9 @@ RESERVED_INPUT               : A4        :        :                   :         
 RESERVED_INPUT               : A5        :        :                   :         : 8         :                
 RESERVED_INPUT               : A6        :        :                   :         : 8         :                
 rst                          : A7        : input  : 3.3 V Schmitt Trigger :         : 7         : Y              
-rightLights[0]               : A8        : output : 3.3-V LVTTL       :         : 7         : Y              
+rightLights[2]               : A8        : output : 3.3-V LVTTL       :         : 7         : Y              
 rightLights[1]               : A9        : output : 3.3-V LVTTL       :         : 7         : Y              
-rightLights[2]               : A10       : output : 3.3-V LVTTL       :         : 7         : Y              
+rightLights[0]               : A10       : output : 3.3-V LVTTL       :         : 7         : Y              
 leftLights[1]                : A11       : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : A12       :        :                   :         : 7         :                
 RESERVED_INPUT               : A13       :        :                   :         : 7         :                
@@ -171,10 +171,10 @@ sw0                          : C10       : input  : 3.3-V LVTTL       :         
 sw1                          : C11       : input  : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : C12       :        :                   :         : 7         :                
 RESERVED_INPUT               : C13       :        :                   :         : 7         :                
-error[6]                     : C14       : output : 3.3-V LVTTL       :         : 7         : Y              
-error[4]                     : C15       : output : 3.3-V LVTTL       :         : 7         : Y              
-error[3]                     : C16       : output : 3.3-V LVTTL       :         : 7         : Y              
-error[0]                     : C17       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[0]                       : C14       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[2]                       : C15       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[3]                       : C16       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[6]                       : C17       : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : C18       :        :                   :         : 7         :                
 RESERVED_INPUT               : C19       :        :                   :         : 7         :                
 RESERVED_INPUT               : C20       :        :                   :         : 6         :                
@@ -196,7 +196,7 @@ RESERVED_INPUT               : D13       :        :                   :         
 leftLights[0]                : D14       : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : D15       :        :                   :         : 7         :                
 GND                          : D16       : gnd    :                   :         :           :                
-error[1]                     : D17       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[5]                       : D17       : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : D18       :        :                   :         : 6         :                
 RESERVED_INPUT               : D19       :        :                   :         : 6         :                
 GND                          : D20       : gnd    :                   :         :           :                
@@ -216,8 +216,8 @@ RESERVED_INPUT               : E11       :        :                   :         
 RESERVED_INPUT               : E12       :        :                   :         : 7         :                
 RESERVED_INPUT               : E13       :        :                   :         : 7         :                
 RESERVED_INPUT               : E14       :        :                   :         : 7         :                
-error[5]                     : E15       : output : 3.3-V LVTTL       :         : 7         : Y              
-error[2]                     : E16       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[1]                       : E15       : output : 3.3-V LVTTL       :         : 7         : Y              
+err[4]                       : E16       : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : E17       :        :                   :         : 6         :                
 RESERVED_INPUT               : E18       :        :                   :         : 6         :                
 RESERVED_INPUT               : E19       :        :                   :         : 6         :                

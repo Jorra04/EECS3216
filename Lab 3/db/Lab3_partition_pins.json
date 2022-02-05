@@ -28,31 +28,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "error[0]",
+					"name" : "err[0]",
 					"strict" : false
 				},
 				{
-					"name" : "error[1]",
+					"name" : "err[3]",
 					"strict" : false
 				},
 				{
-					"name" : "error[2]",
+					"name" : "err[4]",
 					"strict" : false
 				},
 				{
-					"name" : "error[3]",
+					"name" : "err[5]",
 					"strict" : false
 				},
 				{
-					"name" : "error[6]",
-					"strict" : false
-				},
-				{
-					"name" : "sw1",
+					"name" : "err[6]",
 					"strict" : false
 				},
 				{
 					"name" : "sw0",
+					"strict" : false
+				},
+				{
+					"name" : "sw1",
 					"strict" : false
 				},
 				{

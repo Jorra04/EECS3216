@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Lab3
-Mon Jan 31 15:21:50 2022
+Fri Feb 04 23:48:55 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jan 31 15:21:50 2022 ;
+; EDA Netlist Writer Status ; Successful - Fri Feb 04 23:48:55 2022 ;
 ; Revision Name             ; Lab3                                  ;
 ; Top-level Entity Name     ; Lab3                                  ;
 ; Family                    ; MAX 10                                ;
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Mon Jan 31 15:21:50 2022
+    Info: Processing started: Fri Feb 04 23:48:54 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Lab3.vo in folder "C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Mon Jan 31 15:21:50 2022
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Fri Feb 04 23:48:55 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
