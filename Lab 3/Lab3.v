@@ -17,28 +17,36 @@ module Lab3(leftLights, rightLights, clk, rst, sw0, sw1, err);
 	always@(posedge clk or negedge rst) begin
 	
 		if(~rst) begin
-			leftLights_tmp = 3'b000;
-			rightLights_tmp = 3'b000;
-			index = 0;
-			counter = 0;
-			err_tmp = 7'b1111111;
+			leftLights_tmp <= 3'b000;
+			rightLights_tmp <= 3'b000;
+			index <= 0;
+			counter <= 0;
+			err_tmp <= 7'b1111111;
+			flashCount <= 0;
 		end else begin
 			if(sw0 && sw1) begin
-				leftLights_tmp = 3'b000;
-				rightLights_tmp = 3'b000;
-				index = 0;
-				counter = 0;
-				err_tmp = 7'b0000110;
+				leftLights_tmp <= 3'b000;
+				rightLights_tmp <= 3'b000;
+				index <= 0;
+				counter <= 0;
+				err_tmp <= 7'b0000110;
+				flashCount <= 0;
 			end else begin
 				if(sw0) begin
-					err_tmp = 7'b1111111;
-					counter = counter + 1;
+					err_tmp <= 7'b1111111;
+					counter <= counter + 1;
 					if(counter == 25000000) begin
-						counter = 0;
+						counter <= 0;
 						if(index > 2) begin
 							index = 0;
-							leftLights_tmp = 3'b000;
-							rightLights_tmp = 3'b000;
+							if(flashCount >= 2) begin
+								leftLights_tmp <= 3'b000;
+								rightLights_tmp <= 3'b111;
+							end else begin
+								leftLights_tmp <= 3'b000;
+								rightLights_tmp <= 3'b000;
+								flashCount <= flashCount + 1;
+							end
 						end else begin
 							rightLights_tmp[index] = 1;
 							index = index + 1;
@@ -46,24 +54,32 @@ module Lab3(leftLights, rightLights, clk, rst, sw0, sw1, err);
 					end
 				end else if(sw1) begin
 					err_tmp = 7'b1111111;
-					counter = counter + 1;
+					counter <= counter + 1;
 					if(counter == 25000000) begin
-						counter = 0;
+						counter <= 0;
 						if(index > 2) begin
 							index = 0;
-							leftLights_tmp = 3'b000;
-							rightLights_tmp = 3'b000;
+							if(flashCount >= 2) begin
+								leftLights_tmp <= 3'b111;
+								rightLights_tmp <= 3'b000;
+							end else begin 
+								leftLights_tmp <= 3'b000;
+								rightLights_tmp <= 3'b000;
+								flashCount <= flashCount + 1;
+							end
+							
 						end else begin
 							leftLights_tmp[index] = 1;
 							index = index + 1;
 						end
 					end
 				end else if(!sw0 && !sw1) begin
-					err_tmp = 7'b1111111;
-					leftLights_tmp = 3'b000;
-					rightLights_tmp = 3'b000;
-					index = 0;
-					counter = 0;
+					err_tmp <= 7'b1111111;
+					leftLights_tmp <= 3'b000;
+					rightLights_tmp <= 3'b000;
+					index <= 0;
+					counter <= 0;
+					flashCount <= 0;
 				end
 			end
 		end

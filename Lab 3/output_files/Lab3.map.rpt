@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Fri Feb 04 23:48:39 2022
+Sat Feb 05 00:18:17 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -20,6 +20,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,15 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 04 23:48:39 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 05 00:18:17 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                                      ;
 ; Top-level Entity Name              ; Lab3                                                      ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 167                                                       ;
-;     Total combinational functions  ; 167                                                       ;
-;     Dedicated logic registers      ; 71                                                        ;
-; Total registers                    ; 71                                                        ;
+; Total logic elements               ; 212                                                       ;
+;     Total combinational functions  ; 212                                                       ;
+;     Dedicated logic registers      ; 103                                                       ;
+; Total registers                    ; 103                                                       ;
 ; Total pins                         ; 17                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
@@ -182,20 +183,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 167       ;
+; Estimated Total logic elements              ; 212       ;
 ;                                             ;           ;
-; Total combinational functions               ; 167       ;
+; Total combinational functions               ; 212       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 75        ;
-;     -- 3 input functions                    ; 21        ;
-;     -- <=2 input functions                  ; 71        ;
+;     -- 4 input functions                    ; 87        ;
+;     -- 3 input functions                    ; 23        ;
+;     -- <=2 input functions                  ; 102       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 105       ;
-;     -- arithmetic mode                      ; 62        ;
+;     -- normal mode                          ; 119       ;
+;     -- arithmetic mode                      ; 93        ;
 ;                                             ;           ;
-; Total registers                             ; 71        ;
-;     -- Dedicated logic registers            ; 71        ;
+; Total registers                             ; 103       ;
+;     -- Dedicated logic registers            ; 103       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 17        ;
@@ -203,9 +204,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 71        ;
-; Total fan-out                               ; 744       ;
-; Average fan-out                             ; 2.74      ;
+; Maximum fan-out                             ; 103       ;
+; Total fan-out                               ; 1089      ;
+; Average fan-out                             ; 3.12      ;
 +---------------------------------------------+-----------+
 
 
@@ -214,7 +215,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |Lab3                      ; 167 (167)           ; 71 (71)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |Lab3               ; Lab3        ; work         ;
+; |Lab3                      ; 212 (212)           ; 103 (103)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |Lab3               ; Lab3        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -236,12 +237,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 71    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 103   ;
+; Number of registers using Synchronous Clear  ; 102   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 71    ;
+; Number of registers using Asynchronous Clear ; 103   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -273,20 +274,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 71                          ;
-;     CLR               ; 71                          ;
-; cycloneiii_lcell_comb ; 169                         ;
-;     arith             ; 62                          ;
-;         2 data inputs ; 62                          ;
-;     normal            ; 107                         ;
+; cycloneiii_ff         ; 103                         ;
+;     CLR               ; 1                           ;
+;     CLR SCLR          ; 70                          ;
+;     ENA CLR SCLR      ; 32                          ;
+; cycloneiii_lcell_comb ; 214                         ;
+;     arith             ; 93                          ;
+;         2 data inputs ; 93                          ;
+;     normal            ; 121                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 75                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 87                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 7.05                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 4.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,30 +308,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Fri Feb 04 23:48:33 2022
+    Info: Processing started: Sat Feb 05 00:18:11 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lab3.v
     Info (12023): Found entity 1: Lab3 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 1
 Info (12127): Elaborating entity "Lab3" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Lab3.v(13): object "flashCount" assigned a value but never read File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 13
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 26
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 27
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "err[1]" is stuck at VCC File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 6
     Warning (13410): Pin "err[2]" is stuck at VCC File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/Lab3.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/output_files/Lab3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 184 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 230 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 167 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info (21061): Implemented 213 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Fri Feb 04 23:48:39 2022
+    Info: Processing ended: Sat Feb 05 00:18:17 2022
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:14
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 3/output_files/Lab3.map.smsg.
 
 
