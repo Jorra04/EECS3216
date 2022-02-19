@@ -1,10 +1,10 @@
 |Lab3
-leftLights[0] <= leftLights_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
-leftLights[1] <= leftLights_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
-leftLights[2] <= leftLights_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
-rightLights[0] <= rightLights_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
-rightLights[1] <= rightLights_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
-rightLights[2] <= rightLights_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+leftLights[0] << leftLights_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+leftLights[1] << leftLights_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+leftLights[2] << leftLights_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+rightLights[0] << rightLights_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+rightLights[1] << rightLights_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+rightLights[2] << rightLights_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
 clk => flashCount[0].CLK
 clk => flashCount[1].CLK
 clk => flashCount[2].CLK
@@ -445,12 +445,12 @@ sw1 => flashCount.OUTPUTSELECT
 sw1 => flashCount.OUTPUTSELECT
 sw1 => flashCount.OUTPUTSELECT
 sw1 => always0.IN1
-err[0] <= err_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
-err[1] <= err_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
-err[2] <= err_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
-err[3] <= err_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
-err[4] <= err_tmp[4].DB_MAX_OUTPUT_PORT_TYPE
-err[5] <= err_tmp[5].DB_MAX_OUTPUT_PORT_TYPE
-err[6] <= err_tmp[6].DB_MAX_OUTPUT_PORT_TYPE
+err[0] << err_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+err[1] << err_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+err[2] << err_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+err[3] << err_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+err[4] << err_tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+err[5] << err_tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+err[6] << err_tmp[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
