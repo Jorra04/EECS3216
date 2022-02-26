@@ -66,6 +66,18 @@
 				{
 					"name" : "rst",
 					"strict" : false
+				},
+				{
+					"name" : "sw0",
+					"strict" : false
+				},
+				{
+					"name" : "sw1",
+					"strict" : false
+				},
+				{
+					"name" : "sw2",
+					"strict" : false
 				}
 			]
 		}
