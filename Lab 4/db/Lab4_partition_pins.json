@@ -64,11 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw1",
+					"name" : "sw0",
 					"strict" : false
 				},
 				{
-					"name" : "sw0",
+					"name" : "sw1",
 					"strict" : false
 				},
 				{

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Feb 27 14:49:28 2022
+Analysis & Synthesis Status : Successful - Sun Feb 27 16:37:39 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : Lab4
 Top-level Entity Name : Lab4
 Family : MAX 10
-Total logic elements : 282
-    Total combinational functions : 279
+Total logic elements : 293
+    Total combinational functions : 290
     Dedicated logic registers : 44
 Total registers : 44
 Total pins : 19

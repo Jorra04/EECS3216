@@ -1,5 +1,5 @@
 Timing Analyzer report for Lab4
-Sun Feb 27 14:49:44 2022
+Sun Feb 27 16:37:56 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -92,7 +92,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.41        ;
+; Average used               ; 1.42        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -120,9 +120,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
 +------------+-----------------+-----------------+------+
-; 41.55 MHz  ; 41.55 MHz       ; currNum_tmp1[2] ;      ;
-; 50.72 MHz  ; 50.72 MHz       ; currNum_tmp1[1] ;      ;
-; 137.42 MHz ; 137.42 MHz      ; clk             ;      ;
+; 41.07 MHz  ; 41.07 MHz       ; currNum_tmp1[2] ;      ;
+; 46.18 MHz  ; 46.18 MHz       ; currNum_tmp1[1] ;      ;
+; 132.66 MHz ; 132.66 MHz      ; clk             ;      ;
 +------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -132,9 +132,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currNum_tmp1[1] ; -19.564 ; -134.261      ;
-; currNum_tmp1[2] ; -19.397 ; -244.123      ;
-; clk             ; -6.277  ; -123.533      ;
+; currNum_tmp1[1] ; -20.553 ; -141.099      ;
+; currNum_tmp1[2] ; -19.403 ; -236.649      ;
+; clk             ; -6.538  ; -142.805      ;
 +-----------------+---------+---------------+
 
 
@@ -143,9 +143,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
+; currNum_tmp1[2] ; 0.278 ; 0.000         ;
 ; clk             ; 0.347 ; 0.000         ;
-; currNum_tmp1[2] ; 0.729 ; 0.000         ;
-; currNum_tmp1[1] ; 3.021 ; 0.000         ;
+; currNum_tmp1[1] ; 3.451 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -166,9 +166,9 @@ No paths to report.
 +-----------------+--------+------------------------+
 ; Clock           ; Slack  ; End Point TNS          ;
 +-----------------+--------+------------------------+
-; currNum_tmp1[2] ; -3.280 ; -389.829               ;
+; currNum_tmp1[2] ; -3.185 ; -405.298               ;
 ; clk             ; -3.000 ; -64.732                ;
-; currNum_tmp1[1] ; -1.104 ; -43.255                ;
+; currNum_tmp1[1] ; -1.830 ; -68.372                ;
 +-----------------+--------+------------------------+
 
 
@@ -183,9 +183,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
 +------------+-----------------+-----------------+------+
-; 44.52 MHz  ; 44.52 MHz       ; currNum_tmp1[2] ;      ;
-; 54.05 MHz  ; 54.05 MHz       ; currNum_tmp1[1] ;      ;
-; 148.59 MHz ; 148.59 MHz      ; clk             ;      ;
+; 44.1 MHz   ; 44.1 MHz        ; currNum_tmp1[2] ;      ;
+; 49.24 MHz  ; 49.24 MHz       ; currNum_tmp1[1] ;      ;
+; 144.49 MHz ; 144.49 MHz      ; clk             ;      ;
 +------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -195,9 +195,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currNum_tmp1[1] ; -18.020 ; -123.725      ;
-; currNum_tmp1[2] ; -17.854 ; -224.332      ;
-; clk             ; -5.730  ; -109.121      ;
+; currNum_tmp1[1] ; -18.958 ; -129.821      ;
+; currNum_tmp1[2] ; -17.875 ; -218.031      ;
+; clk             ; -5.921  ; -127.038      ;
 +-----------------+---------+---------------+
 
 
@@ -206,9 +206,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
+; currNum_tmp1[2] ; 0.126 ; 0.000         ;
 ; clk             ; 0.311 ; 0.000         ;
-; currNum_tmp1[2] ; 0.664 ; 0.000         ;
-; currNum_tmp1[1] ; 2.666 ; 0.000         ;
+; currNum_tmp1[1] ; 3.088 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -230,8 +230,8 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
 ; clk             ; -3.000 ; -64.732               ;
-; currNum_tmp1[2] ; -2.971 ; -339.930              ;
-; currNum_tmp1[1] ; -0.989 ; -35.943               ;
+; currNum_tmp1[2] ; -2.849 ; -353.060              ;
+; currNum_tmp1[1] ; -1.660 ; -59.164               ;
 +-----------------+--------+-----------------------+
 
 
@@ -246,9 +246,9 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; currNum_tmp1[2] ; -8.306 ; -102.314      ;
-; currNum_tmp1[1] ; -8.275 ; -56.316       ;
-; clk             ; -2.177 ; -28.322       ;
+; currNum_tmp1[1] ; -8.527 ; -58.235       ;
+; currNum_tmp1[2] ; -8.244 ; -99.839       ;
+; clk             ; -2.302 ; -35.150       ;
 +-----------------+--------+---------------+
 
 
@@ -258,8 +258,8 @@ No synchronizer chains to report.
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
 ; clk             ; 0.151 ; 0.000         ;
-; currNum_tmp1[2] ; 0.482 ; 0.000         ;
-; currNum_tmp1[1] ; 1.367 ; 0.000         ;
+; currNum_tmp1[2] ; 0.212 ; 0.000         ;
+; currNum_tmp1[1] ; 1.607 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -280,9 +280,9 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -53.902               ;
-; currNum_tmp1[2] ; -1.014 ; -87.147               ;
-; currNum_tmp1[1] ; -0.200 ; -2.518                ;
+; clk             ; -3.000 ; -53.934               ;
+; currNum_tmp1[2] ; -0.985 ; -93.246               ;
+; currNum_tmp1[1] ; -0.440 ; -11.681               ;
 +-----------------+--------+-----------------------+
 
 
@@ -297,14 +297,14 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -19.564  ; 0.151 ; N/A      ; N/A     ; -3.280              ;
-;  clk             ; -6.277   ; 0.151 ; N/A      ; N/A     ; -3.000              ;
-;  currNum_tmp1[1] ; -19.564  ; 1.367 ; N/A      ; N/A     ; -1.104              ;
-;  currNum_tmp1[2] ; -19.397  ; 0.482 ; N/A      ; N/A     ; -3.280              ;
-; Design-wide TNS  ; -501.917 ; 0.0   ; 0.0      ; 0.0     ; -497.816            ;
-;  clk             ; -123.533 ; 0.000 ; N/A      ; N/A     ; -64.732             ;
-;  currNum_tmp1[1] ; -134.261 ; 0.000 ; N/A      ; N/A     ; -43.255             ;
-;  currNum_tmp1[2] ; -244.123 ; 0.000 ; N/A      ; N/A     ; -389.829            ;
+; Worst-case Slack ; -20.553  ; 0.126 ; N/A      ; N/A     ; -3.185              ;
+;  clk             ; -6.538   ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+;  currNum_tmp1[1] ; -20.553  ; 1.607 ; N/A      ; N/A     ; -1.830              ;
+;  currNum_tmp1[2] ; -19.403  ; 0.126 ; N/A      ; N/A     ; -3.185              ;
+; Design-wide TNS  ; -520.553 ; 0.0   ; 0.0      ; 0.0     ; -538.402            ;
+;  clk             ; -142.805 ; 0.000 ; N/A      ; N/A     ; -64.732             ;
+;  currNum_tmp1[1] ; -141.099 ; 0.000 ; N/A      ; N/A     ; -68.372             ;
+;  currNum_tmp1[2] ; -236.649 ; 0.000 ; N/A      ; N/A     ; -405.298            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -337,8 +337,8 @@ No synchronizer chains to report.
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
 ; sw2                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; sw1                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; sw0                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; sw1                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; rst                 ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -425,9 +425,9 @@ No synchronizer chains to report.
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 1729     ; 0        ; 0        ; 0        ;
-; currNum_tmp1[1] ; clk             ; 103      ; 103      ; 0        ; 0        ;
-; currNum_tmp1[2] ; clk             ; 104      ; 104      ; 0        ; 0        ;
+; clk             ; clk             ; 3122     ; 0        ; 0        ; 0        ;
+; currNum_tmp1[1] ; clk             ; 101      ; 101      ; 0        ; 0        ;
+; currNum_tmp1[2] ; clk             ; 101      ; 101      ; 0        ; 0        ;
 ; clk             ; currNum_tmp1[1] ; 416500   ; 0        ; 416500   ; 0        ;
 ; currNum_tmp1[1] ; currNum_tmp1[1] ; 338      ; 338      ; 338      ; 338      ;
 ; currNum_tmp1[2] ; currNum_tmp1[1] ; 2964     ; 2964     ; 2964     ; 2964     ;
@@ -443,9 +443,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 1729     ; 0        ; 0        ; 0        ;
-; currNum_tmp1[1] ; clk             ; 103      ; 103      ; 0        ; 0        ;
-; currNum_tmp1[2] ; clk             ; 104      ; 104      ; 0        ; 0        ;
+; clk             ; clk             ; 3122     ; 0        ; 0        ; 0        ;
+; currNum_tmp1[1] ; clk             ; 101      ; 101      ; 0        ; 0        ;
+; currNum_tmp1[2] ; clk             ; 101      ; 101      ; 0        ; 0        ;
 ; clk             ; currNum_tmp1[1] ; 416500   ; 0        ; 416500   ; 0        ;
 ; currNum_tmp1[1] ; currNum_tmp1[1] ; 338      ; 338      ; 338      ; 338      ;
 ; currNum_tmp1[2] ; currNum_tmp1[1] ; 2964     ; 2964     ; 2964     ; 2964     ;
@@ -567,7 +567,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Sun Feb 27 14:49:42 2022
+    Info: Processing started: Sun Feb 27 16:37:54 2022
 Info: Command: quartus_sta Lab4 -c Lab4
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -601,10 +601,10 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -613,26 +613,26 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -19.564
+Info (332146): Worst-case setup slack is -20.553
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -19.564            -134.261 currNum_tmp1[1] 
-    Info (332119):   -19.397            -244.123 currNum_tmp1[2] 
-    Info (332119):    -6.277            -123.533 clk 
-Info (332146): Worst-case hold slack is 0.347
+    Info (332119):   -20.553            -141.099 currNum_tmp1[1] 
+    Info (332119):   -19.403            -236.649 currNum_tmp1[2] 
+    Info (332119):    -6.538            -142.805 clk 
+Info (332146): Worst-case hold slack is 0.278
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.278               0.000 currNum_tmp1[2] 
     Info (332119):     0.347               0.000 clk 
-    Info (332119):     0.729               0.000 currNum_tmp1[2] 
-    Info (332119):     3.021               0.000 currNum_tmp1[1] 
+    Info (332119):     3.451               0.000 currNum_tmp1[1] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.280
+Info (332146): Worst-case minimum pulse width slack is -3.185
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.280            -389.829 currNum_tmp1[2] 
+    Info (332119):    -3.185            -405.298 currNum_tmp1[2] 
     Info (332119):    -3.000             -64.732 clk 
-    Info (332119):    -1.104             -43.255 currNum_tmp1[1] 
+    Info (332119):    -1.830             -68.372 currNum_tmp1[1] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -656,34 +656,34 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -18.020
+Info (332146): Worst-case setup slack is -18.958
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -18.020            -123.725 currNum_tmp1[1] 
-    Info (332119):   -17.854            -224.332 currNum_tmp1[2] 
-    Info (332119):    -5.730            -109.121 clk 
-Info (332146): Worst-case hold slack is 0.311
+    Info (332119):   -18.958            -129.821 currNum_tmp1[1] 
+    Info (332119):   -17.875            -218.031 currNum_tmp1[2] 
+    Info (332119):    -5.921            -127.038 clk 
+Info (332146): Worst-case hold slack is 0.126
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.126               0.000 currNum_tmp1[2] 
     Info (332119):     0.311               0.000 clk 
-    Info (332119):     0.664               0.000 currNum_tmp1[2] 
-    Info (332119):     2.666               0.000 currNum_tmp1[1] 
+    Info (332119):     3.088               0.000 currNum_tmp1[1] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -64.732 clk 
-    Info (332119):    -2.971            -339.930 currNum_tmp1[2] 
-    Info (332119):    -0.989             -35.943 currNum_tmp1[1] 
+    Info (332119):    -2.849            -353.060 currNum_tmp1[2] 
+    Info (332119):    -1.660             -59.164 currNum_tmp1[1] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
@@ -705,39 +705,39 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datac  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.306
+Info (332146): Worst-case setup slack is -8.527
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.306            -102.314 currNum_tmp1[2] 
-    Info (332119):    -8.275             -56.316 currNum_tmp1[1] 
-    Info (332119):    -2.177             -28.322 clk 
+    Info (332119):    -8.527             -58.235 currNum_tmp1[1] 
+    Info (332119):    -8.244             -99.839 currNum_tmp1[2] 
+    Info (332119):    -2.302             -35.150 clk 
 Info (332146): Worst-case hold slack is 0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.151               0.000 clk 
-    Info (332119):     0.482               0.000 currNum_tmp1[2] 
-    Info (332119):     1.367               0.000 currNum_tmp1[1] 
+    Info (332119):     0.212               0.000 currNum_tmp1[2] 
+    Info (332119):     1.607               0.000 currNum_tmp1[1] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -53.902 clk 
-    Info (332119):    -1.014             -87.147 currNum_tmp1[2] 
-    Info (332119):    -0.200              -2.518 currNum_tmp1[1] 
+    Info (332119):    -3.000             -53.934 clk 
+    Info (332119):    -0.985             -93.246 currNum_tmp1[2] 
+    Info (332119):    -0.440             -11.681 currNum_tmp1[1] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4929 megabytes
-    Info: Processing ended: Sun Feb 27 14:49:44 2022
+    Info: Peak virtual memory: 4923 megabytes
+    Info: Processing ended: Sun Feb 27 16:37:56 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 

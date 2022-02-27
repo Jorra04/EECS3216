@@ -28,6 +28,19 @@ module Lab4(sw0, sw1, sw2, clk, rst, seg0, seg1);
 					counter <= 0;
 					if(acc > 0 && !(!sw0_prev && sw0) && !(!sw1_prev && sw1) && !(!sw2_prev && sw2)) currNum_tmp1 <= currNum_tmp1 - 1;
 				
+					
+					
+					if((acc <= 10 && acc > 0)) begin
+					
+						flashing <= ~flashing;
+					
+					end
+					
+					
+				end
+				
+				if(counter == 1000000) begin
+				
 					if( !(sw0_prev) && (sw0)) begin
 
 						currNum_tmp1 <= ((currNum_tmp1 + 5) > 99) ? 99 : (currNum_tmp1 + 5);
@@ -48,9 +61,11 @@ module Lab4(sw0, sw1, sw2, clk, rst, seg0, seg1);
 					sw0_prev <= sw0;
 					sw1_prev <= sw1;
 					sw2_prev <= sw2;
+					
 				end
 				
-				if(counter == 12499999 && (acc <= 10 && acc > 0)) begin
+				
+				if(counter == 24999999 && (acc <= 10 && acc > 0)) begin
 					
 					flashing <= ~flashing;
 				

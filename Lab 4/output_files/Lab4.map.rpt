@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Sun Feb 27 14:49:28 2022
+Sun Feb 27 16:37:39 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 27 14:49:28 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 27 16:37:39 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; Lab4                                                      ;
 ; Top-level Entity Name              ; Lab4                                                      ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 282                                                       ;
-;     Total combinational functions  ; 279                                                       ;
+; Total logic elements               ; 293                                                       ;
+;     Total combinational functions  ; 290                                                       ;
 ;     Dedicated logic registers      ; 44                                                        ;
 ; Total registers                    ; 44                                                        ;
 ; Total pins                         ; 19                                                        ;
@@ -199,16 +199,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 282       ;
+; Estimated Total logic elements              ; 293       ;
 ;                                             ;           ;
-; Total combinational functions               ; 279       ;
+; Total combinational functions               ; 290       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 94        ;
 ;     -- 3 input functions                    ; 60        ;
-;     -- <=2 input functions                  ; 125       ;
+;     -- <=2 input functions                  ; 136       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 194       ;
+;     -- normal mode                          ; 205       ;
 ;     -- arithmetic mode                      ; 85        ;
 ;                                             ;           ;
 ; Total registers                             ; 44        ;
@@ -221,8 +221,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 44        ;
-; Total fan-out                               ; 952       ;
-; Average fan-out                             ; 2.64      ;
+; Total fan-out                               ; 972       ;
+; Average fan-out                             ; 2.61      ;
 +---------------------------------------------+-----------+
 
 
@@ -231,7 +231,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                   ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Lab4                                  ; 279 (133)           ; 44 (44)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 19   ; 0            ; 0          ; |Lab4                                                                                                 ; Lab4                ; work         ;
+; |Lab4                                  ; 290 (144)           ; 44 (44)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 19   ; 0            ; 0          ; |Lab4                                                                                                 ; Lab4                ; work         ;
 ;    |B2D:hex01|                         ; 23 (23)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab4|B2D:hex01                                                                                       ; B2D                 ; work         ;
 ;    |B2D:hex02|                         ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab4|B2D:hex02                                                                                       ; B2D                 ; work         ;
 ;    |lpm_divide:Div0|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab4|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
@@ -294,7 +294,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -402,23 +402,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 19                          ;
 ; cycloneiii_ff         ; 44                          ;
-;     CLR               ; 34                          ;
+;     CLR               ; 36                          ;
 ;     ENA               ; 3                           ;
-;     ENA CLR           ; 7                           ;
-; cycloneiii_lcell_comb ; 279                         ;
+;     ENA CLR           ; 5                           ;
+; cycloneiii_lcell_comb ; 290                         ;
 ;     arith             ; 85                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 60                          ;
 ;         3 data inputs ; 24                          ;
-;     normal            ; 194                         ;
+;     normal            ; 205                         ;
 ;         0 data inputs ; 11                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 50                          ;
+;         2 data inputs ; 61                          ;
 ;         3 data inputs ; 36                          ;
 ;         4 data inputs ; 94                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 7.49                        ;
+; Average LUT depth     ; 8.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -437,46 +437,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Sun Feb 27 14:49:21 2022
+    Info: Processing started: Sun Feb 27 16:37:33 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file lab4.sv
     Info (12023): Found entity 1: Lab4 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 1
-    Info (12023): Found entity 2: B2D File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 77
+    Info (12023): Found entity 2: B2D File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 92
 Info (12127): Elaborating entity "Lab4" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at Lab4.sv(29): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at Lab4.sv(33): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at Lab4.sv(38): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at Lab4.sv(43): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at Lab4.sv(68): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 68
-Warning (10230): Verilog HDL assignment warning at Lab4.sv(69): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 69
-Info (12128): Elaborating entity "B2D" for hierarchy "B2D:hex01" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 71
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(85): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 85
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(86): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 86
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(87): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 87
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(88): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 88
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(89): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 89
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(90): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 90
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(91): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 91
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(92): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 92
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(93): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 93
-Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(94): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 94
-Warning (10270): Verilog HDL Case Statement warning at Lab4.sv(84): incomplete case statement has no default case item File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 84
-Warning (10240): Verilog HDL Always Construct warning at Lab4.sv(83): inferring latch(es) for variable "outputBus", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[0]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[1]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[2]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[3]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[4]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[5]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
-Info (10041): Inferred latch for "outputBus[6]" at Lab4.sv(83) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at Lab4.sv(46): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at Lab4.sv(51): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at Lab4.sv(56): truncated value with size 32 to match size of target (7) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at Lab4.sv(83): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at Lab4.sv(84): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 84
+Info (12128): Elaborating entity "B2D" for hierarchy "B2D:hex01" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 86
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(100): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 100
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(101): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 101
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(102): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 102
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(103): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 103
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(104): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 104
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(105): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 105
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(106): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 106
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(107): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 107
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(108): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 108
+Warning (10235): Verilog HDL Always Construct warning at Lab4.sv(109): variable "flashing" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 109
+Warning (10270): Verilog HDL Case Statement warning at Lab4.sv(99): incomplete case statement has no default case item File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 99
+Warning (10240): Verilog HDL Always Construct warning at Lab4.sv(98): inferring latch(es) for variable "outputBus", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[0]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[1]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[2]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[3]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[4]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[5]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
+Info (10041): Inferred latch for "outputBus[6]" at Lab4.sv(98) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 68
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 69
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 69
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 68
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 68
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 84
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 84
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -491,41 +491,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
     Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 69
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 69
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 84
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 84
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8sl.tdf
     Info (12023): Found entity 1: lpm_divide_8sl File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/lpm_divide_8sl.tdf Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[0] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[0] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[1] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[1] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[2] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[2] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[3] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[3] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[4] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[4] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[5] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[5] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex01|outputBus[6] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex01|outputBus[6] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal currNum_tmp1[1] File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 25
-Warning (13012): Latch B2D:hex02|outputBus[0] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[0] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
-Warning (13012): Latch B2D:hex02|outputBus[1] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[1] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
-Warning (13012): Latch B2D:hex02|outputBus[2] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[2] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
-Warning (13012): Latch B2D:hex02|outputBus[3] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[3] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
-Warning (13012): Latch B2D:hex02|outputBus[4] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[4] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
-Warning (13012): Latch B2D:hex02|outputBus[5] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[5] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
-Warning (13012): Latch B2D:hex02|outputBus[6] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 83
+Warning (13012): Latch B2D:hex02|outputBus[6] has unsafe behavior File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/Lab4.sv Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider|StageOut[33]~synth File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/db/alt_u_div_uee.tdf Line: 74
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
@@ -533,14 +533,14 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 4/output_files/Lab4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 282 logic cells
+    Info (21061): Implemented 293 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Sun Feb 27 14:49:28 2022
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Feb 27 16:37:39 2022
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:14
 
 
