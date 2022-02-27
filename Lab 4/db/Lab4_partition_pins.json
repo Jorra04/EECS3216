@@ -60,15 +60,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "sw0",
+					"name" : "sw2",
 					"strict" : false
 				},
 				{
@@ -76,7 +68,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw2",
+					"name" : "sw0",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
 					"strict" : false
 				}
 			]

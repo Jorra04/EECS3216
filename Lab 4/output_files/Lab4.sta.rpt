@@ -1,5 +1,5 @@
 Timing Analyzer report for Lab4
-Fri Feb 25 22:38:24 2022
+Sun Feb 27 14:49:44 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -92,15 +92,15 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
+; Average used               ; 1.41        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
-;     Processor 3            ;   3.7%      ;
-;     Processor 4            ;   3.6%      ;
-;     Processors 5-12        ;   3.4%      ;
+;     Processor 2            ;   4.2%      ;
+;     Processor 3            ;   3.8%      ;
+;     Processor 4            ;   3.8%      ;
+;     Processors 5-12        ;   3.7%      ;
 +----------------------------+-------------+
 
 
@@ -110,24 +110,20 @@ https://fpgasoftware.intel.com/eula.
 ; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
 +-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
 ; clk             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }             ;
-; currNum_tmp1[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { currNum_tmp1[0] } ;
-; sw0             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sw0 }             ;
-; sw1             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sw1 }             ;
-; sw2             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sw2 }             ;
+; currNum_tmp1[1] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { currNum_tmp1[1] } ;
+; currNum_tmp1[2] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { currNum_tmp1[2] } ;
 +-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                             ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
-; 18.57 MHz  ; 18.57 MHz       ; currNum_tmp1[0] ;                                                               ;
-; 107.31 MHz ; 107.31 MHz      ; clk             ;                                                               ;
-; 498.26 MHz ; 250.0 MHz       ; sw1             ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 499.25 MHz ; 250.0 MHz       ; sw0             ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 502.77 MHz ; 250.0 MHz       ; sw2             ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
++-------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                    ;
++------------+-----------------+-----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
++------------+-----------------+-----------------+------+
+; 41.55 MHz  ; 41.55 MHz       ; currNum_tmp1[2] ;      ;
+; 50.72 MHz  ; 50.72 MHz       ; currNum_tmp1[1] ;      ;
+; 137.42 MHz ; 137.42 MHz      ; clk             ;      ;
++------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -136,11 +132,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currNum_tmp1[0] ; -30.303 ; -395.768      ;
-; clk             ; -8.319  ; -329.822      ;
-; sw1             ; -1.007  ; -3.568        ;
-; sw0             ; -1.003  ; -4.518        ;
-; sw2             ; -0.989  ; -2.956        ;
+; currNum_tmp1[1] ; -19.564 ; -134.261      ;
+; currNum_tmp1[2] ; -19.397 ; -244.123      ;
+; clk             ; -6.277  ; -123.533      ;
 +-----------------+---------+---------------+
 
 
@@ -149,11 +143,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; sw0             ; 0.393 ; 0.000         ;
-; sw1             ; 0.393 ; 0.000         ;
-; sw2             ; 0.393 ; 0.000         ;
-; clk             ; 0.419 ; 0.000         ;
-; currNum_tmp1[0] ; 2.225 ; 0.000         ;
+; clk             ; 0.347 ; 0.000         ;
+; currNum_tmp1[2] ; 0.729 ; 0.000         ;
+; currNum_tmp1[1] ; 3.021 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -171,15 +163,13 @@ No paths to report.
 
 +---------------------------------------------------+
 ; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
-+-----------------+---------+-----------------------+
-; Clock           ; Slack   ; End Point TNS         ;
-+-----------------+---------+-----------------------+
-; currNum_tmp1[0] ; -10.003 ; -5751.225             ;
-; clk             ; -3.000  ; -59.120               ;
-; sw0             ; -3.000  ; -12.821               ;
-; sw1             ; -3.000  ; -11.418               ;
-; sw2             ; -3.000  ; -10.015               ;
-+-----------------+---------+-----------------------+
++-----------------+--------+------------------------+
+; Clock           ; Slack  ; End Point TNS          ;
++-----------------+--------+------------------------+
+; currNum_tmp1[2] ; -3.280 ; -389.829               ;
+; clk             ; -3.000 ; -64.732                ;
+; currNum_tmp1[1] ; -1.104 ; -43.255                ;
++-----------------+--------+------------------------+
 
 
 -----------------------------------------------
@@ -188,17 +178,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                              ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
-; 20.09 MHz  ; 20.09 MHz       ; currNum_tmp1[0] ;                                                               ;
-; 116.84 MHz ; 116.84 MHz      ; clk             ;                                                               ;
-; 550.96 MHz ; 250.0 MHz       ; sw1             ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 551.57 MHz ; 250.0 MHz       ; sw0             ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 559.6 MHz  ; 250.0 MHz       ; sw2             ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
++-------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                     ;
++------------+-----------------+-----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
++------------+-----------------+-----------------+------+
+; 44.52 MHz  ; 44.52 MHz       ; currNum_tmp1[2] ;      ;
+; 54.05 MHz  ; 54.05 MHz       ; currNum_tmp1[1] ;      ;
+; 148.59 MHz ; 148.59 MHz      ; clk             ;      ;
++------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -207,11 +195,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currNum_tmp1[0] ; -27.932 ; -363.521      ;
-; clk             ; -7.559  ; -299.917      ;
-; sw1             ; -0.815  ; -2.772        ;
-; sw0             ; -0.813  ; -3.544        ;
-; sw2             ; -0.787  ; -2.278        ;
+; currNum_tmp1[1] ; -18.020 ; -123.725      ;
+; currNum_tmp1[2] ; -17.854 ; -224.332      ;
+; clk             ; -5.730  ; -109.121      ;
 +-----------------+---------+---------------+
 
 
@@ -220,11 +206,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; sw0             ; 0.355 ; 0.000         ;
-; sw1             ; 0.355 ; 0.000         ;
-; sw2             ; 0.355 ; 0.000         ;
-; clk             ; 0.384 ; 0.000         ;
-; currNum_tmp1[0] ; 2.099 ; 0.000         ;
+; clk             ; 0.311 ; 0.000         ;
+; currNum_tmp1[2] ; 0.664 ; 0.000         ;
+; currNum_tmp1[1] ; 2.666 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -245,11 +229,9 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; currNum_tmp1[0] ; -8.985 ; -5126.560             ;
-; clk             ; -3.000 ; -59.120               ;
-; sw0             ; -3.000 ; -12.821               ;
-; sw1             ; -3.000 ; -11.418               ;
-; sw2             ; -3.000 ; -10.015               ;
+; clk             ; -3.000 ; -64.732               ;
+; currNum_tmp1[2] ; -2.971 ; -339.930              ;
+; currNum_tmp1[1] ; -0.989 ; -35.943               ;
 +-----------------+--------+-----------------------+
 
 
@@ -259,17 +241,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary        ;
-+-----------------+---------+---------------+
-; Clock           ; Slack   ; End Point TNS ;
-+-----------------+---------+---------------+
-; currNum_tmp1[0] ; -13.778 ; -177.464      ;
-; clk             ; -2.932  ; -115.650      ;
-; sw2             ; 0.177   ; 0.000         ;
-; sw1             ; 0.213   ; 0.000         ;
-; sw0             ; 0.217   ; 0.000         ;
-+-----------------+---------+---------------+
++------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary       ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; currNum_tmp1[2] ; -8.306 ; -102.314      ;
+; currNum_tmp1[1] ; -8.275 ; -56.316       ;
+; clk             ; -2.177 ; -28.322       ;
++-----------------+--------+---------------+
 
 
 +-----------------------------------------+
@@ -277,11 +257,9 @@ No synchronizer chains to report.
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.167 ; 0.000         ;
-; sw0             ; 0.170 ; 0.000         ;
-; sw1             ; 0.170 ; 0.000         ;
-; sw2             ; 0.170 ; 0.000         ;
-; currNum_tmp1[0] ; 1.462 ; 0.000         ;
+; clk             ; 0.151 ; 0.000         ;
+; currNum_tmp1[2] ; 0.482 ; 0.000         ;
+; currNum_tmp1[1] ; 1.367 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -302,11 +280,9 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; currNum_tmp1[0] ; -3.659 ; -1791.664             ;
-; clk             ; -3.000 ; -48.857               ;
-; sw0             ; -3.000 ; -11.631               ;
-; sw1             ; -3.000 ; -10.482               ;
-; sw2             ; -3.000 ; -9.259                ;
+; clk             ; -3.000 ; -53.902               ;
+; currNum_tmp1[2] ; -1.014 ; -87.147               ;
+; currNum_tmp1[1] ; -0.200 ; -2.518                ;
 +-----------------+--------+-----------------------+
 
 
@@ -321,18 +297,14 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -30.303  ; 0.167 ; N/A      ; N/A     ; -10.003             ;
-;  clk             ; -8.319   ; 0.167 ; N/A      ; N/A     ; -3.000              ;
-;  currNum_tmp1[0] ; -30.303  ; 1.462 ; N/A      ; N/A     ; -10.003             ;
-;  sw0             ; -1.003   ; 0.170 ; N/A      ; N/A     ; -3.000              ;
-;  sw1             ; -1.007   ; 0.170 ; N/A      ; N/A     ; -3.000              ;
-;  sw2             ; -0.989   ; 0.170 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -736.632 ; 0.0   ; 0.0      ; 0.0     ; -5844.599           ;
-;  clk             ; -329.822 ; 0.000 ; N/A      ; N/A     ; -59.120             ;
-;  currNum_tmp1[0] ; -395.768 ; 0.000 ; N/A      ; N/A     ; -5751.225           ;
-;  sw0             ; -4.518   ; 0.000 ; N/A      ; N/A     ; -12.821             ;
-;  sw1             ; -3.568   ; 0.000 ; N/A      ; N/A     ; -11.418             ;
-;  sw2             ; -2.956   ; 0.000 ; N/A      ; N/A     ; -10.015             ;
+; Worst-case Slack ; -19.564  ; 0.151 ; N/A      ; N/A     ; -3.280              ;
+;  clk             ; -6.277   ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+;  currNum_tmp1[1] ; -19.564  ; 1.367 ; N/A      ; N/A     ; -1.104              ;
+;  currNum_tmp1[2] ; -19.397  ; 0.482 ; N/A      ; N/A     ; -3.280              ;
+; Design-wide TNS  ; -501.917 ; 0.0   ; 0.0      ; 0.0     ; -497.816            ;
+;  clk             ; -123.533 ; 0.000 ; N/A      ; N/A     ; -64.732             ;
+;  currNum_tmp1[1] ; -134.261 ; 0.000 ; N/A      ; N/A     ; -43.255             ;
+;  currNum_tmp1[2] ; -244.123 ; 0.000 ; N/A      ; N/A     ; -389.829            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -364,11 +336,11 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
+; sw2                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; sw1                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; sw0                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; rst                 ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
-; sw0                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; sw1                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; sw2                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -453,19 +425,15 @@ No synchronizer chains to report.
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 6049     ; 0        ; 0        ; 0        ;
-; currNum_tmp1[0] ; clk             ; 2087     ; 2087     ; 0        ; 0        ;
-; sw0             ; clk             ; 6920     ; 0        ; 0        ; 0        ;
-; sw1             ; clk             ; 2040     ; 0        ; 0        ; 0        ;
-; sw2             ; clk             ; 600      ; 0        ; 0        ; 0        ;
-; clk             ; currNum_tmp1[0] ; 9175712  ; 0        ; 9175712  ; 0        ;
-; currNum_tmp1[0] ; currNum_tmp1[0] ; 3713780  ; 3713780  ; 3713780  ; 3713780  ;
-; sw0             ; currNum_tmp1[0] ; 12889492 ; 0        ; 12889492 ; 0        ;
-; sw1             ; currNum_tmp1[0] ; 3713766  ; 0        ; 3713766  ; 0        ;
-; sw2             ; currNum_tmp1[0] ; 1058918  ; 0        ; 1058918  ; 0        ;
-; sw0             ; sw0             ; 28       ; 0        ; 0        ; 0        ;
-; sw1             ; sw1             ; 21       ; 0        ; 0        ; 0        ;
-; sw2             ; sw2             ; 15       ; 0        ; 0        ; 0        ;
+; clk             ; clk             ; 1729     ; 0        ; 0        ; 0        ;
+; currNum_tmp1[1] ; clk             ; 103      ; 103      ; 0        ; 0        ;
+; currNum_tmp1[2] ; clk             ; 104      ; 104      ; 0        ; 0        ;
+; clk             ; currNum_tmp1[1] ; 416500   ; 0        ; 416500   ; 0        ;
+; currNum_tmp1[1] ; currNum_tmp1[1] ; 338      ; 338      ; 338      ; 338      ;
+; currNum_tmp1[2] ; currNum_tmp1[1] ; 2964     ; 2964     ; 2964     ; 2964     ;
+; clk             ; currNum_tmp1[2] ; 602886   ; 0        ; 602886   ; 0        ;
+; currNum_tmp1[1] ; currNum_tmp1[2] ; 394      ; 394      ; 394      ; 394      ;
+; currNum_tmp1[2] ; currNum_tmp1[2] ; 4108     ; 4108     ; 4108     ; 4108     ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -475,19 +443,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 6049     ; 0        ; 0        ; 0        ;
-; currNum_tmp1[0] ; clk             ; 2087     ; 2087     ; 0        ; 0        ;
-; sw0             ; clk             ; 6920     ; 0        ; 0        ; 0        ;
-; sw1             ; clk             ; 2040     ; 0        ; 0        ; 0        ;
-; sw2             ; clk             ; 600      ; 0        ; 0        ; 0        ;
-; clk             ; currNum_tmp1[0] ; 9175712  ; 0        ; 9175712  ; 0        ;
-; currNum_tmp1[0] ; currNum_tmp1[0] ; 3713780  ; 3713780  ; 3713780  ; 3713780  ;
-; sw0             ; currNum_tmp1[0] ; 12889492 ; 0        ; 12889492 ; 0        ;
-; sw1             ; currNum_tmp1[0] ; 3713766  ; 0        ; 3713766  ; 0        ;
-; sw2             ; currNum_tmp1[0] ; 1058918  ; 0        ; 1058918  ; 0        ;
-; sw0             ; sw0             ; 28       ; 0        ; 0        ; 0        ;
-; sw1             ; sw1             ; 21       ; 0        ; 0        ; 0        ;
-; sw2             ; sw2             ; 15       ; 0        ; 0        ; 0        ;
+; clk             ; clk             ; 1729     ; 0        ; 0        ; 0        ;
+; currNum_tmp1[1] ; clk             ; 103      ; 103      ; 0        ; 0        ;
+; currNum_tmp1[2] ; clk             ; 104      ; 104      ; 0        ; 0        ;
+; clk             ; currNum_tmp1[1] ; 416500   ; 0        ; 416500   ; 0        ;
+; currNum_tmp1[1] ; currNum_tmp1[1] ; 338      ; 338      ; 338      ; 338      ;
+; currNum_tmp1[2] ; currNum_tmp1[1] ; 2964     ; 2964     ; 2964     ; 2964     ;
+; clk             ; currNum_tmp1[2] ; 602886   ; 0        ; 602886   ; 0        ;
+; currNum_tmp1[1] ; currNum_tmp1[2] ; 394      ; 394      ; 394      ; 394      ;
+; currNum_tmp1[2] ; currNum_tmp1[2] ; 4108     ; 4108     ; 4108     ; 4108     ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -511,8 +475,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 58    ; 58   ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 68    ; 68   ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
 ; Unconstrained Output Port Paths ; 14    ; 14   ;
 +---------------------------------+-------+------+
@@ -524,10 +488,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target          ; Clock           ; Type ; Status      ;
 +-----------------+-----------------+------+-------------+
 ; clk             ; clk             ; Base ; Constrained ;
-; currNum_tmp1[0] ; currNum_tmp1[0] ; Base ; Constrained ;
-; sw0             ; sw0             ; Base ; Constrained ;
-; sw1             ; sw1             ; Base ; Constrained ;
-; sw2             ; sw2             ; Base ; Constrained ;
+; currNum_tmp1[1] ; currNum_tmp1[1] ; Base ; Constrained ;
+; currNum_tmp1[2] ; currNum_tmp1[2] ; Base ; Constrained ;
 +-----------------+-----------------+------+-------------+
 
 
@@ -537,6 +499,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw0        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw2        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -568,6 +533,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw0        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw2        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -599,7 +567,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Fri Feb 25 22:38:22 2022
+    Info: Processing started: Sun Feb 27 14:49:42 2022
 Info: Command: quartus_sta Lab4 -c Lab4
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -611,79 +579,20 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name sw2 sw2
-    Info (332105): create_clock -period 1.000 -name sw1 sw1
-    Info (332105): create_clock -period 1.000 -name sw0 sw0
-    Info (332105): create_clock -period 1.000 -name currNum_tmp1[0] currNum_tmp1[0]
+    Info (332105): create_clock -period 1.000 -name currNum_tmp1[1] currNum_tmp1[1]
+    Info (332105): create_clock -period 1.000 -name currNum_tmp1[2] currNum_tmp1[2]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Add0~0  from: datab  to: combout
-    Info (332098): Cell: Add0~10  from: cin  to: combout
-    Info (332098): Cell: Add0~12  from: cin  to: combout
-    Info (332098): Cell: Add0~2  from: cin  to: combout
-    Info (332098): Cell: Add0~4  from: cin  to: combout
-    Info (332098): Cell: Add0~6  from: cin  to: combout
-    Info (332098): Cell: Add0~8  from: cin  to: combout
-    Info (332098): Cell: Add1~0  from: dataa  to: combout
-    Info (332098): Cell: Add1~10  from: cin  to: combout
-    Info (332098): Cell: Add1~10  from: datad  to: combout
-    Info (332098): Cell: Add1~2  from: cin  to: combout
-    Info (332098): Cell: Add1~2  from: datab  to: combout
-    Info (332098): Cell: Add1~4  from: cin  to: combout
-    Info (332098): Cell: Add1~4  from: datab  to: combout
-    Info (332098): Cell: Add1~6  from: cin  to: combout
-    Info (332098): Cell: Add1~6  from: dataa  to: combout
-    Info (332098): Cell: Add1~8  from: cin  to: combout
-    Info (332098): Cell: Add1~8  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|StageOut[22]~48  from: datad  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|StageOut[23]~47  from: datac  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[22]~51  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[23]~50  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[27]~52  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[31]~46  from: datad  to: combout
+    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[31]~48  from: datad  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[32]~47  from: datad  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[33]~48  from: datad  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[33]~46  from: datad  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
@@ -692,127 +601,53 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~0  from: datad  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datad  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~2  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datac  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datac  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: dataa  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: acc[2]~0  from: dataa  to: combout
-    Info (332098): Cell: acc[3]~2  from: cin  to: combout
-    Info (332098): Cell: acc[3]~2  from: datab  to: combout
-    Info (332098): Cell: acc[4]~4  from: cin  to: combout
-    Info (332098): Cell: acc[4]~4  from: datab  to: combout
-    Info (332098): Cell: acc[5]~6  from: cin  to: combout
-    Info (332098): Cell: acc[5]~6  from: datab  to: combout
-    Info (332098): Cell: acc[6]~8  from: cin  to: combout
-    Info (332098): Cell: acc[6]~8  from: datad  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -30.303
+Info (332146): Worst-case setup slack is -19.564
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -30.303            -395.768 currNum_tmp1[0] 
-    Info (332119):    -8.319            -329.822 clk 
-    Info (332119):    -1.007              -3.568 sw1 
-    Info (332119):    -1.003              -4.518 sw0 
-    Info (332119):    -0.989              -2.956 sw2 
-Info (332146): Worst-case hold slack is 0.393
+    Info (332119):   -19.564            -134.261 currNum_tmp1[1] 
+    Info (332119):   -19.397            -244.123 currNum_tmp1[2] 
+    Info (332119):    -6.277            -123.533 clk 
+Info (332146): Worst-case hold slack is 0.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.393               0.000 sw0 
-    Info (332119):     0.393               0.000 sw1 
-    Info (332119):     0.393               0.000 sw2 
-    Info (332119):     0.419               0.000 clk 
-    Info (332119):     2.225               0.000 currNum_tmp1[0] 
+    Info (332119):     0.347               0.000 clk 
+    Info (332119):     0.729               0.000 currNum_tmp1[2] 
+    Info (332119):     3.021               0.000 currNum_tmp1[1] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -10.003
+Info (332146): Worst-case minimum pulse width slack is -3.280
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.003           -5751.225 currNum_tmp1[0] 
-    Info (332119):    -3.000             -59.120 clk 
-    Info (332119):    -3.000             -12.821 sw0 
-    Info (332119):    -3.000             -11.418 sw1 
-    Info (332119):    -3.000             -10.015 sw2 
+    Info (332119):    -3.280            -389.829 currNum_tmp1[2] 
+    Info (332119):    -3.000             -64.732 clk 
+    Info (332119):    -1.104             -43.255 currNum_tmp1[1] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Add0~0  from: datab  to: combout
-    Info (332098): Cell: Add0~10  from: cin  to: combout
-    Info (332098): Cell: Add0~12  from: cin  to: combout
-    Info (332098): Cell: Add0~2  from: cin  to: combout
-    Info (332098): Cell: Add0~4  from: cin  to: combout
-    Info (332098): Cell: Add0~6  from: cin  to: combout
-    Info (332098): Cell: Add0~8  from: cin  to: combout
-    Info (332098): Cell: Add1~0  from: dataa  to: combout
-    Info (332098): Cell: Add1~10  from: cin  to: combout
-    Info (332098): Cell: Add1~10  from: datad  to: combout
-    Info (332098): Cell: Add1~2  from: cin  to: combout
-    Info (332098): Cell: Add1~2  from: datab  to: combout
-    Info (332098): Cell: Add1~4  from: cin  to: combout
-    Info (332098): Cell: Add1~4  from: datab  to: combout
-    Info (332098): Cell: Add1~6  from: cin  to: combout
-    Info (332098): Cell: Add1~6  from: dataa  to: combout
-    Info (332098): Cell: Add1~8  from: cin  to: combout
-    Info (332098): Cell: Add1~8  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|StageOut[22]~48  from: datad  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|StageOut[23]~47  from: datac  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[22]~51  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[23]~50  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[27]~52  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[31]~46  from: datad  to: combout
+    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[31]~48  from: datad  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[32]~47  from: datad  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[33]~48  from: datad  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[33]~46  from: datad  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
@@ -821,121 +656,47 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~0  from: datad  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datad  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~2  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datac  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datac  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: dataa  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: acc[2]~0  from: dataa  to: combout
-    Info (332098): Cell: acc[3]~2  from: cin  to: combout
-    Info (332098): Cell: acc[3]~2  from: datab  to: combout
-    Info (332098): Cell: acc[4]~4  from: cin  to: combout
-    Info (332098): Cell: acc[4]~4  from: datab  to: combout
-    Info (332098): Cell: acc[5]~6  from: cin  to: combout
-    Info (332098): Cell: acc[5]~6  from: datab  to: combout
-    Info (332098): Cell: acc[6]~8  from: cin  to: combout
-    Info (332098): Cell: acc[6]~8  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -27.932
+Info (332146): Worst-case setup slack is -18.020
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -27.932            -363.521 currNum_tmp1[0] 
-    Info (332119):    -7.559            -299.917 clk 
-    Info (332119):    -0.815              -2.772 sw1 
-    Info (332119):    -0.813              -3.544 sw0 
-    Info (332119):    -0.787              -2.278 sw2 
-Info (332146): Worst-case hold slack is 0.355
+    Info (332119):   -18.020            -123.725 currNum_tmp1[1] 
+    Info (332119):   -17.854            -224.332 currNum_tmp1[2] 
+    Info (332119):    -5.730            -109.121 clk 
+Info (332146): Worst-case hold slack is 0.311
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.355               0.000 sw0 
-    Info (332119):     0.355               0.000 sw1 
-    Info (332119):     0.355               0.000 sw2 
-    Info (332119):     0.384               0.000 clk 
-    Info (332119):     2.099               0.000 currNum_tmp1[0] 
+    Info (332119):     0.311               0.000 clk 
+    Info (332119):     0.664               0.000 currNum_tmp1[2] 
+    Info (332119):     2.666               0.000 currNum_tmp1[1] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -8.985
+Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.985           -5126.560 currNum_tmp1[0] 
-    Info (332119):    -3.000             -59.120 clk 
-    Info (332119):    -3.000             -12.821 sw0 
-    Info (332119):    -3.000             -11.418 sw1 
-    Info (332119):    -3.000             -10.015 sw2 
+    Info (332119):    -3.000             -64.732 clk 
+    Info (332119):    -2.971            -339.930 currNum_tmp1[2] 
+    Info (332119):    -0.989             -35.943 currNum_tmp1[1] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Add0~0  from: datab  to: combout
-    Info (332098): Cell: Add0~10  from: cin  to: combout
-    Info (332098): Cell: Add0~12  from: cin  to: combout
-    Info (332098): Cell: Add0~2  from: cin  to: combout
-    Info (332098): Cell: Add0~4  from: cin  to: combout
-    Info (332098): Cell: Add0~6  from: cin  to: combout
-    Info (332098): Cell: Add0~8  from: cin  to: combout
-    Info (332098): Cell: Add1~0  from: dataa  to: combout
-    Info (332098): Cell: Add1~10  from: cin  to: combout
-    Info (332098): Cell: Add1~10  from: datad  to: combout
-    Info (332098): Cell: Add1~2  from: cin  to: combout
-    Info (332098): Cell: Add1~2  from: datab  to: combout
-    Info (332098): Cell: Add1~4  from: cin  to: combout
-    Info (332098): Cell: Add1~4  from: datab  to: combout
-    Info (332098): Cell: Add1~6  from: cin  to: combout
-    Info (332098): Cell: Add1~6  from: dataa  to: combout
-    Info (332098): Cell: Add1~8  from: cin  to: combout
-    Info (332098): Cell: Add1~8  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|StageOut[22]~48  from: datad  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|StageOut[23]~47  from: datac  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Div0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[22]~51  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[23]~50  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[27]~52  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[31]~46  from: datad  to: combout
+    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[31]~48  from: datad  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[32]~47  from: datad  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[33]~48  from: datad  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2  from: datab  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: Mod0|auto_generated|divider|divider|StageOut[33]~46  from: datad  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_5_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
@@ -944,57 +705,40 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~0  from: datad  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datad  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~2  from: datad  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[31]~2  from: datac  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
+    Info (332098): Cell: Mod1|auto_generated|divider|divider|StageOut[33]~0  from: datac  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: dataa  to: combout
     Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: dataa  to: combout
-    Info (332098): Cell: acc[2]~0  from: dataa  to: combout
-    Info (332098): Cell: acc[3]~2  from: cin  to: combout
-    Info (332098): Cell: acc[3]~2  from: datab  to: combout
-    Info (332098): Cell: acc[4]~4  from: cin  to: combout
-    Info (332098): Cell: acc[4]~4  from: datab  to: combout
-    Info (332098): Cell: acc[5]~6  from: cin  to: combout
-    Info (332098): Cell: acc[5]~6  from: datab  to: combout
-    Info (332098): Cell: acc[6]~8  from: cin  to: combout
-    Info (332098): Cell: acc[6]~8  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -13.778
+Info (332146): Worst-case setup slack is -8.306
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.778            -177.464 currNum_tmp1[0] 
-    Info (332119):    -2.932            -115.650 clk 
-    Info (332119):     0.177               0.000 sw2 
-    Info (332119):     0.213               0.000 sw1 
-    Info (332119):     0.217               0.000 sw0 
-Info (332146): Worst-case hold slack is 0.167
+    Info (332119):    -8.306            -102.314 currNum_tmp1[2] 
+    Info (332119):    -8.275             -56.316 currNum_tmp1[1] 
+    Info (332119):    -2.177             -28.322 clk 
+Info (332146): Worst-case hold slack is 0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.167               0.000 clk 
-    Info (332119):     0.170               0.000 sw0 
-    Info (332119):     0.170               0.000 sw1 
-    Info (332119):     0.170               0.000 sw2 
-    Info (332119):     1.462               0.000 currNum_tmp1[0] 
+    Info (332119):     0.151               0.000 clk 
+    Info (332119):     0.482               0.000 currNum_tmp1[2] 
+    Info (332119):     1.367               0.000 currNum_tmp1[1] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.659
+Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.659           -1791.664 currNum_tmp1[0] 
-    Info (332119):    -3.000             -48.857 clk 
-    Info (332119):    -3.000             -11.631 sw0 
-    Info (332119):    -3.000             -10.482 sw1 
-    Info (332119):    -3.000              -9.259 sw2 
+    Info (332119):    -3.000             -53.902 clk 
+    Info (332119):    -1.014             -87.147 currNum_tmp1[2] 
+    Info (332119):    -0.200              -2.518 currNum_tmp1[1] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4920 megabytes
-    Info: Processing ended: Fri Feb 25 22:38:24 2022
+    Info: Peak virtual memory: 4929 megabytes
+    Info: Processing ended: Sun Feb 27 14:49:44 2022
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
