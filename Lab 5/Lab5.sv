@@ -8,6 +8,8 @@ module Lab5(sw0, sw1, sw2, sw3, sw4, sw5, sw6, sw7, seg0, seg1, rst, do_op);
 	reg[6:0] tmp;
 	
 	reg[4:0] tensValue, onesValue;
+	
+	bit isEmpty = 1;
 
 	integer index = -1;
 	
@@ -18,6 +20,7 @@ module Lab5(sw0, sw1, sw2, sw3, sw4, sw5, sw6, sw7, seg0, seg1, rst, do_op);
 			integer i;
 			for(i=0;i<15;i=i+1) stack[i] <= 6'b000000;
 			index <= -1;
+			isEmpty <= 1;
 			tmp <= 0;
 		
 		end else begin
@@ -30,6 +33,7 @@ module Lab5(sw0, sw1, sw2, sw3, sw4, sw5, sw6, sw7, seg0, seg1, rst, do_op);
 						index = index + 1;
 						stack[index] = {sw5,sw4,sw3,sw2,sw1,sw0}; //Switches represent 6-bit number we're pushing
 						tmp = stack[index];
+						isEmpty = 0;
 
 					end
 
@@ -44,6 +48,7 @@ module Lab5(sw0, sw1, sw2, sw3, sw4, sw5, sw6, sw7, seg0, seg1, rst, do_op);
 						stack[index] = 6'b000000;
 						tmp = stack[index];
 						index = -1;
+						isEmpty = 1;
 						
 					end
 				end
@@ -58,31 +63,32 @@ module Lab5(sw0, sw1, sw2, sw3, sw4, sw5, sw6, sw7, seg0, seg1, rst, do_op);
 	assign tensValue = (tmp/10) % 10;
 	
 
-	B2D(onesValue, seg0);
-	B2D(tensValue, seg1);
+	B2D(onesValue, seg0, isEmpty);
+	B2D(tensValue, seg1, isEmpty);
 
 
 endmodule
 
 
 
-module B2D(inputBus, outputBus);
+module B2D(inputBus, outputBus, isEmpty);
 
 	input [4:0] inputBus;
 	output [6:0] outputBus;
+	input isEmpty;
 	
 		always_comb
 		case(inputBus)
-        5'b00000: outputBus = 7'b1000000; //0
-        5'b00001: outputBus = 7'b1111001; //1
-        5'b00010: outputBus = 7'b0100100; //2
-        5'b00011: outputBus = 7'b0110000; //3
-        5'b00100: outputBus = 7'b0011001; //4
-        5'b00101: outputBus = 7'b0010010; //5
-        5'b00110: outputBus = 7'b0000010; //6
-        5'b00111: outputBus = 7'b1111000; //7
-        5'b01000: outputBus = 7'b0000000; //8
-        5'b01001: outputBus = 7'b0010000; //9
-		  default: outputBus = 7'b1111111;
+        5'b00000: outputBus = isEmpty ? 7'b0000110 : 7'b1000000; //0
+        5'b00001: outputBus = isEmpty ? 7'b0000110 : 7'b1111001; //1
+        5'b00010: outputBus = isEmpty ? 7'b0000110 : 7'b0100100; //2
+        5'b00011: outputBus = isEmpty ? 7'b0000110 : 7'b0110000; //3
+        5'b00100: outputBus = isEmpty ? 7'b0000110 : 7'b0011001; //4
+        5'b00101: outputBus = isEmpty ? 7'b0000110 : 7'b0010010; //5
+        5'b00110: outputBus = isEmpty ? 7'b0000110 : 7'b0000010; //6
+        5'b00111: outputBus = isEmpty ? 7'b0000110 : 7'b1111000; //7
+        5'b01000: outputBus = isEmpty ? 7'b0000110 : 7'b0000000; //8
+        5'b01001: outputBus = isEmpty ? 7'b0000110 : 7'b0010000; //9
+		  default: outputBus = isEmpty ? 7'b0000110 : 7'b1111111;
 		 endcase
 endmodule

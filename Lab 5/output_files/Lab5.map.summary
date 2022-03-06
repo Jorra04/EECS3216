@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Mar 04 12:07:52 2022
+Analysis & Synthesis Status : Successful - Sun Mar 06 17:09:01 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : Lab5
 Top-level Entity Name : Lab5
 Family : MAX 10
-Total logic elements : 672
-    Total combinational functions : 672
-    Dedicated logic registers : 134
-Total registers : 134
+Total logic elements : 671
+    Total combinational functions : 671
+    Dedicated logic registers : 135
+Total registers : 135
 Total pins : 24
 Total virtual pins : 0
 Total memory bits : 0

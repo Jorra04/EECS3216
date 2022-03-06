@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab5
-Fri Mar 04 12:07:52 2022
+Sun Mar 06 17:09:02 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -20,8 +20,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
  12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
  13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
  14. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 15. Port Connectivity Checks: "B2D:comb_2213"
- 16. Port Connectivity Checks: "B2D:comb_2212"
+ 15. Port Connectivity Checks: "B2D:comb_2226"
+ 16. Port Connectivity Checks: "B2D:comb_2225"
  17. Post-Synthesis Netlist Statistics for Top Partition
  18. Elapsed Time Per Partition
  19. Analysis & Synthesis Messages
@@ -52,15 +52,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 04 12:07:52 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 06 17:09:01 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; Lab5                                                      ;
 ; Top-level Entity Name              ; Lab5                                                      ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 672                                                       ;
-;     Total combinational functions  ; 672                                                       ;
-;     Dedicated logic registers      ; 134                                                       ;
-; Total registers                    ; 134                                                       ;
+; Total logic elements               ; 671                                                       ;
+;     Total combinational functions  ; 671                                                       ;
+;     Dedicated logic registers      ; 135                                                       ;
+; Total registers                    ; 135                                                       ;
 ; Total pins                         ; 24                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
@@ -205,20 +205,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 672       ;
+; Estimated Total logic elements              ; 671       ;
 ;                                             ;           ;
-; Total combinational functions               ; 672       ;
+; Total combinational functions               ; 671       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 389       ;
-;     -- 3 input functions                    ; 160       ;
-;     -- <=2 input functions                  ; 123       ;
+;     -- 4 input functions                    ; 400       ;
+;     -- 3 input functions                    ; 153       ;
+;     -- <=2 input functions                  ; 118       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 586       ;
+;     -- normal mode                          ; 585       ;
 ;     -- arithmetic mode                      ; 86        ;
 ;                                             ;           ;
-; Total registers                             ; 134       ;
-;     -- Dedicated logic registers            ; 134       ;
+; Total registers                             ; 135       ;
+;     -- Dedicated logic registers            ; 135       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 24        ;
@@ -226,9 +226,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; always0~0 ;
-; Maximum fan-out                             ; 144       ;
-; Total fan-out                               ; 2706      ;
-; Average fan-out                             ; 3.17      ;
+; Maximum fan-out                             ; 145       ;
+; Total fan-out                               ; 2722      ;
+; Average fan-out                             ; 3.19      ;
 +---------------------------------------------+-----------+
 
 
@@ -237,9 +237,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                   ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Lab5                                  ; 672 (593)           ; 134 (134)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |Lab5                                                                                                 ; Lab5                ; work         ;
-;    |B2D:comb_2212|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|B2D:comb_2212                                                                                   ; B2D                 ; work         ;
-;    |B2D:comb_2213|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|B2D:comb_2213                                                                                   ; B2D                 ; work         ;
+; |Lab5                                  ; 671 (584)           ; 135 (135)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |Lab5                                                                                                 ; Lab5                ; work         ;
+;    |B2D:comb_2225|                     ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|B2D:comb_2225                                                                                   ; B2D                 ; work         ;
+;    |B2D:comb_2226|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|B2D:comb_2226                                                                                   ; B2D                 ; work         ;
 ;    |lpm_divide:Div0|                   ; 31 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;       |lpm_divide_8sl:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|lpm_divide:Div0|lpm_divide_8sl:auto_generated                                                   ; lpm_divide_8sl      ; work         ;
 ;          |sign_div_unsign_akh:divider| ; 31 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab5|lpm_divide:Div0|lpm_divide_8sl:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
@@ -267,10 +267,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 134   ;
+; Total registers                              ; 135   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 128   ;
+; Number of registers using Asynchronous Clear ; 129   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
@@ -282,39 +282,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; isEmpty                                 ; 14      ;
+; index[4]                                ; 5       ;
+; index[3]                                ; 10      ;
 ; index[2]                                ; 20      ;
 ; index[1]                                ; 20      ;
 ; index[0]                                ; 20      ;
-; index[3]                                ; 21      ;
-; index[29]                               ; 4       ;
-; index[28]                               ; 4       ;
+; index[31]                               ; 17      ;
 ; index[27]                               ; 4       ;
-; index[26]                               ; 4       ;
-; index[25]                               ; 4       ;
-; index[24]                               ; 4       ;
-; index[23]                               ; 4       ;
-; index[22]                               ; 4       ;
-; index[21]                               ; 4       ;
-; index[20]                               ; 4       ;
-; index[19]                               ; 4       ;
-; index[18]                               ; 4       ;
-; index[17]                               ; 4       ;
-; index[16]                               ; 4       ;
-; index[15]                               ; 4       ;
-; index[14]                               ; 4       ;
-; index[13]                               ; 4       ;
-; index[12]                               ; 4       ;
-; index[11]                               ; 4       ;
-; index[10]                               ; 4       ;
-; index[9]                                ; 4       ;
-; index[8]                                ; 4       ;
-; index[7]                                ; 4       ;
-; index[6]                                ; 4       ;
-; index[5]                                ; 4       ;
-; index[4]                                ; 5       ;
+; index[28]                               ; 4       ;
+; index[29]                               ; 4       ;
 ; index[30]                               ; 4       ;
-; index[31]                               ; 11      ;
-; Total number of inverted registers = 32 ;         ;
+; index[23]                               ; 4       ;
+; index[24]                               ; 4       ;
+; index[25]                               ; 4       ;
+; index[26]                               ; 4       ;
+; index[19]                               ; 4       ;
+; index[20]                               ; 4       ;
+; index[21]                               ; 4       ;
+; index[22]                               ; 4       ;
+; index[15]                               ; 4       ;
+; index[16]                               ; 4       ;
+; index[17]                               ; 4       ;
+; index[18]                               ; 4       ;
+; index[11]                               ; 4       ;
+; index[12]                               ; 4       ;
+; index[13]                               ; 4       ;
+; index[14]                               ; 4       ;
+; index[7]                                ; 4       ;
+; index[8]                                ; 4       ;
+; index[9]                                ; 4       ;
+; index[10]                               ; 4       ;
+; index[5]                                ; 4       ;
+; index[6]                                ; 4       ;
+; Total number of inverted registers = 33 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -323,9 +324,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 96 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |Lab5|stack[12][5]         ;
+; 3:1                ; 96 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |Lab5|stack[9][5]          ;
 ; 98:1               ; 6 bits    ; 390 LEs       ; 132 LEs              ; 258 LEs                ; Yes        ; |Lab5|tmp[4]               ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Lab5|index[4]             ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Lab5|index[3]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Lab5|B2D:comb_2225|Mux6   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Lab5|B2D:comb_2226|Mux3   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -399,7 +402,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------+
-; Port Connectivity Checks: "B2D:comb_2213"     ;
+; Port Connectivity Checks: "B2D:comb_2226"     ;
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
@@ -408,7 +411,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------+
-; Port Connectivity Checks: "B2D:comb_2212"     ;
+; Port Connectivity Checks: "B2D:comb_2225"     ;
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
@@ -422,24 +425,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 24                          ;
-; cycloneiii_ff         ; 134                         ;
-;     CLR               ; 122                         ;
+; cycloneiii_ff         ; 135                         ;
+;     CLR               ; 123                         ;
 ;     ENA CLR           ; 6                           ;
 ;     plain             ; 6                           ;
-; cycloneiii_lcell_comb ; 674                         ;
+; cycloneiii_lcell_comb ; 681                         ;
 ;     arith             ; 86                          ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 68                          ;
 ;         3 data inputs ; 16                          ;
-;     normal            ; 588                         ;
+;     normal            ; 595                         ;
 ;         0 data inputs ; 6                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 45                          ;
-;         3 data inputs ; 144                         ;
-;         4 data inputs ; 389                         ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 137                         ;
+;         4 data inputs ; 400                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 10.27                       ;
+; Average LUT depth     ; 10.39                       ;
 +-----------------------+-----------------------------+
 
 
@@ -458,25 +461,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Fri Mar 04 12:07:44 2022
+    Info: Processing started: Sun Mar 06 17:08:54 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5 -c Lab5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file lab5.sv
     Info (12023): Found entity 1: Lab5 File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 1
-    Info (12023): Found entity 2: B2D File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 69
-Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(61): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 61
-Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(62): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 62
+    Info (12023): Found entity 2: B2D File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 74
+Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(66): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 66
+Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(67): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 67
 Info (12127): Elaborating entity "Lab5" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(57): truncated value with size 32 to match size of target (5) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 57
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(58): truncated value with size 32 to match size of target (5) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
-Info (12128): Elaborating entity "B2D" for hierarchy "B2D:comb_2212" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(62): truncated value with size 32 to match size of target (5) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(63): truncated value with size 32 to match size of target (5) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
+Info (12128): Elaborating entity "B2D" for hierarchy "B2D:comb_2225" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 66
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 57
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 57
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 57
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 62
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 62
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 62
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -491,35 +494,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
     Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8sl.tdf
     Info (12023): Found entity 1: lpm_divide_8sl File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/db/lpm_divide_8sl.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
-Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 58
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 63
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 25
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/Lab5.sv Line: 12
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Lab 5/output_files/Lab5.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 696 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 695 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 672 logic cells
+    Info (21061): Implemented 671 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Fri Mar 04 12:07:52 2022
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Sun Mar 06 17:09:02 2022
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +------------------------------------------+
