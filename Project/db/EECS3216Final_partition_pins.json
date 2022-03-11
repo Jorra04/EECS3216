@@ -56,6 +56,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "tmp",
+					"strict" : false
+				},
+				{
 					"name" : "seg0[0]",
 					"strict" : false
 				},
@@ -116,11 +120,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clkin",
+					"name" : "btn_up",
 					"strict" : false
 				},
 				{
-					"name" : "btn_up",
+					"name" : "clkin",
 					"strict" : false
 				}
 			]

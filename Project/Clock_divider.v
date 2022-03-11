@@ -9,7 +9,7 @@ always @(posedge clock_in) begin
 
 	
 	count <= count +1;
-	if(count >= 249900) begin
+	if(count >= 24999999) begin
 		count <= 0;
 		clock_out <= ~clock_out;
 	

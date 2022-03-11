@@ -1,0 +1,5 @@
+module randomNum(clk, rst, num);
+
+	
+	
+endmodule

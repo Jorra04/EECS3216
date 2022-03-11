@@ -1,0 +1,18 @@
+-- begin_signature
+-- EECS3216Final
+-- end_signature
+WIDTH=3;
+DEPTH=7;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	6 :	001;
+	5 :	010;
+	4 :	011;
+	3 :	100;
+	2 :	101;
+	1 :	110;
+	0 :	111;
+END;
