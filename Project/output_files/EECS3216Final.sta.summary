@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -8.689
+TNS   : -142.870
+
+Type  : Slow 1200mV 85C Model Setup 'gravityClockDivder:gravityDivider|clock_out'
+Slack : -6.005
+TNS   : -63.881
+
+Type  : Slow 1200mV 85C Model Setup 'btn_up'
+Slack : -4.159
+TNS   : -33.272
+
+Type  : Slow 1200mV 85C Model Setup 'pipeClockDivider:pipeDivider|clock_out'
+Slack : -2.182
+TNS   : -31.792
+
+Type  : Slow 1200mV 85C Model Setup 'clkin'
+Slack : -1.693
+TNS   : -3.313
+
+Type  : Slow 1200mV 85C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'gravityClockDivder:gravityDivider|clock_out'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'btn_up'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clkin'
+Slack : 0.638
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'btn_up'
+Slack : -3.000
+TNS   : -14.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pipeClockDivider:pipeDivider|clock_out'
+Slack : -1.403
+TNS   : -23.851
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gravityClockDivder:gravityDivider|clock_out'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkin'
+Slack : 9.638
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.732
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -7.736
+TNS   : -122.529
+
+Type  : Slow 1200mV 0C Model Setup 'gravityClockDivder:gravityDivider|clock_out'
+Slack : -5.563
+TNS   : -59.150
+
+Type  : Slow 1200mV 0C Model Setup 'btn_up'
+Slack : -3.729
+TNS   : -29.832
+
+Type  : Slow 1200mV 0C Model Setup 'pipeClockDivider:pipeDivider|clock_out'
+Slack : -2.005
+TNS   : -29.384
+
+Type  : Slow 1200mV 0C Model Setup 'clkin'
+Slack : -1.512
+TNS   : -2.958
+
+Type  : Slow 1200mV 0C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'gravityClockDivder:gravityDivider|clock_out'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'btn_up'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clkin'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'btn_up'
+Slack : -3.000
+TNS   : -14.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pipeClockDivider:pipeDivider|clock_out'
+Slack : -1.403
+TNS   : -23.851
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gravityClockDivder:gravityDivider|clock_out'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkin'
+Slack : 9.648
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.706
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.667
+TNS   : -54.455
+
+Type  : Fast 1200mV 0C Model Setup 'gravityClockDivder:gravityDivider|clock_out'
+Slack : -2.397
+TNS   : -25.410
+
+Type  : Fast 1200mV 0C Model Setup 'btn_up'
+Slack : -1.247
+TNS   : -9.976
+
+Type  : Fast 1200mV 0C Model Setup 'pipeClockDivider:pipeDivider|clock_out'
+Slack : -0.874
+TNS   : -12.843
+
+Type  : Fast 1200mV 0C Model Setup 'clkin'
+Slack : -0.609
+TNS   : -1.178
+
+Type  : Fast 1200mV 0C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gravityClockDivder:gravityDivider|clock_out'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'btn_up'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkin'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'btn_up'
+Slack : -3.000
+TNS   : -13.088
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pipeClockDivider:pipeDivider|clock_out'
+Slack : -1.000
+TNS   : -17.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gravityClockDivder:gravityDivider|clock_out'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkin'
+Slack : 9.325
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.769
+TNS   : 0.000
+
+------------------------------------------------------------
