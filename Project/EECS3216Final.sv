@@ -19,7 +19,7 @@ module EECS3216Final(clkin,rst,btn_up,hsync,vsync,r,g,b, tmp, seg0, seg1);
 	
 	reg[9:0] pipeX, pipeY;
 	
-	reg[7:0] score;
+	reg[7:0] score, lastScore;
 	reg[6:0] flashing = 0;
 	reg[3:0] onesPlace, tensPlace;
 	bit gameStarted = 0;
@@ -36,17 +36,19 @@ module EECS3216Final(clkin,rst,btn_up,hsync,vsync,r,g,b, tmp, seg0, seg1);
 	assign pipe_opening_bottom = pipe_opening_bottom_arr[rng_out];
 	
 	bit addScore = 0;
-	
+	bit score5Achieved, score15Achieved,score30Achieved = 0;
 	bit tryThis = 0;
 	
 	bit playerOutOfBounds = 0;
 	bit playerHitPipe = 0;
 	bit overflow = 0;
+	bit powerUp = 0;
+	bit powerUpFlashing = 0;
 	assign gameOver = (playerOutOfBounds | playerHitPipe);
 	
 	assign playery = tmp_playerY + tmp2_playerY;
 	assign playerx = tmp_playerX;
-	
+	reg[3:0] pipe_clock_divisor = 0;
 	output tmp;
 //
 pll	pll_inst (
@@ -65,7 +67,8 @@ pll	pll_inst (
  
  pipeClockDivider pipeDivider (
   .clock_in(clkin), 
-  .clock_out(pipeClock)
+  .clock_out(pipeClock),
+  .divisor(pipe_clock_divisor)
  );
  
  Clock_divider(
@@ -114,28 +117,30 @@ pll	pll_inst (
 			playerHitPipe <= 0;
 			pipe_opening_top_arr <= 		'{9'd50, 9'd100,9'd150,9'd200,9'd250,9'd300,9'd350};
 			pipe_opening_bottom_arr <= 	'{9'd450, 9'd350,9'd250,3'd220,3'd270,3'd500,3'd600};
+			tmp <= 0;
 		end else begin 
 			if(~gameOver) begin
 				if(de)begin
 				if(((playerx + PLAYER_DIMENSIONS > pipeX) && (playerx + PLAYER_DIMENSIONS < pipeX + PIPE_WIDTH)) && 
 				(playery <= pipe_openning_top || (playery + PLAYER_DIMENSIONS) >= pipe_openning_top + SAFE_AREA)) begin
-						playerHitPipe <= 1;
+						playerHitPipe <= 1 & !powerUp;
 				end if(x >= playerx && x <= playerx+PLAYER_DIMENSIONS && y >= playery && y <= playery+PLAYER_DIMENSIONS)begin
 					//bird is kind of yellow
 					r <= 4'b1111;
 					g <= 4'b1111;
 					b <= 4'b0000;
 				end else if(x >= pipeX && x <= pipeX+PIPE_WIDTH) begin
-					if(y >= pipe_openning_top && y <= pipe_openning_top + SAFE_AREA) begin
 					
+					if(y >= pipe_openning_top && y <= pipe_openning_top + SAFE_AREA) begin
+						
+					
+					//blue background
 						r <= 4'b1000;
 						g <= 4'b1100;
 						b <= 4'b1110;
-					
-						
 						
 					end else begin
-					
+						//Green pipes
 						r <= 4'b0011;
 						g <= 4'b1010;
 						b <= 4'b0010;
@@ -237,7 +242,12 @@ pll	pll_inst (
 			pipeX <= HA_END;
 			pipeY <= 0;
 			score <= 0;
-			tmp <= 0;
+			pipe_clock_divisor <= 0;
+			score5Achieved <= 0;
+			score15Achieved <= 0;
+			score30Achieved <= 0;
+			powerUp <= 0;
+			powerUpFlashing <= 0;
 		end else begin
 			if(gameStarted && ~gameOver) begin
 				if((pipeX) <= 10) begin
@@ -249,7 +259,6 @@ pll	pll_inst (
 				end
 					
 				addScore <= (playerx > pipeX + PIPE_WIDTH) ? 1 : 0;
-				tmp <= addScore;
 
 				
 				if(!addScore && (playerx > pipeX + PIPE_WIDTH)) begin
@@ -258,6 +267,21 @@ pll	pll_inst (
 				
 				end
 				
+				if(score >= 5 && !score5Achieved) begin
+					pipe_clock_divisor <= pipe_clock_divisor + 1;
+					score5Achieved <= 1;
+				end
+				
+				if(score >= 15 && !score15Achieved) begin
+					pipe_clock_divisor <= pipe_clock_divisor + 1;
+					score15Achieved <= 1;
+				end
+				
+				if(score >= 30 && !score30Achieved) begin
+					pipe_clock_divisor <= pipe_clock_divisor + 1;
+					score30Achieved <= 1;
+				end
+
 			end
 		
 		end

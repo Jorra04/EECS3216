@@ -56,10 +56,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "tmp",
-					"strict" : false
-				},
-				{
 					"name" : "seg0[0]",
 					"strict" : false
 				},

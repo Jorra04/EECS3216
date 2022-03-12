@@ -1,5 +1,5 @@
 |EECS3216Final
-clkin => clkin.IN4
+clkin => clkin.IN3
 rst => randomNum:rng.rst
 rst => playerHitPipe.ACLR
 rst => y[0].ACLR
@@ -22,7 +22,21 @@ rst => x[6].ACLR
 rst => x[7].ACLR
 rst => x[8].ACLR
 rst => x[9].ACLR
-rst => tmp~reg0.ACLR
+rst => gameStarted.ACLR
+rst => tmp_playerY[3].PRESET
+rst => tmp_playerY[4].PRESET
+rst => tmp_playerY[5].ACLR
+rst => tmp_playerY[6].PRESET
+rst => tmp_playerY[7].PRESET
+rst => tmp_playerY[8].ACLR
+rst => tmp_playerY[9].ACLR
+rst => score30Achieved.ACLR
+rst => score15Achieved.ACLR
+rst => score5Achieved.ACLR
+rst => pipe_clock_divisor[0].ACLR
+rst => pipe_clock_divisor[1].ACLR
+rst => pipe_clock_divisor[2].ACLR
+rst => pipe_clock_divisor[3].ACLR
 rst => score[0].ACLR
 rst => score[1].ACLR
 rst => score[2].ACLR
@@ -42,14 +56,6 @@ rst => pipeX[7].ACLR
 rst => pipeX[8].ACLR
 rst => pipeX[9].PRESET
 rst => tryThis.PRESET
-rst => gameStarted.ACLR
-rst => tmp_playerY[3].PRESET
-rst => tmp_playerY[4].PRESET
-rst => tmp_playerY[5].ACLR
-rst => tmp_playerY[6].PRESET
-rst => tmp_playerY[7].PRESET
-rst => tmp_playerY[8].ACLR
-rst => tmp_playerY[9].ACLR
 rst => playerOutOfBounds.ACLR
 rst => tmp2_playerY[0].ACLR
 rst => tmp2_playerY[1].ACLR
@@ -68,7 +74,6 @@ rst => flashing[3].ACLR
 rst => flashing[4].ACLR
 rst => flashing[5].ACLR
 rst => flashing[6].ACLR
-rst => b[0]~reg0.ENA
 rst => r[3]~reg0.ENA
 rst => r[2]~reg0.ENA
 rst => r[1]~reg0.ENA
@@ -81,6 +86,7 @@ rst => b[3]~reg0.ENA
 rst => b[2]~reg0.ENA
 rst => b[1]~reg0.ENA
 rst => addScore.ENA
+rst => b[0]~reg0.ENA
 btn_up => always3.IN1
 btn_up => gameStarted.CLK
 btn_up => tmp_playerY[3].CLK
@@ -104,21 +110,21 @@ b[0] <= b[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[1] <= b[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[2] <= b[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[3] <= b[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-tmp <= tmp~reg0.DB_MAX_OUTPUT_PORT_TYPE
-seg0[0] <= B2D:comb_902.outputBus[0]
-seg0[1] <= B2D:comb_902.outputBus[1]
-seg0[2] <= B2D:comb_902.outputBus[2]
-seg0[3] <= B2D:comb_902.outputBus[3]
-seg0[4] <= B2D:comb_902.outputBus[4]
-seg0[5] <= B2D:comb_902.outputBus[5]
-seg0[6] <= B2D:comb_902.outputBus[6]
-seg1[0] <= B2D:comb_903.outputBus[0]
-seg1[1] <= B2D:comb_903.outputBus[1]
-seg1[2] <= B2D:comb_903.outputBus[2]
-seg1[3] <= B2D:comb_903.outputBus[3]
-seg1[4] <= B2D:comb_903.outputBus[4]
-seg1[5] <= B2D:comb_903.outputBus[5]
-seg1[6] <= B2D:comb_903.outputBus[6]
+tmp <= <GND>
+seg0[0] <= B2D:comb_960.outputBus[0]
+seg0[1] <= B2D:comb_960.outputBus[1]
+seg0[2] <= B2D:comb_960.outputBus[2]
+seg0[3] <= B2D:comb_960.outputBus[3]
+seg0[4] <= B2D:comb_960.outputBus[4]
+seg0[5] <= B2D:comb_960.outputBus[5]
+seg0[6] <= B2D:comb_960.outputBus[6]
+seg1[0] <= B2D:comb_961.outputBus[0]
+seg1[1] <= B2D:comb_961.outputBus[1]
+seg1[2] <= B2D:comb_961.outputBus[2]
+seg1[3] <= B2D:comb_961.outputBus[3]
+seg1[4] <= B2D:comb_961.outputBus[4]
+seg1[5] <= B2D:comb_961.outputBus[5]
+seg1[6] <= B2D:comb_961.outputBus[6]
 
 
 |EECS3216Final|pll:pll_inst
@@ -274,6 +280,10 @@ clock_in => count[29].CLK
 clock_in => count[30].CLK
 clock_in => count[31].CLK
 clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divisor[0] => ShiftRight0.IN36
+divisor[1] => ShiftRight0.IN35
+divisor[2] => ShiftRight0.IN34
+divisor[3] => ShiftRight0.IN33
 
 
 |EECS3216Final|Clock_divider:comb_33
@@ -325,7 +335,7 @@ num[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
 num[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|EECS3216Final|B2D:comb_902
+|EECS3216Final|B2D:comb_960
 inputBus[0] => Decoder0.IN4
 inputBus[1] => Decoder0.IN3
 inputBus[2] => Decoder0.IN2
@@ -347,7 +357,7 @@ flashing[5] => outputBus.DATAB
 flashing[6] => outputBus.DATAB
 
 
-|EECS3216Final|B2D:comb_903
+|EECS3216Final|B2D:comb_961
 inputBus[0] => Decoder0.IN4
 inputBus[1] => Decoder0.IN3
 inputBus[2] => Decoder0.IN2

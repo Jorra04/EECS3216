@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EECS3216Final
-Fri Mar 11 14:18:59 2022
+Sat Mar 12 01:26:17 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -24,8 +24,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
  16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
  17. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
  18. altpll Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "B2D:comb_903"
- 20. Port Connectivity Checks: "B2D:comb_902"
+ 19. Port Connectivity Checks: "B2D:comb_961"
+ 20. Port Connectivity Checks: "B2D:comb_960"
  21. Port Connectivity Checks: "pll:pll_inst"
  22. Post-Synthesis Netlist Statistics for Top Partition
  23. Elapsed Time Per Partition
@@ -56,15 +56,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 11 14:18:59 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 12 01:26:17 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; EECS3216Final                                             ;
 ; Top-level Entity Name              ; EECS3216Final                                             ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 543                                                       ;
-;     Total combinational functions  ; 535                                                       ;
-;     Dedicated logic registers      ; 174                                                       ;
-; Total registers                    ; 174                                                       ;
+; Total logic elements               ; 597                                                       ;
+;     Total combinational functions  ; 590                                                       ;
+;     Dedicated logic registers      ; 180                                                       ;
+; Total registers                    ; 180                                                       ;
 ; Total pins                         ; 32                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
@@ -214,20 +214,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 543         ;
+; Estimated Total logic elements              ; 597         ;
 ;                                             ;             ;
-; Total combinational functions               ; 535         ;
+; Total combinational functions               ; 590         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 127         ;
-;     -- 3 input functions                    ; 120         ;
-;     -- <=2 input functions                  ; 288         ;
+;     -- 4 input functions                    ; 151         ;
+;     -- 3 input functions                    ; 150         ;
+;     -- <=2 input functions                  ; 289         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 281         ;
-;     -- arithmetic mode                      ; 254         ;
+;     -- normal mode                          ; 314         ;
+;     -- arithmetic mode                      ; 276         ;
 ;                                             ;             ;
-; Total registers                             ; 174         ;
-;     -- Dedicated logic registers            ; 174         ;
+; Total registers                             ; 180         ;
+;     -- Dedicated logic registers            ; 180         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 32          ;
@@ -239,8 +239,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clkin~input ;
 ; Maximum fan-out                             ; 100         ;
-; Total fan-out                               ; 2044        ;
-; Average fan-out                             ; 2.64        ;
+; Total fan-out                               ; 2248        ;
+; Average fan-out                             ; 2.69        ;
 +---------------------------------------------+-------------+
 
 
@@ -249,9 +249,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                            ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |EECS3216Final                         ; 535 (235)           ; 174 (72)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 32   ; 0            ; 0          ; |EECS3216Final                                                                                                 ; EECS3216Final       ; work         ;
-;    |B2D:comb_902|                      ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|B2D:comb_902                                                                                    ; B2D                 ; work         ;
-;    |B2D:comb_903|                      ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|B2D:comb_903                                                                                    ; B2D                 ; work         ;
+; |EECS3216Final                         ; 590 (252)           ; 180 (78)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 32   ; 0            ; 0          ; |EECS3216Final                                                                                                 ; EECS3216Final       ; work         ;
+;    |B2D:comb_960|                      ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|B2D:comb_960                                                                                    ; B2D                 ; work         ;
+;    |B2D:comb_961|                      ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|B2D:comb_961                                                                                    ; B2D                 ; work         ;
 ;    |Clock_divider:comb_33|             ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|Clock_divider:comb_33                                                                           ; Clock_divider       ; work         ;
 ;    |gravityClockDivder:gravityDivider| ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|gravityClockDivder:gravityDivider                                                               ; gravityClockDivder  ; work         ;
 ;    |lpm_divide:Div0|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
@@ -266,7 +266,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |lpm_divide_ckl:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|lpm_divide:Mod1|lpm_divide_ckl:auto_generated                                                   ; lpm_divide_ckl      ; work         ;
 ;          |sign_div_unsign_bkh:divider| ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|lpm_divide:Mod1|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
 ;             |alt_u_div_0fe:divider|    ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|lpm_divide:Mod1|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_0fe:divider ; alt_u_div_0fe       ; work         ;
-;    |pipeClockDivider:pipeDivider|      ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|pipeClockDivider:pipeDivider                                                                    ; pipeClockDivider    ; work         ;
+;    |pipeClockDivider:pipeDivider|      ; 82 (82)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|pipeClockDivider:pipeDivider                                                                    ; pipeClockDivider    ; work         ;
 ;    |pll:pll_inst|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|pll:pll_inst                                                                                    ; pll                 ; work         ;
 ;       |altpll:altpll_component|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|pll:pll_inst|altpll:altpll_component                                                            ; altpll              ; work         ;
 ;          |pll_altpll:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EECS3216Final|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated                                  ; pll_altpll          ; work         ;
@@ -292,10 +292,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 174   ;
+; Total registers                              ; 180   ;
 ; Number of registers using Synchronous Clear  ; 96    ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 63    ;
+; Number of registers using Asynchronous Clear ; 69    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 56    ;
 ; Number of registers using Preset             ; 0     ;
@@ -319,18 +319,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; tmp_playerY[4]                          ; 2       ;
 ; randomNum:rng|tmp[3]                    ; 13      ;
 ; tmp_playerY[3]                          ; 3       ;
-; tryThis                                 ; 3       ;
+; tryThis                                 ; 4       ;
 ; Total number of inverted registers = 13 ;         ;
 +-----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |EECS3216Final|b           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |EECS3216Final|pipeClockDivider:pipeDivider|ShiftRight0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |EECS3216Final|r                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -826,7 +827,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------+
-; Port Connectivity Checks: "B2D:comb_903"      ;
+; Port Connectivity Checks: "B2D:comb_961"      ;
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
@@ -835,7 +836,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------+
-; Port Connectivity Checks: "B2D:comb_902"      ;
+; Port Connectivity Checks: "B2D:comb_960"      ;
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
@@ -859,28 +860,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 32                          ;
-; cycloneiii_ff         ; 174                         ;
-;     CLR               ; 18                          ;
+; cycloneiii_ff         ; 180                         ;
+;     CLR               ; 24                          ;
 ;     ENA               ; 11                          ;
 ;     ENA CLR           ; 36                          ;
 ;     ENA CLR SLD       ; 9                           ;
 ;     SCLR              ; 96                          ;
 ;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 535                         ;
-;     arith             ; 254                         ;
+; cycloneiii_lcell_comb ; 590                         ;
+;     arith             ; 276                         ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 155                         ;
-;         3 data inputs ; 97                          ;
-;     normal            ; 281                         ;
+;         3 data inputs ; 119                         ;
+;     normal            ; 314                         ;
 ;         0 data inputs ; 14                          ;
-;         1 data inputs ; 13                          ;
+;         1 data inputs ; 14                          ;
 ;         2 data inputs ; 104                         ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 127                         ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 151                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.90                       ;
-; Average LUT depth     ; 6.35                        ;
+; Average LUT depth     ; 6.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -899,7 +900,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Fri Mar 11 14:18:52 2022
+    Info: Processing started: Sat Mar 12 01:26:10 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EECS3216Final -c EECS3216Final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -915,110 +916,119 @@ Info (12021): Found 1 design units, including 1 entities, in source file b2d.sv
     Info (12023): Found entity 1: B2D File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/B2D.sv Line: 1
 Warning (10229): Verilog HDL Expression warning at EECS3216Final.sv(30): truncated literal to match 3 bits File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 30
 Warning (10229): Verilog HDL Expression warning at EECS3216Final.sv(31): truncated literal to match 3 bits File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 31
-Warning (10229): Verilog HDL Expression warning at EECS3216Final.sv(116): truncated literal to match 3 bits File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 116
+Warning (10229): Verilog HDL Expression warning at EECS3216Final.sv(119): truncated literal to match 3 bits File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 119
 Info (12021): Found 1 design units, including 1 entities, in source file eecs3216final.sv
     Info (12023): Found entity 1: EECS3216Final File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at EECS3216Final.sv(53): created implicit net for "areset_sig" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at EECS3216Final.sv(57): created implicit net for "locked_sig" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 57
-Critical Warning (10846): Verilog HDL Instantiation warning at EECS3216Final.sv(74): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 74
-Critical Warning (10846): Verilog HDL Instantiation warning at EECS3216Final.sv(286): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 286
-Critical Warning (10846): Verilog HDL Instantiation warning at EECS3216Final.sv(287): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 287
+Warning (10236): Verilog HDL Implicit Net warning at EECS3216Final.sv(55): created implicit net for "areset_sig" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at EECS3216Final.sv(59): created implicit net for "locked_sig" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 59
+Critical Warning (10846): Verilog HDL Instantiation warning at EECS3216Final.sv(77): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 77
+Critical Warning (10846): Verilog HDL Instantiation warning at EECS3216Final.sv(310): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 310
+Critical Warning (10846): Verilog HDL Instantiation warning at EECS3216Final.sv(311): instance has no name File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 311
 Info (12127): Elaborating entity "EECS3216Final" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at EECS3216Final.sv(20): object "pipeY" assigned a value but never read File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 20
 Warning (10036): Verilog HDL or VHDL warning at EECS3216Final.sv(33): object "pipe_opening_bottom" assigned a value but never read File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 33
 Warning (10036): Verilog HDL or VHDL warning at EECS3216Final.sv(44): object "overflow" assigned a value but never read File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(162): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 162
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(164): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 164
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(192): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 192
-Warning (10240): Verilog HDL Always Construct warning at EECS3216Final.sv(179): inferring latch(es) for variable "tmp_playerX", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Warning (10240): Verilog HDL Always Construct warning at EECS3216Final.sv(179): inferring latch(es) for variable "tmp_playerY", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(217): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 217
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(237): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 237
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(245): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 245
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(247): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 247
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(251): truncated value with size 32 to match size of target (1) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 251
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(257): truncated value with size 32 to match size of target (8) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 257
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(283): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 283
-Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(284): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 284
-Info (10041): Inferred latch for "tmp_playerY[0]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerY[1]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerY[2]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[0]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[1]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[2]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[3]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[4]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[5]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[6]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[7]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[8]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "tmp_playerX[9]" at EECS3216Final.sv(179) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 179
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[0][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[1][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[2][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[3][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[4][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[5][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][0]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][1]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][2]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][3]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][4]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][5]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][6]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][7]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
-Info (10041): Inferred latch for "pipe_opening_top_arr[6][8]" at EECS3216Final.sv(110) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 110
+Warning (10036): Verilog HDL or VHDL warning at EECS3216Final.sv(46): object "powerUpFlashing" assigned a value but never read File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(126): truncated value with size 32 to match size of target (1) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(167): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(169): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 169
+Warning (10240): Verilog HDL Always Construct warning at EECS3216Final.sv(113): inferring latch(es) for variable "tmp", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(197): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 197
+Warning (10240): Verilog HDL Always Construct warning at EECS3216Final.sv(184): inferring latch(es) for variable "tmp_playerX", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Warning (10240): Verilog HDL Always Construct warning at EECS3216Final.sv(184): inferring latch(es) for variable "tmp_playerY", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(222): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 222
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(242): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 242
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(255): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 255
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(257): truncated value with size 32 to match size of target (10) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 257
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(261): truncated value with size 32 to match size of target (1) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 261
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(266): truncated value with size 32 to match size of target (8) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 266
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(271): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 271
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(276): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 276
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(281): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 281
+Warning (10240): Verilog HDL Always Construct warning at EECS3216Final.sv(238): inferring latch(es) for variable "powerUp", which holds its previous value in one or more paths through the always construct File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 238
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(307): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 307
+Warning (10230): Verilog HDL assignment warning at EECS3216Final.sv(308): truncated value with size 32 to match size of target (4) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 308
+Info (10041): Inferred latch for "powerUp" at EECS3216Final.sv(238) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 238
+Info (10041): Inferred latch for "tmp_playerY[0]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerY[1]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerY[2]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[0]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[1]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[2]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[3]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[4]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[5]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[6]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[7]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[8]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp_playerX[9]" at EECS3216Final.sv(184) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 184
+Info (10041): Inferred latch for "tmp" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[0][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[1][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[2][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[3][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[4][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[5][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][0]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][1]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][2]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][3]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][4]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][5]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][6]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][7]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
+Info (10041): Inferred latch for "pipe_opening_top_arr[6][8]" at EECS3216Final.sv(113) File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 113
 Warning (12125): Using design file pll.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: pll File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/pll.v Line: 40
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 58
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 60
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/pll.v Line: 108
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/pll.v Line: 108
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/pll.v Line: 108
@@ -1084,17 +1094,17 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/db/pll_altpll.v Line: 31
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "gravityClockDivder" for hierarchy "gravityClockDivder:gravityDivider" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 64
-Info (12128): Elaborating entity "pipeClockDivider" for hierarchy "pipeClockDivider:pipeDivider" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 69
-Info (12128): Elaborating entity "Clock_divider" for hierarchy "Clock_divider:comb_33" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 74
-Info (12128): Elaborating entity "randomNum" for hierarchy "randomNum:rng" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 81
-Info (12128): Elaborating entity "B2D" for hierarchy "B2D:comb_902" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 286
+Info (12128): Elaborating entity "gravityClockDivder" for hierarchy "gravityClockDivder:gravityDivider" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 66
+Info (12128): Elaborating entity "pipeClockDivider" for hierarchy "pipeClockDivider:pipeDivider" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 72
+Info (12128): Elaborating entity "Clock_divider" for hierarchy "Clock_divider:comb_33" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 77
+Info (12128): Elaborating entity "randomNum" for hierarchy "randomNum:rng" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 84
+Info (12128): Elaborating entity "B2D" for hierarchy "B2D:comb_960" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 310
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 283
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 284
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 284
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 283
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 283
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 307
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 308
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 308
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 307
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 307
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1109,18 +1119,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
     Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 284
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 284
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 308
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 308
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9sl.tdf
     Info (12023): Found entity 1: lpm_divide_9sl File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/db/lpm_divide_9sl.tdf Line: 25
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 188
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 193
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 118
+    Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 122
+    Warning (13410): Pin "tmp" is stuck at GND File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 52
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register tryThis will power up to High File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/EECS3216Final.sv Line: 40
@@ -1130,14 +1141,14 @@ Info (17016): Found the following redundant logic cells in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15899): PLL "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected File: C:/Users/Jorra/Documents/Coding Practice/School/EECS3216/Project/db/pll_altpll.v Line: 51
-Info (21057): Implemented 583 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 636 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 550 logic cells
+    Info (21061): Implemented 603 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Fri Mar 11 14:18:59 2022
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Sat Mar 12 01:26:17 2022
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:15
 
