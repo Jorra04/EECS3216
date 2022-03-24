@@ -1,5 +1,5 @@
 |EECS3216Final
-clkin => clkin.IN3
+clkin => clkin.IN4
 rst => randomNum:rng.rst
 rst => playerHitPipe.ACLR
 rst => y[0].ACLR
@@ -30,10 +30,21 @@ rst => tmp_playerY[6].PRESET
 rst => tmp_playerY[7].PRESET
 rst => tmp_playerY[8].ACLR
 rst => tmp_playerY[9].ACLR
+rst => playerOutOfBounds.ACLR
+rst => tmp2_playerY[0].ACLR
+rst => tmp2_playerY[1].ACLR
+rst => tmp2_playerY[2].ACLR
+rst => tmp2_playerY[3].ACLR
+rst => tmp2_playerY[4].ACLR
+rst => tmp2_playerY[5].ACLR
+rst => tmp2_playerY[6].ACLR
+rst => tmp2_playerY[7].ACLR
+rst => tmp2_playerY[8].ACLR
+rst => tmp2_playerY[9].ACLR
 rst => score30Achieved.ACLR
 rst => score15Achieved.ACLR
 rst => score5Achieved.ACLR
-rst => pipe_clock_divisor[0].ACLR
+rst => pipe_clock_divisor[0].PRESET
 rst => pipe_clock_divisor[1].ACLR
 rst => pipe_clock_divisor[2].ACLR
 rst => pipe_clock_divisor[3].ACLR
@@ -56,17 +67,21 @@ rst => pipeX[7].ACLR
 rst => pipeX[8].ACLR
 rst => pipeX[9].PRESET
 rst => tryThis.PRESET
-rst => playerOutOfBounds.ACLR
-rst => tmp2_playerY[0].ACLR
-rst => tmp2_playerY[1].ACLR
-rst => tmp2_playerY[2].ACLR
-rst => tmp2_playerY[3].ACLR
-rst => tmp2_playerY[4].ACLR
-rst => tmp2_playerY[5].ACLR
-rst => tmp2_playerY[6].ACLR
-rst => tmp2_playerY[7].ACLR
-rst => tmp2_playerY[8].ACLR
-rst => tmp2_playerY[9].ACLR
+rst => gameOverScreenBlack.ACLR
+rst => gameOverAnimationRoll[0].ACLR
+rst => gameOverAnimationRoll[1].ACLR
+rst => gameOverAnimationRoll[2].ACLR
+rst => gameOverAnimationRoll[3].ACLR
+rst => gameOverAnimationRoll[4].ACLR
+rst => gameOverAnimationRoll[5].ACLR
+rst => gameOverAnimationRoll[6].ACLR
+rst => gameOverAnimationRoll[7].ACLR
+rst => gameOverAnimationRoll[8].ACLR
+rst => gameOverAnimationRoll[9].ACLR
+rst => flashText[0].ACLR
+rst => flashText[1].ACLR
+rst => flashText[2].ACLR
+rst => flashText[3].ACLR
 rst => flashing[0].ACLR
 rst => flashing[1].ACLR
 rst => flashing[2].ACLR
@@ -111,20 +126,20 @@ b[1] <= b[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[2] <= b[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[3] <= b[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tmp <= <GND>
-seg0[0] <= B2D:comb_960.outputBus[0]
-seg0[1] <= B2D:comb_960.outputBus[1]
-seg0[2] <= B2D:comb_960.outputBus[2]
-seg0[3] <= B2D:comb_960.outputBus[3]
-seg0[4] <= B2D:comb_960.outputBus[4]
-seg0[5] <= B2D:comb_960.outputBus[5]
-seg0[6] <= B2D:comb_960.outputBus[6]
-seg1[0] <= B2D:comb_961.outputBus[0]
-seg1[1] <= B2D:comb_961.outputBus[1]
-seg1[2] <= B2D:comb_961.outputBus[2]
-seg1[3] <= B2D:comb_961.outputBus[3]
-seg1[4] <= B2D:comb_961.outputBus[4]
-seg1[5] <= B2D:comb_961.outputBus[5]
-seg1[6] <= B2D:comb_961.outputBus[6]
+seg0[0] <= B2D:comb_1357.outputBus[0]
+seg0[1] <= B2D:comb_1357.outputBus[1]
+seg0[2] <= B2D:comb_1357.outputBus[2]
+seg0[3] <= B2D:comb_1357.outputBus[3]
+seg0[4] <= B2D:comb_1357.outputBus[4]
+seg0[5] <= B2D:comb_1357.outputBus[5]
+seg0[6] <= B2D:comb_1357.outputBus[6]
+seg1[0] <= B2D:comb_1358.outputBus[0]
+seg1[1] <= B2D:comb_1358.outputBus[1]
+seg1[2] <= B2D:comb_1358.outputBus[2]
+seg1[3] <= B2D:comb_1358.outputBus[3]
+seg1[4] <= B2D:comb_1358.outputBus[4]
+seg1[5] <= B2D:comb_1358.outputBus[5]
+seg1[6] <= B2D:comb_1358.outputBus[6]
 
 
 |EECS3216Final|pll:pll_inst
@@ -245,6 +260,43 @@ clock_in => count[31].CLK
 clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|EECS3216Final|gameOverAnimationClockDivider:gameOverclkdiv
+clock_in => clock_out~reg0.CLK
+clock_in => count[0].CLK
+clock_in => count[1].CLK
+clock_in => count[2].CLK
+clock_in => count[3].CLK
+clock_in => count[4].CLK
+clock_in => count[5].CLK
+clock_in => count[6].CLK
+clock_in => count[7].CLK
+clock_in => count[8].CLK
+clock_in => count[9].CLK
+clock_in => count[10].CLK
+clock_in => count[11].CLK
+clock_in => count[12].CLK
+clock_in => count[13].CLK
+clock_in => count[14].CLK
+clock_in => count[15].CLK
+clock_in => count[16].CLK
+clock_in => count[17].CLK
+clock_in => count[18].CLK
+clock_in => count[19].CLK
+clock_in => count[20].CLK
+clock_in => count[21].CLK
+clock_in => count[22].CLK
+clock_in => count[23].CLK
+clock_in => count[24].CLK
+clock_in => count[25].CLK
+clock_in => count[26].CLK
+clock_in => count[27].CLK
+clock_in => count[28].CLK
+clock_in => count[29].CLK
+clock_in => count[30].CLK
+clock_in => count[31].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |EECS3216Final|pipeClockDivider:pipeDivider
 clock_in => clock_out~reg0.CLK
 clock_in => count[0].CLK
@@ -286,7 +338,7 @@ divisor[2] => ShiftRight0.IN34
 divisor[3] => ShiftRight0.IN33
 
 
-|EECS3216Final|Clock_divider:comb_33
+|EECS3216Final|Clock_divider:comb_24
 clock_in => clock_out~reg0.CLK
 clock_in => count[0].CLK
 clock_in => count[1].CLK
@@ -335,7 +387,7 @@ num[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
 num[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|EECS3216Final|B2D:comb_960
+|EECS3216Final|B2D:comb_1357
 inputBus[0] => Decoder0.IN4
 inputBus[1] => Decoder0.IN3
 inputBus[2] => Decoder0.IN2
@@ -357,7 +409,7 @@ flashing[5] => outputBus.DATAB
 flashing[6] => outputBus.DATAB
 
 
-|EECS3216Final|B2D:comb_961
+|EECS3216Final|B2D:comb_1358
 inputBus[0] => Decoder0.IN4
 inputBus[1] => Decoder0.IN3
 inputBus[2] => Decoder0.IN2

@@ -116,11 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "btn_up",
+					"name" : "clkin",
 					"strict" : false
 				},
 				{
-					"name" : "clkin",
+					"name" : "btn_up",
 					"strict" : false
 				}
 			]

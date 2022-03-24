@@ -1,5 +1,5 @@
 Timing Analyzer report for EECS3216Final
-Sat Mar 12 01:26:34 2022
+Wed Mar 23 21:30:57 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -92,77 +92,81 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.45        ;
+; Average used               ; 1.59        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.4%      ;
-;     Processor 3            ;   4.1%      ;
-;     Processor 4            ;   4.0%      ;
-;     Processors 5-12        ;   4.0%      ;
+;     Processor 2            ;   5.7%      ;
+;     Processor 3            ;   5.5%      ;
+;     Processor 4            ;   5.4%      ;
+;     Processors 5-12        ;   5.4%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                                                                                           ;
-+------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
-; Clock Name                                           ; Type      ; Period ; Frequency  ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                 ; Targets                                                  ;
-+------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
-; btn_up                                               ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { btn_up }                                               ;
-; clkin                                                ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { clkin }                                                ;
-; Clock_divider:comb_33|clock_out                      ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Clock_divider:comb_33|clock_out }                      ;
-; gravityClockDivder:gravityDivider|clock_out          ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { gravityClockDivder:gravityDivider|clock_out }          ;
-; pipeClockDivider:pipeDivider|clock_out               ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { pipeClockDivider:pipeDivider|clock_out }               ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; 40.000 ; 25.0 MHz   ; 0.000 ; 20.000 ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; clkin  ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] } ;
-; tryThis                                              ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { tryThis }                                              ;
-+------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                               ;
++--------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+------------------------------------------------------------+
+; Clock Name                                             ; Type      ; Period ; Frequency  ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                 ; Targets                                                    ;
++--------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+------------------------------------------------------------+
+; btn_up                                                 ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { btn_up }                                                 ;
+; clkin                                                  ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { clkin }                                                  ;
+; Clock_divider:comb_24|clock_out                        ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Clock_divider:comb_24|clock_out }                        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { gameOverAnimationClockDivider:gameOverclkdiv|clock_out } ;
+; gravityClockDivder:gravityDivider|clock_out            ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { gravityClockDivder:gravityDivider|clock_out }            ;
+; pipeClockDivider:pipeDivider|clock_out                 ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { pipeClockDivider:pipeDivider|clock_out }                 ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; Generated ; 40.000 ; 25.0 MHz   ; 0.000 ; 20.000 ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; clkin  ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] }   ;
+; tryThis                                                ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { tryThis }                                                ;
++--------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                                   ;
-+------------+-----------------+------------------------------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note                                           ;
-+------------+-----------------+------------------------------------------------------+------------------------------------------------+
-; 117.81 MHz ; 117.81 MHz      ; clkin                                                ;                                                ;
-; 150.76 MHz ; 150.76 MHz      ; gravityClockDivder:gravityDivider|clock_out          ;                                                ;
-; 150.85 MHz ; 150.85 MHz      ; pipeClockDivider:pipeDivider|clock_out               ;                                                ;
-; 160.28 MHz ; 160.28 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
-; 178.25 MHz ; 178.25 MHz      ; btn_up                                               ;                                                ;
-; 543.18 MHz ; 416.15 MHz      ; tryThis                                              ; limit due to minimum period restriction (tmin) ;
-; 1424.5 MHz ; 416.15 MHz      ; Clock_divider:comb_33|clock_out                      ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+------------------------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                                     ;
++------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                             ; Note                                           ;
++------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; 92.9 MHz   ; 92.9 MHz        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ;                                                ;
+; 122.01 MHz ; 122.01 MHz      ; clkin                                                  ;                                                ;
+; 153.19 MHz ; 153.19 MHz      ; gravityClockDivder:gravityDivider|clock_out            ;                                                ;
+; 167.06 MHz ; 167.06 MHz      ; pipeClockDivider:pipeDivider|clock_out                 ;                                                ;
+; 210.57 MHz ; 210.57 MHz      ; btn_up                                                 ;                                                ;
+; 243.07 MHz ; 243.07 MHz      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ;                                                ;
+; 888.1 MHz  ; 416.15 MHz      ; tryThis                                                ; limit due to minimum period restriction (tmin) ;
+; 1424.5 MHz ; 416.15 MHz      ; Clock_divider:comb_24|clock_out                        ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+--------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                                           ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -9.656 ; -188.487      ;
-; gravityClockDivder:gravityDivider|clock_out          ; -6.887 ; -74.983       ;
-; clkin                                                ; -5.821 ; -157.924      ;
-; pipeClockDivider:pipeDivider|clock_out               ; -5.629 ; -127.893      ;
-; btn_up                                               ; -4.723 ; -36.188       ;
-; Clock_divider:comb_33|clock_out                      ; -2.496 ; -2.496        ;
-; tryThis                                              ; -0.841 ; -1.296        ;
-+------------------------------------------------------+--------+---------------+
++----------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                              ;
++--------------------------------------------------------+---------+---------------+
+; Clock                                                  ; Slack   ; End Point TNS ;
++--------------------------------------------------------+---------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; -10.612 ; -111.615      ;
+; gravityClockDivder:gravityDivider|clock_out            ; -7.149  ; -77.988       ;
+; clkin                                                  ; -6.168  ; -173.855      ;
+; pipeClockDivider:pipeDivider|clock_out                 ; -4.986  ; -119.685      ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -4.199  ; -39.846       ;
+; btn_up                                                 ; -3.749  ; -29.985       ;
+; Clock_divider:comb_24|clock_out                        ; -3.361  ; -3.361        ;
+; tryThis                                                ; -0.126  ; -0.209        ;
++--------------------------------------------------------+---------+---------------+
 
 
-+------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                           ;
-+------------------------------------------------------+-------+---------------+
-; Clock                                                ; Slack ; End Point TNS ;
-+------------------------------------------------------+-------+---------------+
-; pipeClockDivider:pipeDivider|clock_out               ; 0.339 ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out          ; 0.340 ; 0.000         ;
-; Clock_divider:comb_33|clock_out                      ; 0.378 ; 0.000         ;
-; btn_up                                               ; 0.393 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.417 ; 0.000         ;
-; tryThis                                              ; 0.613 ; 0.000         ;
-; clkin                                                ; 0.638 ; 0.000         ;
-+------------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                             ;
++--------------------------------------------------------+-------+---------------+
+; Clock                                                  ; Slack ; End Point TNS ;
++--------------------------------------------------------+-------+---------------+
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 0.340 ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out            ; 0.340 ; 0.000         ;
+; pipeClockDivider:pipeDivider|clock_out                 ; 0.340 ; 0.000         ;
+; Clock_divider:comb_24|clock_out                        ; 0.393 ; 0.000         ;
+; btn_up                                                 ; 0.393 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0.417 ; 0.000         ;
+; tryThis                                                ; 0.471 ; 0.000         ;
+; clkin                                                  ; 0.501 ; 0.000         ;
++--------------------------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -177,19 +181,20 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary                             ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; btn_up                                               ; -3.000 ; -14.224       ;
-; pipeClockDivider:pipeDivider|clock_out               ; -1.403 ; -36.478       ;
-; gravityClockDivder:gravityDivider|clock_out          ; -1.403 ; -15.433       ;
-; tryThis                                              ; -1.403 ; -4.209        ;
-; Clock_divider:comb_33|clock_out                      ; -1.403 ; -1.403        ;
-; clkin                                                ; 9.621  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 19.720 ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                               ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; btn_up                                                 ; -3.000 ; -14.224       ;
+; pipeClockDivider:pipeDivider|clock_out                 ; -1.403 ; -36.478       ;
+; gravityClockDivder:gravityDivider|clock_out            ; -1.403 ; -15.433       ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -1.403 ; -14.030       ;
+; tryThis                                                ; -1.403 ; -4.209        ;
+; Clock_divider:comb_24|clock_out                        ; -1.403 ; -1.403        ;
+; clkin                                                  ; 9.624  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 19.721 ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -198,50 +203,53 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                                    ;
-+------------+-----------------+------------------------------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note                                           ;
-+------------+-----------------+------------------------------------------------------+------------------------------------------------+
-; 126.53 MHz ; 126.53 MHz      ; clkin                                                ;                                                ;
-; 161.32 MHz ; 161.32 MHz      ; pipeClockDivider:pipeDivider|clock_out               ;                                                ;
-; 163.27 MHz ; 163.27 MHz      ; gravityClockDivder:gravityDivider|clock_out          ;                                                ;
-; 172.71 MHz ; 172.71 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
-; 192.57 MHz ; 192.57 MHz      ; btn_up                                               ;                                                ;
-; 593.47 MHz ; 416.15 MHz      ; tryThis                                              ; limit due to minimum period restriction (tmin) ;
-; 1567.4 MHz ; 416.15 MHz      ; Clock_divider:comb_33|clock_out                      ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+------------------------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                                      ;
++------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                             ; Note                                           ;
++------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; 100.16 MHz ; 100.16 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ;                                                ;
+; 132.36 MHz ; 132.36 MHz      ; clkin                                                  ;                                                ;
+; 165.13 MHz ; 165.13 MHz      ; gravityClockDivder:gravityDivider|clock_out            ;                                                ;
+; 181.09 MHz ; 181.09 MHz      ; pipeClockDivider:pipeDivider|clock_out                 ;                                                ;
+; 229.94 MHz ; 229.94 MHz      ; btn_up                                                 ;                                                ;
+; 264.55 MHz ; 264.55 MHz      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ;                                                ;
+; 965.25 MHz ; 416.15 MHz      ; tryThis                                                ; limit due to minimum period restriction (tmin) ;
+; 1567.4 MHz ; 416.15 MHz      ; Clock_divider:comb_24|clock_out                        ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+--------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                                            ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -8.598 ; -163.123      ;
-; gravityClockDivder:gravityDivider|clock_out          ; -6.422 ; -69.898       ;
-; clkin                                                ; -5.254 ; -140.868      ;
-; pipeClockDivider:pipeDivider|clock_out               ; -5.199 ; -117.147      ;
-; btn_up                                               ; -4.250 ; -32.621       ;
-; Clock_divider:comb_33|clock_out                      ; -2.522 ; -2.522        ;
-; tryThis                                              ; -0.685 ; -0.962        ;
-+------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                              ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; -9.344 ; -98.550       ;
+; gravityClockDivder:gravityDivider|clock_out            ; -6.635 ; -72.353       ;
+; clkin                                                  ; -5.565 ; -155.299      ;
+; pipeClockDivider:pipeDivider|clock_out                 ; -4.522 ; -110.535      ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -3.805 ; -36.044       ;
+; btn_up                                                 ; -3.349 ; -26.785       ;
+; Clock_divider:comb_24|clock_out                        ; -3.001 ; -3.001        ;
+; tryThis                                                ; -0.036 ; -0.036        ;
++--------------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                            ;
-+------------------------------------------------------+-------+---------------+
-; Clock                                                ; Slack ; End Point TNS ;
-+------------------------------------------------------+-------+---------------+
-; pipeClockDivider:pipeDivider|clock_out               ; 0.305 ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out          ; 0.306 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.336 ; 0.000         ;
-; Clock_divider:comb_33|clock_out                      ; 0.339 ; 0.000         ;
-; btn_up                                               ; 0.354 ; 0.000         ;
-; tryThis                                              ; 0.572 ; 0.000         ;
-; clkin                                                ; 0.590 ; 0.000         ;
-+------------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                              ;
++--------------------------------------------------------+-------+---------------+
+; Clock                                                  ; Slack ; End Point TNS ;
++--------------------------------------------------------+-------+---------------+
+; pipeClockDivider:pipeDivider|clock_out                 ; 0.305 ; 0.000         ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 0.306 ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out            ; 0.306 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0.336 ; 0.000         ;
+; btn_up                                                 ; 0.354 ; 0.000         ;
+; Clock_divider:comb_24|clock_out                        ; 0.355 ; 0.000         ;
+; tryThis                                                ; 0.428 ; 0.000         ;
+; clkin                                                  ; 0.457 ; 0.000         ;
++--------------------------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -256,19 +264,20 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary                              ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; btn_up                                               ; -3.000 ; -14.224       ;
-; pipeClockDivider:pipeDivider|clock_out               ; -1.403 ; -36.478       ;
-; gravityClockDivder:gravityDivider|clock_out          ; -1.403 ; -15.433       ;
-; tryThis                                              ; -1.403 ; -4.209        ;
-; Clock_divider:comb_33|clock_out                      ; -1.403 ; -1.403        ;
-; clkin                                                ; 9.645  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 19.697 ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                                ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; btn_up                                                 ; -3.000 ; -14.224       ;
+; pipeClockDivider:pipeDivider|clock_out                 ; -1.403 ; -36.478       ;
+; gravityClockDivder:gravityDivider|clock_out            ; -1.403 ; -15.433       ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -1.403 ; -14.030       ;
+; tryThis                                                ; -1.403 ; -4.209        ;
+; Clock_divider:comb_24|clock_out                        ; -1.403 ; -1.403        ;
+; clkin                                                  ; 9.647  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 19.700 ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -277,34 +286,36 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                                            ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -4.200 ; -74.696       ;
-; gravityClockDivder:gravityDivider|clock_out          ; -2.852 ; -31.053       ;
-; pipeClockDivider:pipeDivider|clock_out               ; -2.460 ; -53.844       ;
-; clkin                                                ; -1.854 ; -45.575       ;
-; btn_up                                               ; -1.508 ; -11.308       ;
-; Clock_divider:comb_33|clock_out                      ; -0.915 ; -0.915        ;
-; tryThis                                              ; 0.217  ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                              ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; -4.465 ; -47.444       ;
+; gravityClockDivder:gravityDivider|clock_out            ; -2.999 ; -32.864       ;
+; pipeClockDivider:pipeDivider|clock_out                 ; -2.211 ; -52.002       ;
+; clkin                                                  ; -2.054 ; -54.603       ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -1.475 ; -13.751       ;
+; Clock_divider:comb_24|clock_out                        ; -1.102 ; -1.102        ;
+; btn_up                                                 ; -0.966 ; -7.725        ;
+; tryThis                                                ; 0.509  ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                            ;
-+------------------------------------------------------+-------+---------------+
-; Clock                                                ; Slack ; End Point TNS ;
-+------------------------------------------------------+-------+---------------+
-; gravityClockDivder:gravityDivider|clock_out          ; 0.147 ; 0.000         ;
-; pipeClockDivider:pipeDivider|clock_out               ; 0.147 ; 0.000         ;
-; Clock_divider:comb_33|clock_out                      ; 0.166 ; 0.000         ;
-; btn_up                                               ; 0.169 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.207 ; 0.000         ;
-; tryThis                                              ; 0.242 ; 0.000         ;
-; clkin                                                ; 0.245 ; 0.000         ;
-+------------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                              ;
++--------------------------------------------------------+-------+---------------+
+; Clock                                                  ; Slack ; End Point TNS ;
++--------------------------------------------------------+-------+---------------+
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 0.147 ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out            ; 0.147 ; 0.000         ;
+; pipeClockDivider:pipeDivider|clock_out                 ; 0.148 ; 0.000         ;
+; clkin                                                  ; 0.168 ; 0.000         ;
+; btn_up                                                 ; 0.169 ; 0.000         ;
+; Clock_divider:comb_24|clock_out                        ; 0.170 ; 0.000         ;
+; tryThis                                                ; 0.189 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0.208 ; 0.000         ;
++--------------------------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -319,19 +330,20 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary                              ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; btn_up                                               ; -3.000 ; -13.656       ;
-; pipeClockDivider:pipeDivider|clock_out               ; -1.000 ; -26.000       ;
-; gravityClockDivder:gravityDivider|clock_out          ; -1.000 ; -11.000       ;
-; tryThis                                              ; -1.000 ; -3.000        ;
-; Clock_divider:comb_33|clock_out                      ; -1.000 ; -1.000        ;
-; clkin                                                ; 9.300  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 19.761 ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                                ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; btn_up                                                 ; -3.000 ; -14.400       ;
+; pipeClockDivider:pipeDivider|clock_out                 ; -1.000 ; -26.000       ;
+; gravityClockDivder:gravityDivider|clock_out            ; -1.000 ; -11.000       ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -1.000 ; -10.000       ;
+; tryThis                                                ; -1.000 ; -3.000        ;
+; Clock_divider:comb_24|clock_out                        ; -1.000 ; -1.000        ;
+; clkin                                                  ; 9.305  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 19.766 ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -340,28 +352,30 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                 ;
-+-------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                                                 ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                      ; -9.656   ; 0.147 ; N/A      ; N/A     ; -3.000              ;
-;  Clock_divider:comb_33|clock_out                      ; -2.522   ; 0.166 ; N/A      ; N/A     ; -1.403              ;
-;  btn_up                                               ; -4.723   ; 0.169 ; N/A      ; N/A     ; -3.000              ;
-;  clkin                                                ; -5.821   ; 0.245 ; N/A      ; N/A     ; 9.300               ;
-;  gravityClockDivder:gravityDivider|clock_out          ; -6.887   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
-;  pipeClockDivider:pipeDivider|clock_out               ; -5.629   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -9.656   ; 0.207 ; N/A      ; N/A     ; 19.697              ;
-;  tryThis                                              ; -0.841   ; 0.242 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS                                       ; -589.267 ; 0.0   ; 0.0      ; 0.0     ; -71.747             ;
-;  Clock_divider:comb_33|clock_out                      ; -2.522   ; 0.000 ; N/A      ; N/A     ; -1.403              ;
-;  btn_up                                               ; -36.188  ; 0.000 ; N/A      ; N/A     ; -14.224             ;
-;  clkin                                                ; -157.924 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  gravityClockDivder:gravityDivider|clock_out          ; -74.983  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
-;  pipeClockDivider:pipeDivider|clock_out               ; -127.893 ; 0.000 ; N/A      ; N/A     ; -36.478             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -188.487 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  tryThis                                              ; -1.296   ; 0.000 ; N/A      ; N/A     ; -4.209              ;
-+-------------------------------------------------------+----------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                   ;
++---------------------------------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                                                   ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack                                        ; -10.612  ; 0.147 ; N/A      ; N/A     ; -3.000              ;
+;  Clock_divider:comb_24|clock_out                        ; -3.361   ; 0.170 ; N/A      ; N/A     ; -1.403              ;
+;  btn_up                                                 ; -3.749   ; 0.169 ; N/A      ; N/A     ; -3.000              ;
+;  clkin                                                  ; -6.168   ; 0.168 ; N/A      ; N/A     ; 9.305               ;
+;  gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -4.199   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
+;  gravityClockDivder:gravityDivider|clock_out            ; -7.149   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
+;  pipeClockDivider:pipeDivider|clock_out                 ; -4.986   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; -10.612  ; 0.208 ; N/A      ; N/A     ; 19.700              ;
+;  tryThis                                                ; -0.126   ; 0.189 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS                                         ; -556.544 ; 0.0   ; 0.0      ; 0.0     ; -85.777             ;
+;  Clock_divider:comb_24|clock_out                        ; -3.361   ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  btn_up                                                 ; -29.985  ; 0.000 ; N/A      ; N/A     ; -14.400             ;
+;  clkin                                                  ; -173.855 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; -39.846  ; 0.000 ; N/A      ; N/A     ; -14.030             ;
+;  gravityClockDivder:gravityDivider|clock_out            ; -77.988  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  pipeClockDivider:pipeDivider|clock_out                 ; -119.685 ; 0.000 ; N/A      ; N/A     ; -36.478             ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; -111.615 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  tryThis                                                ; -0.209   ; 0.000 ; N/A      ; N/A     ; -4.209              ;
++---------------------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -408,8 +422,8 @@ No synchronizer chains to report.
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
 ; rst                 ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
-; btn_up              ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; clkin               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; btn_up              ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -534,67 +548,79 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                                         ;
-+------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
-; btn_up                                               ; btn_up                                               ; 0        ; 0        ; 0        ; 476      ;
-; gravityClockDivder:gravityDivider|clock_out          ; btn_up                                               ; 0        ; 0        ; 872      ; 0        ;
-; clkin                                                ; clkin                                                ; 4752     ; 0        ; 0        ; 0        ;
-; Clock_divider:comb_33|clock_out                      ; clkin                                                ; 1        ; 1        ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; clkin                                                ; 1        ; 1        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out               ; clkin                                                ; 3037     ; 1        ; 0        ; 0        ;
-; Clock_divider:comb_33|clock_out                      ; Clock_divider:comb_33|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; Clock_divider:comb_33|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Clock_divider:comb_33|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; btn_up                                               ; gravityClockDivder:gravityDivider|clock_out          ; 11       ; 540      ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; gravityClockDivder:gravityDivider|clock_out          ; 1122     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; gravityClockDivder:gravityDivider|clock_out          ; 11       ; 0        ; 0        ; 0        ;
-; btn_up                                               ; pipeClockDivider:pipeDivider|clock_out               ; 0        ; 27       ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; pipeClockDivider:pipeDivider|clock_out               ; 27       ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out               ; pipeClockDivider:pipeDivider|clock_out               ; 484      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pipeClockDivider:pipeDivider|clock_out               ; 27       ; 0        ; 0        ; 0        ;
-; tryThis                                              ; pipeClockDivider:pipeDivider|clock_out               ; 1        ; 1        ; 0        ; 0        ;
-; btn_up                                               ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0        ; 1337     ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2463     ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out               ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 216      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 992      ; 0        ; 0        ; 0        ;
-; tryThis                                              ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0        ; 634      ; 0        ; 0        ;
-; tryThis                                              ; tryThis                                              ; 0        ; 0        ; 0        ; 4        ;
-+------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                             ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; btn_up                                                 ; btn_up                                                 ; 0        ; 0        ; 0        ; 476      ;
+; gravityClockDivder:gravityDivider|clock_out            ; btn_up                                                 ; 0        ; 0        ; 872      ; 0        ;
+; clkin                                                  ; clkin                                                  ; 6336     ; 0        ; 0        ; 0        ;
+; Clock_divider:comb_24|clock_out                        ; clkin                                                  ; 1        ; 1        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; clkin                                                  ; 1        ; 1        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; clkin                                                  ; 1        ; 1        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                 ; clkin                                                  ; 3037     ; 1        ; 0        ; 0        ;
+; Clock_divider:comb_24|clock_out                        ; Clock_divider:comb_24|clock_out                        ; 1        ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; Clock_divider:comb_24|clock_out                        ; 1        ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; Clock_divider:comb_24|clock_out                        ; 1        ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 451      ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 10       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 10       ; 0        ; 0        ; 0        ;
+; btn_up                                                 ; gravityClockDivder:gravityDivider|clock_out            ; 11       ; 540      ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; gravityClockDivder:gravityDivider|clock_out            ; 1122     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; gravityClockDivder:gravityDivider|clock_out            ; 11       ; 0        ; 0        ; 0        ;
+; btn_up                                                 ; pipeClockDivider:pipeDivider|clock_out                 ; 0        ; 27       ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; pipeClockDivider:pipeDivider|clock_out                 ; 27       ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                 ; pipeClockDivider:pipeDivider|clock_out                 ; 484      ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; pipeClockDivider:pipeDivider|clock_out                 ; 27       ; 0        ; 0        ; 0        ;
+; tryThis                                                ; pipeClockDivider:pipeDivider|clock_out                 ; 1        ; 1        ; 0        ; 0        ;
+; btn_up                                                 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0        ; 1331     ; 0        ; 0        ;
+; Clock_divider:comb_24|clock_out                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 4        ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 132      ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 2431     ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 207      ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 3473     ; 0        ; 0        ; 0        ;
+; tryThis                                                ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0        ; 1224     ; 0        ; 0        ;
+; tryThis                                                ; tryThis                                                ; 0        ; 0        ; 0        ; 4        ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                                          ;
-+------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
-; btn_up                                               ; btn_up                                               ; 0        ; 0        ; 0        ; 476      ;
-; gravityClockDivder:gravityDivider|clock_out          ; btn_up                                               ; 0        ; 0        ; 872      ; 0        ;
-; clkin                                                ; clkin                                                ; 4752     ; 0        ; 0        ; 0        ;
-; Clock_divider:comb_33|clock_out                      ; clkin                                                ; 1        ; 1        ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; clkin                                                ; 1        ; 1        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out               ; clkin                                                ; 3037     ; 1        ; 0        ; 0        ;
-; Clock_divider:comb_33|clock_out                      ; Clock_divider:comb_33|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; Clock_divider:comb_33|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Clock_divider:comb_33|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; btn_up                                               ; gravityClockDivder:gravityDivider|clock_out          ; 11       ; 540      ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; gravityClockDivder:gravityDivider|clock_out          ; 1122     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; gravityClockDivder:gravityDivider|clock_out          ; 11       ; 0        ; 0        ; 0        ;
-; btn_up                                               ; pipeClockDivider:pipeDivider|clock_out               ; 0        ; 27       ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; pipeClockDivider:pipeDivider|clock_out               ; 27       ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out               ; pipeClockDivider:pipeDivider|clock_out               ; 484      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pipeClockDivider:pipeDivider|clock_out               ; 27       ; 0        ; 0        ; 0        ;
-; tryThis                                              ; pipeClockDivider:pipeDivider|clock_out               ; 1        ; 1        ; 0        ; 0        ;
-; btn_up                                               ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0        ; 1337     ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out          ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2463     ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out               ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 216      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 992      ; 0        ; 0        ; 0        ;
-; tryThis                                              ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0        ; 634      ; 0        ; 0        ;
-; tryThis                                              ; tryThis                                              ; 0        ; 0        ; 0        ; 4        ;
-+------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                              ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; btn_up                                                 ; btn_up                                                 ; 0        ; 0        ; 0        ; 476      ;
+; gravityClockDivder:gravityDivider|clock_out            ; btn_up                                                 ; 0        ; 0        ; 872      ; 0        ;
+; clkin                                                  ; clkin                                                  ; 6336     ; 0        ; 0        ; 0        ;
+; Clock_divider:comb_24|clock_out                        ; clkin                                                  ; 1        ; 1        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; clkin                                                  ; 1        ; 1        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; clkin                                                  ; 1        ; 1        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                 ; clkin                                                  ; 3037     ; 1        ; 0        ; 0        ;
+; Clock_divider:comb_24|clock_out                        ; Clock_divider:comb_24|clock_out                        ; 1        ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; Clock_divider:comb_24|clock_out                        ; 1        ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; Clock_divider:comb_24|clock_out                        ; 1        ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 451      ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 10       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; 10       ; 0        ; 0        ; 0        ;
+; btn_up                                                 ; gravityClockDivder:gravityDivider|clock_out            ; 11       ; 540      ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; gravityClockDivder:gravityDivider|clock_out            ; 1122     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; gravityClockDivder:gravityDivider|clock_out            ; 11       ; 0        ; 0        ; 0        ;
+; btn_up                                                 ; pipeClockDivider:pipeDivider|clock_out                 ; 0        ; 27       ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; pipeClockDivider:pipeDivider|clock_out                 ; 27       ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                 ; pipeClockDivider:pipeDivider|clock_out                 ; 484      ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; pipeClockDivider:pipeDivider|clock_out                 ; 27       ; 0        ; 0        ; 0        ;
+; tryThis                                                ; pipeClockDivider:pipeDivider|clock_out                 ; 1        ; 1        ; 0        ; 0        ;
+; btn_up                                                 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0        ; 1331     ; 0        ; 0        ;
+; Clock_divider:comb_24|clock_out                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 4        ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 132      ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out            ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 2431     ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 207      ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 3473     ; 0        ; 0        ; 0        ;
+; tryThis                                                ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; 0        ; 1224     ; 0        ; 0        ;
+; tryThis                                                ; tryThis                                                ; 0        ; 0        ; 0        ; 4        ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -618,25 +644,26 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 81    ; 81   ;
+; Unconstrained Input Port Paths  ; 91    ; 91   ;
 ; Unconstrained Output Ports      ; 27    ; 27   ;
 ; Unconstrained Output Port Paths ; 150   ; 150  ;
 +---------------------------------+-------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                                                  ;
-+------------------------------------------------------+------------------------------------------------------+-----------+-------------+
-; Target                                               ; Clock                                                ; Type      ; Status      ;
-+------------------------------------------------------+------------------------------------------------------+-----------+-------------+
-; Clock_divider:comb_33|clock_out                      ; Clock_divider:comb_33|clock_out                      ; Base      ; Constrained ;
-; btn_up                                               ; btn_up                                               ; Base      ; Constrained ;
-; clkin                                                ; clkin                                                ; Base      ; Constrained ;
-; gravityClockDivder:gravityDivider|clock_out          ; gravityClockDivder:gravityDivider|clock_out          ; Base      ; Constrained ;
-; pipeClockDivider:pipeDivider|clock_out               ; pipeClockDivider:pipeDivider|clock_out               ; Base      ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; Constrained ;
-; tryThis                                              ; tryThis                                              ; Base      ; Constrained ;
-+------------------------------------------------------+------------------------------------------------------+-----------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                      ;
++--------------------------------------------------------+--------------------------------------------------------+-----------+-------------+
+; Target                                                 ; Clock                                                  ; Type      ; Status      ;
++--------------------------------------------------------+--------------------------------------------------------+-----------+-------------+
+; Clock_divider:comb_24|clock_out                        ; Clock_divider:comb_24|clock_out                        ; Base      ; Constrained ;
+; btn_up                                                 ; btn_up                                                 ; Base      ; Constrained ;
+; clkin                                                  ; clkin                                                  ; Base      ; Constrained ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out ; Base      ; Constrained ;
+; gravityClockDivder:gravityDivider|clock_out            ; gravityClockDivder:gravityDivider|clock_out            ; Base      ; Constrained ;
+; pipeClockDivider:pipeDivider|clock_out                 ; pipeClockDivider:pipeDivider|clock_out                 ; Base      ; Constrained ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; pll_inst|altpll_component|auto_generated|pll1|clk[0]   ; Generated ; Constrained ;
+; tryThis                                                ; tryThis                                                ; Base      ; Constrained ;
++--------------------------------------------------------+--------------------------------------------------------+-----------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -733,7 +760,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Sat Mar 12 01:26:32 2022
+    Info: Processing started: Wed Mar 23 21:30:55 2022
 Info: Command: quartus_sta EECS3216Final -c EECS3216Final
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -751,33 +778,36 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name gravityClockDivder:gravityDivider|clock_out gravityClockDivder:gravityDivider|clock_out
     Info (332105): create_clock -period 1.000 -name btn_up btn_up
     Info (332105): create_clock -period 1.000 -name tryThis tryThis
-    Info (332105): create_clock -period 1.000 -name Clock_divider:comb_33|clock_out Clock_divider:comb_33|clock_out
+    Info (332105): create_clock -period 1.000 -name gameOverAnimationClockDivider:gameOverclkdiv|clock_out gameOverAnimationClockDivider:gameOverclkdiv|clock_out
+    Info (332105): create_clock -period 1.000 -name Clock_divider:comb_24|clock_out Clock_divider:comb_24|clock_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -9.656
+Info (332146): Worst-case setup slack is -10.612
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.656            -188.487 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -6.887             -74.983 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -5.821            -157.924 clkin 
-    Info (332119):    -5.629            -127.893 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -4.723             -36.188 btn_up 
-    Info (332119):    -2.496              -2.496 Clock_divider:comb_33|clock_out 
-    Info (332119):    -0.841              -1.296 tryThis 
-Info (332146): Worst-case hold slack is 0.339
+    Info (332119):   -10.612            -111.615 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -7.149             -77.988 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -6.168            -173.855 clkin 
+    Info (332119):    -4.986            -119.685 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -4.199             -39.846 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -3.749             -29.985 btn_up 
+    Info (332119):    -3.361              -3.361 Clock_divider:comb_24|clock_out 
+    Info (332119):    -0.126              -0.209 tryThis 
+Info (332146): Worst-case hold slack is 0.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.339               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.340               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):     0.340               0.000 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):     0.378               0.000 Clock_divider:comb_33|clock_out 
+    Info (332119):     0.340               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.393               0.000 Clock_divider:comb_24|clock_out 
     Info (332119):     0.393               0.000 btn_up 
     Info (332119):     0.417               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.613               0.000 tryThis 
-    Info (332119):     0.638               0.000 clkin 
+    Info (332119):     0.471               0.000 tryThis 
+    Info (332119):     0.501               0.000 clkin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -786,35 +816,38 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -14.224 btn_up 
     Info (332119):    -1.403             -36.478 pipeClockDivider:pipeDivider|clock_out 
     Info (332119):    -1.403             -15.433 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -1.403             -14.030 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):    -1.403              -4.209 tryThis 
-    Info (332119):    -1.403              -1.403 Clock_divider:comb_33|clock_out 
-    Info (332119):     9.621               0.000 clkin 
-    Info (332119):    19.720               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -1.403              -1.403 Clock_divider:comb_24|clock_out 
+    Info (332119):     9.624               0.000 clkin 
+    Info (332119):    19.721               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.598
+Info (332146): Worst-case setup slack is -9.344
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.598            -163.123 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -6.422             -69.898 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -5.254            -140.868 clkin 
-    Info (332119):    -5.199            -117.147 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -4.250             -32.621 btn_up 
-    Info (332119):    -2.522              -2.522 Clock_divider:comb_33|clock_out 
-    Info (332119):    -0.685              -0.962 tryThis 
+    Info (332119):    -9.344             -98.550 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -6.635             -72.353 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -5.565            -155.299 clkin 
+    Info (332119):    -4.522            -110.535 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -3.805             -36.044 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -3.349             -26.785 btn_up 
+    Info (332119):    -3.001              -3.001 Clock_divider:comb_24|clock_out 
+    Info (332119):    -0.036              -0.036 tryThis 
 Info (332146): Worst-case hold slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.305               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.306               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):     0.306               0.000 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):     0.336               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.339               0.000 Clock_divider:comb_33|clock_out 
     Info (332119):     0.354               0.000 btn_up 
-    Info (332119):     0.572               0.000 tryThis 
-    Info (332119):     0.590               0.000 clkin 
+    Info (332119):     0.355               0.000 Clock_divider:comb_24|clock_out 
+    Info (332119):     0.428               0.000 tryThis 
+    Info (332119):     0.457               0.000 clkin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -823,50 +856,54 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -14.224 btn_up 
     Info (332119):    -1.403             -36.478 pipeClockDivider:pipeDivider|clock_out 
     Info (332119):    -1.403             -15.433 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -1.403             -14.030 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):    -1.403              -4.209 tryThis 
-    Info (332119):    -1.403              -1.403 Clock_divider:comb_33|clock_out 
-    Info (332119):     9.645               0.000 clkin 
-    Info (332119):    19.697               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -1.403              -1.403 Clock_divider:comb_24|clock_out 
+    Info (332119):     9.647               0.000 clkin 
+    Info (332119):    19.700               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.200
+Info (332146): Worst-case setup slack is -4.465
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.200             -74.696 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -2.852             -31.053 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -2.460             -53.844 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -1.854             -45.575 clkin 
-    Info (332119):    -1.508             -11.308 btn_up 
-    Info (332119):    -0.915              -0.915 Clock_divider:comb_33|clock_out 
-    Info (332119):     0.217               0.000 tryThis 
+    Info (332119):    -4.465             -47.444 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -2.999             -32.864 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -2.211             -52.002 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -2.054             -54.603 clkin 
+    Info (332119):    -1.475             -13.751 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -1.102              -1.102 Clock_divider:comb_24|clock_out 
+    Info (332119):    -0.966              -7.725 btn_up 
+    Info (332119):     0.509               0.000 tryThis 
 Info (332146): Worst-case hold slack is 0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.147               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):     0.147               0.000 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):     0.147               0.000 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):     0.166               0.000 Clock_divider:comb_33|clock_out 
+    Info (332119):     0.148               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.168               0.000 clkin 
     Info (332119):     0.169               0.000 btn_up 
-    Info (332119):     0.207               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.242               0.000 tryThis 
-    Info (332119):     0.245               0.000 clkin 
+    Info (332119):     0.170               0.000 Clock_divider:comb_24|clock_out 
+    Info (332119):     0.189               0.000 tryThis 
+    Info (332119):     0.208               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -13.656 btn_up 
+    Info (332119):    -3.000             -14.400 btn_up 
     Info (332119):    -1.000             -26.000 pipeClockDivider:pipeDivider|clock_out 
     Info (332119):    -1.000             -11.000 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -1.000             -10.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):    -1.000              -3.000 tryThis 
-    Info (332119):    -1.000              -1.000 Clock_divider:comb_33|clock_out 
-    Info (332119):     9.300               0.000 clkin 
-    Info (332119):    19.761               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -1.000              -1.000 Clock_divider:comb_24|clock_out 
+    Info (332119):     9.305               0.000 clkin 
+    Info (332119):    19.766               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4925 megabytes
-    Info: Processing ended: Sat Mar 12 01:26:34 2022
+    Info: Peak virtual memory: 4937 megabytes
+    Info: Processing ended: Wed Mar 23 21:30:57 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 

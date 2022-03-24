@@ -3,43 +3,51 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -9.656
-TNS   : -188.487
+Slack : -10.612
+TNS   : -111.615
 
 Type  : Slow 1200mV 85C Model Setup 'gravityClockDivder:gravityDivider|clock_out'
-Slack : -6.887
-TNS   : -74.983
+Slack : -7.149
+TNS   : -77.988
 
 Type  : Slow 1200mV 85C Model Setup 'clkin'
-Slack : -5.821
-TNS   : -157.924
+Slack : -6.168
+TNS   : -173.855
 
 Type  : Slow 1200mV 85C Model Setup 'pipeClockDivider:pipeDivider|clock_out'
-Slack : -5.629
-TNS   : -127.893
+Slack : -4.986
+TNS   : -119.685
+
+Type  : Slow 1200mV 85C Model Setup 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : -4.199
+TNS   : -39.846
 
 Type  : Slow 1200mV 85C Model Setup 'btn_up'
-Slack : -4.723
-TNS   : -36.188
+Slack : -3.749
+TNS   : -29.985
 
-Type  : Slow 1200mV 85C Model Setup 'Clock_divider:comb_33|clock_out'
-Slack : -2.496
-TNS   : -2.496
+Type  : Slow 1200mV 85C Model Setup 'Clock_divider:comb_24|clock_out'
+Slack : -3.361
+TNS   : -3.361
 
 Type  : Slow 1200mV 85C Model Setup 'tryThis'
-Slack : -0.841
-TNS   : -1.296
+Slack : -0.126
+TNS   : -0.209
 
-Type  : Slow 1200mV 85C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
-Slack : 0.339
+Type  : Slow 1200mV 85C Model Hold 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : 0.340
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'gravityClockDivder:gravityDivider|clock_out'
 Slack : 0.340
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Clock_divider:comb_33|clock_out'
-Slack : 0.378
+Type  : Slow 1200mV 85C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock_divider:comb_24|clock_out'
+Slack : 0.393
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'btn_up'
@@ -51,11 +59,11 @@ Slack : 0.417
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'tryThis'
-Slack : 0.613
+Slack : 0.471
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clkin'
-Slack : 0.638
+Slack : 0.501
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'btn_up'
@@ -70,52 +78,64 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gravityClockDivder:gravityDiv
 Slack : -1.403
 TNS   : -15.433
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : -1.403
+TNS   : -14.030
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tryThis'
 Slack : -1.403
 TNS   : -4.209
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock_divider:comb_33|clock_out'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock_divider:comb_24|clock_out'
 Slack : -1.403
 TNS   : -1.403
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkin'
-Slack : 9.621
+Slack : 9.624
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.720
+Slack : 19.721
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -8.598
-TNS   : -163.123
+Slack : -9.344
+TNS   : -98.550
 
 Type  : Slow 1200mV 0C Model Setup 'gravityClockDivder:gravityDivider|clock_out'
-Slack : -6.422
-TNS   : -69.898
+Slack : -6.635
+TNS   : -72.353
 
 Type  : Slow 1200mV 0C Model Setup 'clkin'
-Slack : -5.254
-TNS   : -140.868
+Slack : -5.565
+TNS   : -155.299
 
 Type  : Slow 1200mV 0C Model Setup 'pipeClockDivider:pipeDivider|clock_out'
-Slack : -5.199
-TNS   : -117.147
+Slack : -4.522
+TNS   : -110.535
+
+Type  : Slow 1200mV 0C Model Setup 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : -3.805
+TNS   : -36.044
 
 Type  : Slow 1200mV 0C Model Setup 'btn_up'
-Slack : -4.250
-TNS   : -32.621
+Slack : -3.349
+TNS   : -26.785
 
-Type  : Slow 1200mV 0C Model Setup 'Clock_divider:comb_33|clock_out'
-Slack : -2.522
-TNS   : -2.522
+Type  : Slow 1200mV 0C Model Setup 'Clock_divider:comb_24|clock_out'
+Slack : -3.001
+TNS   : -3.001
 
 Type  : Slow 1200mV 0C Model Setup 'tryThis'
-Slack : -0.685
-TNS   : -0.962
+Slack : -0.036
+TNS   : -0.036
 
 Type  : Slow 1200mV 0C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
 Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : 0.306
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'gravityClockDivder:gravityDivider|clock_out'
@@ -126,20 +146,20 @@ Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1
 Slack : 0.336
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'Clock_divider:comb_33|clock_out'
-Slack : 0.339
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Hold 'btn_up'
 Slack : 0.354
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'Clock_divider:comb_24|clock_out'
+Slack : 0.355
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'tryThis'
-Slack : 0.572
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clkin'
-Slack : 0.590
+Slack : 0.457
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'btn_up'
@@ -154,48 +174,60 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gravityClockDivder:gravityDivi
 Slack : -1.403
 TNS   : -15.433
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : -1.403
+TNS   : -14.030
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tryThis'
 Slack : -1.403
 TNS   : -4.209
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock_divider:comb_33|clock_out'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock_divider:comb_24|clock_out'
 Slack : -1.403
 TNS   : -1.403
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkin'
-Slack : 9.645
+Slack : 9.647
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.697
+Slack : 19.700
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.200
-TNS   : -74.696
+Slack : -4.465
+TNS   : -47.444
 
 Type  : Fast 1200mV 0C Model Setup 'gravityClockDivder:gravityDivider|clock_out'
-Slack : -2.852
-TNS   : -31.053
+Slack : -2.999
+TNS   : -32.864
 
 Type  : Fast 1200mV 0C Model Setup 'pipeClockDivider:pipeDivider|clock_out'
-Slack : -2.460
-TNS   : -53.844
+Slack : -2.211
+TNS   : -52.002
 
 Type  : Fast 1200mV 0C Model Setup 'clkin'
-Slack : -1.854
-TNS   : -45.575
+Slack : -2.054
+TNS   : -54.603
+
+Type  : Fast 1200mV 0C Model Setup 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : -1.475
+TNS   : -13.751
+
+Type  : Fast 1200mV 0C Model Setup 'Clock_divider:comb_24|clock_out'
+Slack : -1.102
+TNS   : -1.102
 
 Type  : Fast 1200mV 0C Model Setup 'btn_up'
-Slack : -1.508
-TNS   : -11.308
-
-Type  : Fast 1200mV 0C Model Setup 'Clock_divider:comb_33|clock_out'
-Slack : -0.915
-TNS   : -0.915
+Slack : -0.966
+TNS   : -7.725
 
 Type  : Fast 1200mV 0C Model Setup 'tryThis'
-Slack : 0.217
+Slack : 0.509
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : 0.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'gravityClockDivder:gravityDivider|clock_out'
@@ -203,32 +235,32 @@ Slack : 0.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pipeClockDivider:pipeDivider|clock_out'
-Slack : 0.147
+Slack : 0.148
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'Clock_divider:comb_33|clock_out'
-Slack : 0.166
+Type  : Fast 1200mV 0C Model Hold 'clkin'
+Slack : 0.168
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'btn_up'
 Slack : 0.169
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.207
+Type  : Fast 1200mV 0C Model Hold 'Clock_divider:comb_24|clock_out'
+Slack : 0.170
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'tryThis'
-Slack : 0.242
+Slack : 0.189
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clkin'
-Slack : 0.245
+Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.208
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'btn_up'
 Slack : -3.000
-TNS   : -13.656
+TNS   : -14.400
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pipeClockDivider:pipeDivider|clock_out'
 Slack : -1.000
@@ -238,20 +270,24 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gravityClockDivder:gravityDivi
 Slack : -1.000
 TNS   : -11.000
 
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gameOverAnimationClockDivider:gameOverclkdiv|clock_out'
+Slack : -1.000
+TNS   : -10.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tryThis'
 Slack : -1.000
 TNS   : -3.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock_divider:comb_33|clock_out'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock_divider:comb_24|clock_out'
 Slack : -1.000
 TNS   : -1.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkin'
-Slack : 9.300
+Slack : 9.305
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.761
+Slack : 19.766
 TNS   : 0.000
 
 ------------------------------------------------------------
