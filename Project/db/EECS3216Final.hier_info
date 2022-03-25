@@ -126,20 +126,20 @@ b[1] <= b[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[2] <= b[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 b[3] <= b[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tmp <= <GND>
-seg0[0] <= B2D:comb_1357.outputBus[0]
-seg0[1] <= B2D:comb_1357.outputBus[1]
-seg0[2] <= B2D:comb_1357.outputBus[2]
-seg0[3] <= B2D:comb_1357.outputBus[3]
-seg0[4] <= B2D:comb_1357.outputBus[4]
-seg0[5] <= B2D:comb_1357.outputBus[5]
-seg0[6] <= B2D:comb_1357.outputBus[6]
-seg1[0] <= B2D:comb_1358.outputBus[0]
-seg1[1] <= B2D:comb_1358.outputBus[1]
-seg1[2] <= B2D:comb_1358.outputBus[2]
-seg1[3] <= B2D:comb_1358.outputBus[3]
-seg1[4] <= B2D:comb_1358.outputBus[4]
-seg1[5] <= B2D:comb_1358.outputBus[5]
-seg1[6] <= B2D:comb_1358.outputBus[6]
+seg0[0] <= B2D:comb_1807.outputBus[0]
+seg0[1] <= B2D:comb_1807.outputBus[1]
+seg0[2] <= B2D:comb_1807.outputBus[2]
+seg0[3] <= B2D:comb_1807.outputBus[3]
+seg0[4] <= B2D:comb_1807.outputBus[4]
+seg0[5] <= B2D:comb_1807.outputBus[5]
+seg0[6] <= B2D:comb_1807.outputBus[6]
+seg1[0] <= B2D:comb_1808.outputBus[0]
+seg1[1] <= B2D:comb_1808.outputBus[1]
+seg1[2] <= B2D:comb_1808.outputBus[2]
+seg1[3] <= B2D:comb_1808.outputBus[3]
+seg1[4] <= B2D:comb_1808.outputBus[4]
+seg1[5] <= B2D:comb_1808.outputBus[5]
+seg1[6] <= B2D:comb_1808.outputBus[6]
 
 
 |EECS3216Final|pll:pll_inst
@@ -376,18 +376,54 @@ clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |EECS3216Final|randomNum:rng
+clk => tmp3[5].CLK
+clk => tmp3[4].CLK
+clk => tmp3[3].CLK
+clk => tmp3[2].CLK
+clk => tmp3[1].CLK
+clk => tmp2[5].CLK
+clk => tmp2[4].CLK
+clk => tmp2[3].CLK
+clk => tmp2[2].CLK
+clk => tmp2[1].CLK
+clk => tmp[5].CLK
+clk => tmp[4].CLK
 clk => tmp[3].CLK
 clk => tmp[2].CLK
 clk => tmp[1].CLK
-rst => tmp[3].PRESET
-rst => tmp[2].ACLR
-rst => tmp[1].ACLR
-num[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
-num[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
-num[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+clk => num[5]~reg0.CLK
+clk => num[4]~reg0.CLK
+clk => num[3]~reg0.CLK
+clk => num[2]~reg0.CLK
+clk => num[1]~reg0.CLK
+rst => num[5]~reg0.ALOAD
+rst => num[4]~reg0.ALOAD
+rst => num[3]~reg0.ALOAD
+rst => num[2]~reg0.ALOAD
+rst => num[1]~reg0.ALOAD
+rst => tmp3[5].ENA
+rst => tmp[1].ENA
+rst => tmp[2].ENA
+rst => tmp[3].ENA
+rst => tmp[4].ENA
+rst => tmp[5].ENA
+rst => tmp2[1].ENA
+rst => tmp2[2].ENA
+rst => tmp2[3].ENA
+rst => tmp2[4].ENA
+rst => tmp2[5].ENA
+rst => tmp3[1].ENA
+rst => tmp3[2].ENA
+rst => tmp3[3].ENA
+rst => tmp3[4].ENA
+num[5] <= num[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[4] <= num[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[3] <= num[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[2] <= num[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[1] <= num[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|EECS3216Final|B2D:comb_1357
+|EECS3216Final|B2D:comb_1807
 inputBus[0] => Decoder0.IN4
 inputBus[1] => Decoder0.IN3
 inputBus[2] => Decoder0.IN2
@@ -409,7 +445,7 @@ flashing[5] => outputBus.DATAB
 flashing[6] => outputBus.DATAB
 
 
-|EECS3216Final|B2D:comb_1358
+|EECS3216Final|B2D:comb_1808
 inputBus[0] => Decoder0.IN4
 inputBus[1] => Decoder0.IN3
 inputBus[2] => Decoder0.IN2

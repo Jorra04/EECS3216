@@ -26,9 +26,11 @@ module EECS3216Final(clkin,rst,btn_up,hsync,vsync,r,g,b, tmp, seg0, seg1);
 	bit gameStarted = 0;
 	bit gameOver = 0;
 	
-	wire[2:0] rng_out;
+	wire[4:0] rng_out;
 	
-	reg[8:0] pipe_opening_top_arr[6:0] = 		'{9'd250, 9'd150,9'd50,9'd20,9'd70,9'd300,9'd380};
+	reg[8:0] pipe_opening_top_arr[31:0] = 		'{9'd360, 9'd80, 9'd60, 9'd300, 9'd150, 9'd180, 9'd290, 9'd280, 9'd320, 9'd50, 
+															9'd190, 9'd230, 9'd210, 9'd140, 9'd260, 9'd120, 9'd170, 9'd200, 9'd160, 9'd220, 9'd70, 
+															9'd330, 9'd350, 9'd90, 9'd310, 9'd240, 9'd110, 9'd270, 9'd250, 9'd340, 9'd130, 9'd100};
 	
 	
 	reg[8:0] pipe_openning_top;
@@ -157,7 +159,9 @@ pll	pll_inst (
 			x <= 0;
 			y <= 0;
 			playerHitPipe <= 0;
-			pipe_opening_top_arr <= 		'{9'd250, 9'd150,9'd50,9'd20,9'd70,9'd300,9'd380};
+			pipe_opening_top_arr <= 		'{9'd360, 9'd80, 9'd60, 9'd300, 9'd150, 9'd180, 9'd290, 9'd280, 9'd320, 9'd50, 
+															9'd190, 9'd230, 9'd210, 9'd140, 9'd260, 9'd120, 9'd170, 9'd200, 9'd160, 9'd220, 9'd70, 
+															9'd330, 9'd350, 9'd90, 9'd310, 9'd240, 9'd110, 9'd270, 9'd250, 9'd340, 9'd130, 9'd100};
 			tmp <= 0;
 		end else begin 
 				if(de)begin
@@ -610,6 +614,7 @@ pll	pll_inst (
 	
 	assign onesPlace = (score % 10);
 	assign tensPlace = ((score / 10) % 10);
+	
 	
 	B2D(onesPlace, seg0,flashing);
 	B2D(tensPlace, seg1,flashing);

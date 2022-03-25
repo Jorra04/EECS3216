@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Mar 23 21:30:50 2022
+Fitter Status : Successful - Thu Mar 24 22:00:05 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : EECS3216Final
 Top-level Entity Name : EECS3216Final
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 821 / 49,760 ( 2 % )
-    Total combinational functions : 815 / 49,760 ( 2 % )
-    Dedicated logic registers : 223 / 49,760 ( < 1 % )
-Total registers : 223
+Total logic elements : 865 / 49,760 ( 2 % )
+    Total combinational functions : 859 / 49,760 ( 2 % )
+    Dedicated logic registers : 236 / 49,760 ( < 1 % )
+Total registers : 236
 Total pins : 32 / 360 ( 9 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
