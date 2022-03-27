@@ -44,6 +44,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
 					"name" : "b[1]",
 					"strict" : false
 				},
@@ -109,6 +113,74 @@
 				},
 				{
 					"name" : "seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[8]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[9]",
 					"strict" : false
 				},
 				{
