@@ -91,6 +91,7 @@ pll	pll_inst (
  Clock_divider scoreClockDivider(
 	.clock_in(clkin), 
   .clock_out(scoreClk)
+
   );
   
   //powerUpClock
@@ -242,7 +243,7 @@ pll	pll_inst (
 						*/
 						if(~gameOverScreenBlack) begin
 						
-							if(((y <= gameOverAnimationRoll) && ((x > 0 && x < 120) || (x > 260 && x < 380) || (x > 520 && x < 640))) || 
+							if(((y <= gameOverAnimationRoll) && ((x >= 0 && x < 120) || (x > 260 && x < 380) || (x > 520 && x < 640))) || 
 							((y >= VA_END-gameOverAnimationRoll) && ((x >= 120 && x <= 260) || (x >= 380 && x <= 520)))) begin
 								r <= 4'b0000;
 								g <= 4'b0000;
@@ -550,7 +551,7 @@ pll	pll_inst (
 			if((btn_up&gameStarted) && ~gameOver) begin
 				if(playery + PLAYER_DIMENSIONS < VA_END && playery > 0) begin
 				
-					tmp2_playerY <= tmp2_playerY + 5;
+					tmp2_playerY <= tmp2_playerY + 1; //was + 5 before
 				
 				end else if (playery + PLAYER_DIMENSIONS >= VA_END) begin
 					playerOutOfBounds <= 1;
@@ -589,7 +590,7 @@ pll	pll_inst (
 					tryThis <= 1;
 					pipeX <= HA_END;
 				end else begin
-					pipeX <= pipeX - 10;
+					pipeX <= pipeX - 1; //changed from 10
 					tryThis <= 0;
 				end
 					
