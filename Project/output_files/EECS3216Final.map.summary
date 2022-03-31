@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Tue Mar 29 13:48:21 2022
+Analysis & Synthesis Status : Successful - Thu Mar 31 14:24:45 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : EECS3216Final
 Top-level Entity Name : EECS3216Final
 Family : MAX 10
-Total logic elements : 902
-    Total combinational functions : 901
-    Dedicated logic registers : 263
-Total registers : 263
+Total logic elements : 909
+    Total combinational functions : 908
+    Dedicated logic registers : 265
+Total registers : 265
 Total pins : 48
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 1
+Total PLLs : 0
 UFM blocks : 0
 ADC blocks : 0

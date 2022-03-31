@@ -40,7 +40,7 @@ module EECS3216Final(clkin,rst,btn_up,hsync,vsync,r,g,b, seg0, seg1, seg5, leds)
 	assign pipe_openning_top = pipe_opening_top_arr[rng_out];
 	
 	bit addScore = 0;
-	bit score5Achieved, score15Achieved,score30Achieved = 0;
+	bit score5Achieved, score15Achieved,score25Achieved , score40Achieved = 0;
 	bit tryThis = 0;
 	
 	bit playerOutOfBounds = 0;
@@ -51,15 +51,23 @@ module EECS3216Final(clkin,rst,btn_up,hsync,vsync,r,g,b, seg0, seg1, seg5, leds)
 	
 	assign playery = tmp_playerY + tmp2_playerY;
 	assign playerx = tmp_playerX;
-	reg[3:0] pipe_clock_divisor = 1;
+	reg[3:0] currentLevel = 0;
 //
-pll	pll_inst (
-		.areset ( areset_sig ),
-		.inclk0 ( clkin ),
-		.c0 ( clk25M ),
-		.c1 ( clk1M ),
-		.locked ( locked_sig )
+//pll	pll_inst (
+//		.areset ( areset_sig ),
+//		.inclk0 ( clkin ),
+//		.c0 ( clk25M ),
+//		.c1 ( clk1M ),
+//		.locked ( locked_sig )
+//	);
+
+	//Clock divider to drive vga logic. Converts input 50MHz clock into 25MHz clock.
+	VGAClockDivider vgaClockDivider(
+		.clock_in(clkin),
+		.clock_out(clk25M),
+		.rst(rst)
 	);
+
 
 	//Clock divider for the gravity component of the game.
 	gravityClockDivder gravityDivider (
@@ -83,7 +91,7 @@ pll	pll_inst (
  pipeClockDivider pipeDivider (
   .clock_in(clkin), 
   .clock_out(pipeClock),
-  .divisor(pipe_clock_divisor)
+  .divisor(currentLevel)
  );
  
  
@@ -134,7 +142,7 @@ pll	pll_inst (
 	parameter PIPE_WIDTH = 64;
 	
 	
-	
+	//contstants responsible for drawing letters on screen
 	parameter BLOCK_SIZE = 16;
 	parameter LETTER_SPACING = 70;
 	
@@ -323,7 +331,7 @@ pll	pll_inst (
 									end
 									
 									
-								
+								//U
 								end else if((TOP_BLOCK_3_START <= x && x <= TOP_BLOCK_3_END) && (TOP_LETTERS_START <= y && y <= TOP_LETTERS_END)) begin
 									
 									if((TOP_BLOCK_3_START <= x && x <= TOP_BLOCK_3_END) && (TOP_LETTERS_END - BLOCK_SIZE <= y && y <= TOP_LETTERS_END)) begin
@@ -359,9 +367,9 @@ pll	pll_inst (
 								
 								
 								
-								
+							//Bottom letters begin	
 							end else begin
-							
+								//L
 								if((BOTTOM_BLOCK_1_START <= x && x <= BOTTOM_BLOCK_1_END) && (BOTTOM_LETTERS_START < y && y < BOTTOM_LETTERS_END)) begin
 									if((BOTTOM_BLOCK_1_START <= x && x <= BOTTOM_BLOCK_1_END) && (BOTTOM_LETTERS_END - BLOCK_SIZE <= y && y <= BOTTOM_LETTERS_END)) begin
 										r <= flashText;
@@ -380,7 +388,7 @@ pll	pll_inst (
 										b <= 4'b0000;
 									
 									end
-								
+								//O
 								end else if((BOTTOM_BLOCK_2_START <= x && x <= BOTTOM_BLOCK_2_END) && (BOTTOM_LETTERS_START <= y && y <= BOTTOM_LETTERS_END)) begin
 									
 									if((BOTTOM_BLOCK_2_START <= x && x <= BOTTOM_BLOCK_2_END) && (BOTTOM_LETTERS_START <= y && y <= BOTTOM_LETTERS_START + BLOCK_SIZE)) begin
@@ -411,7 +419,7 @@ pll	pll_inst (
 										b <= 4'b0000;
 									
 									end
-								
+								//S
 								end else if((BOTTOM_BLOCK_3_START <= x && x <= BOTTOM_BLOCK_3_END) && (BOTTOM_LETTERS_START <= y && y <= BOTTOM_LETTERS_END)) begin
 									
 									if((BOTTOM_BLOCK_3_START <= x && x <= BOTTOM_BLOCK_3_END) && (BOTTOM_LETTERS_START <= y && y <= BOTTOM_LETTERS_START + BLOCK_SIZE)) begin
@@ -440,7 +448,7 @@ pll	pll_inst (
 										g <= 4'b0000;
 										b <= 4'b0000;
 									end
-								
+								//E
 								end else if((BOTTOM_BLOCK_4_START <= x && x <= BOTTOM_BLOCK_4_END) && (BOTTOM_LETTERS_START <= y && y <= BOTTOM_LETTERS_END)) begin
 									
 									if((BOTTOM_BLOCK_4_START <= x && x <= BOTTOM_BLOCK_4_END) && (BOTTOM_LETTERS_START <= y && y <= BOTTOM_LETTERS_START + BLOCK_SIZE)) begin
@@ -465,10 +473,10 @@ pll	pll_inst (
 										g <= 4'b0000;
 										b <= 4'b0000;
 									end
-								
+								//Background
 								end else begin
 								
-									r <= ~flashText;
+									r <= ~flashText; //Allows the background to flash red and black in phase with the letters
 									g <= 4'b0000;
 									b <= 4'b0000;
 								end
@@ -519,7 +527,7 @@ pll	pll_inst (
 		
 			if(~btn_up) begin
 			
-				if(playery + PLAYER_DIMENSIONS < VA_END && (playery ) > 45) begin
+				if(playery + PLAYER_DIMENSIONS < VA_END && (playery ) > 45) begin //Logic for keeping player object within upper bounds
 				
 					tmp_playerY <= tmp_playerY - 40;
 				
@@ -553,7 +561,7 @@ pll	pll_inst (
 				
 					tmp2_playerY <= tmp2_playerY + 1; //was + 5 before
 				
-				end else if (playery + PLAYER_DIMENSIONS >= VA_END) begin
+				end else if (playery + PLAYER_DIMENSIONS >= VA_END) begin //Logic for detecting if the Bird hits the ground
 					playerOutOfBounds <= 1;
 				end
 			end
@@ -576,10 +584,11 @@ pll	pll_inst (
 			pipeX <= HA_END;
 			pipeY <= 0;
 			score <= 0;
-			pipe_clock_divisor <= 1;
+			currentLevel <= 0;
 			score5Achieved <= 0;
 			score15Achieved <= 0;
-			score30Achieved <= 0;
+			score25Achieved <= 0;
+			score40Achieved <= 0;
 			led_counter <= 0;
 			leds <= 10'b0000000000;
 			
@@ -612,19 +621,26 @@ pll	pll_inst (
 				end
 				
 				if(score >= 5 && !score5Achieved) begin
-					pipe_clock_divisor <= pipe_clock_divisor + 1;
+					currentLevel <= currentLevel + 1;
 					score5Achieved <= 1;
 				end
 				
 				if(score >= 15 && !score15Achieved) begin
-					pipe_clock_divisor <= pipe_clock_divisor + 1;
+					currentLevel <= currentLevel + 1;
 					score15Achieved <= 1;
 				end
 				
-				if(score >= 30 && !score30Achieved) begin
-					pipe_clock_divisor <= pipe_clock_divisor + 1;
-					score30Achieved <= 1;
+				if(score >= 25 && !score25Achieved) begin
+					currentLevel <= currentLevel + 1;
+					score25Achieved <= 1;
 				end
+				
+				if(score >= 40 && !score40Achieved) begin
+					currentLevel <= currentLevel + 1;
+					score40Achieved <= 1;
+				end
+				
+				
 
 			end
 		

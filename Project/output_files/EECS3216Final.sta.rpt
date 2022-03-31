@@ -1,5 +1,5 @@
 Timing Analyzer report for EECS3216Final
-Tue Mar 29 13:48:42 2022
+Thu Mar 31 14:25:07 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -92,35 +92,35 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.70        ;
+; Average used               ; 1.68        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   6.6%      ;
-;     Processor 3            ;   6.4%      ;
-;     Processor 4            ;   6.3%      ;
-;     Processors 5-12        ;   6.3%      ;
+;     Processor 3            ;   6.3%      ;
+;     Processor 4            ;   6.2%      ;
+;     Processors 5-12        ;   6.1%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                                                                                                               ;
-+----------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+--------------------------------------------------------------------+
-; Clock Name                                                     ; Type      ; Period ; Frequency  ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                 ; Targets                                                            ;
-+----------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+--------------------------------------------------------------------+
-; btn_up                                                         ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { btn_up }                                                         ;
-; clkin                                                          ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { clkin }                                                          ;
-; Clock_divider:powerupClock|clock_out                           ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Clock_divider:powerupClock|clock_out }                           ;
-; Clock_divider:scoreClockDivider|clock_out                      ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Clock_divider:scoreClockDivider|clock_out }                      ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { gameOverAnimationClockDivider:gameOverclkdiv|clock_out }         ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out } ;
-; gravityClockDivder:gravityDivider|clock_out                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { gravityClockDivder:gravityDivider|clock_out }                    ;
-; pipeClockDivider:pipeDivider|clock_out                         ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { pipeClockDivider:pipeDivider|clock_out }                         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; Generated ; 40.000 ; 25.0 MHz   ; 0.000 ; 20.000 ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; clkin  ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] }           ;
-; rst                                                            ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { rst }                                                            ;
-; tryThis                                                        ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { tryThis }                                                        ;
-+----------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+--------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                         ;
++----------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------+
+; Clock Name                                                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                            ;
++----------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------+
+; btn_up                                                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_up }                                                         ;
+; clkin                                                          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clkin }                                                          ;
+; Clock_divider:powerupClock|clock_out                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock_divider:powerupClock|clock_out }                           ;
+; Clock_divider:scoreClockDivider|clock_out                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock_divider:scoreClockDivider|clock_out }                      ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { gameOverAnimationClockDivider:gameOverclkdiv|clock_out }         ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out } ;
+; gravityClockDivder:gravityDivider|clock_out                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { gravityClockDivder:gravityDivider|clock_out }                    ;
+; pipeClockDivider:pipeDivider|clock_out                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { pipeClockDivider:pipeDivider|clock_out }                         ;
+; rst                                                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { rst }                                                            ;
+; tryThis                                                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { tryThis }                                                        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGAClockDivider:vgaClockDivider|clock_out }                      ;
++----------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -128,15 +128,15 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+----------------------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                     ; Note                                           ;
 +------------+-----------------+----------------------------------------------------------------+------------------------------------------------+
-; 85.4 MHz   ; 85.4 MHz        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ;                                                ;
-; 121.77 MHz ; 121.77 MHz      ; clkin                                                          ;                                                ;
-; 154.97 MHz ; 154.97 MHz      ; gravityClockDivder:gravityDivider|clock_out                    ;                                                ;
-; 155.3 MHz  ; 155.3 MHz       ; pipeClockDivider:pipeDivider|clock_out                         ;                                                ;
-; 225.07 MHz ; 225.07 MHz      ; Clock_divider:powerupClock|clock_out                           ;                                                ;
-; 225.89 MHz ; 225.89 MHz      ; btn_up                                                         ;                                                ;
-; 227.22 MHz ; 227.22 MHz      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ;                                                ;
-; 231.37 MHz ; 231.37 MHz      ; tryThis                                                        ;                                                ;
-; 655.31 MHz ; 416.15 MHz      ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; limit due to minimum period restriction (tmin) ;
+; 132.35 MHz ; 132.35 MHz      ; clkin                                                          ;                                                ;
+; 137.01 MHz ; 137.01 MHz      ; VGAClockDivider:vgaClockDivider|clock_out                      ;                                                ;
+; 161.73 MHz ; 161.73 MHz      ; gravityClockDivder:gravityDivider|clock_out                    ;                                                ;
+; 179.57 MHz ; 179.57 MHz      ; pipeClockDivider:pipeDivider|clock_out                         ;                                                ;
+; 206.02 MHz ; 206.02 MHz      ; tryThis                                                        ;                                                ;
+; 210.88 MHz ; 210.88 MHz      ; btn_up                                                         ;                                                ;
+; 228.15 MHz ; 228.15 MHz      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ;                                                ;
+; 449.03 MHz ; 416.15 MHz      ; Clock_divider:powerupClock|clock_out                           ; limit due to minimum period restriction (tmin) ;
+; 771.01 MHz ; 416.15 MHz      ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; limit due to minimum period restriction (tmin) ;
 ; 1424.5 MHz ; 416.15 MHz      ; Clock_divider:scoreClockDivider|clock_out                      ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+----------------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -147,17 +147,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+---------+---------------+
 ; Clock                                                          ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------+---------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -12.380 ; -140.329      ;
-; gravityClockDivder:gravityDivider|clock_out                    ; -6.200  ; -67.623       ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -5.439  ; -213.078      ;
-; clkin                                                          ; -5.202  ; -142.983      ;
-; Clock_divider:powerupClock|clock_out                           ; -4.502  ; -18.876       ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -4.420  ; -42.133       ;
-; btn_up                                                         ; -4.030  ; -32.240       ;
-; rst                                                            ; -3.872  ; -17.084       ;
-; Clock_divider:scoreClockDivider|clock_out                      ; -3.367  ; -3.367        ;
-; tryThis                                                        ; -3.322  ; -44.291       ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.139  ; -4.556        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -10.187 ; -164.865      ;
+; clkin                                                          ; -6.887  ; -583.387      ;
+; btn_up                                                         ; -5.644  ; -45.152       ;
+; gravityClockDivder:gravityDivider|clock_out                    ; -5.183  ; -56.503       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -4.569  ; -120.347      ;
+; tryThis                                                        ; -3.854  ; -45.236       ;
+; rst                                                            ; -3.665  ; -16.617       ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -3.383  ; -29.848       ;
+; Clock_divider:scoreClockDivider|clock_out                      ; -3.027  ; -3.027        ;
+; Clock_divider:powerupClock|clock_out                           ; -2.358  ; -11.072       ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -0.339  ; -1.356        ;
 +----------------------------------------------------------------+---------+---------------+
 
 
@@ -166,17 +166,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; clkin                                                          ; -0.573 ; -0.573        ;
+; clkin                                                          ; -0.703 ; -1.263        ;
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.347  ; 0.000         ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.347  ; 0.000         ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; 0.347  ; 0.000         ;
 ; pipeClockDivider:pipeDivider|clock_out                         ; 0.347  ; 0.000         ;
 ; Clock_divider:powerupClock|clock_out                           ; 0.348  ; 0.000         ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; 0.348  ; 0.000         ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; 0.393  ; 0.000         ;
 ; btn_up                                                         ; 0.393  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0.423  ; 0.000         ;
-; tryThis                                                        ; 0.646  ; 0.000         ;
-; rst                                                            ; 2.162  ; 0.000         ;
+; tryThis                                                        ; 0.556  ; 0.000         ;
+; rst                                                            ; 1.712  ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -185,15 +185,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -3.130 ; -51.476       ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -3.068 ; -26.381       ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -2.391 ; -91.730       ;
-; gravityClockDivder:gravityDivider|clock_out                    ; -2.207 ; -24.177       ;
-; Clock_divider:powerupClock|clock_out                           ; -2.186 ; -10.394       ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.832 ; -7.328        ;
-; btn_up                                                         ; -1.725 ; -13.800       ;
-; Clock_divider:scoreClockDivider|clock_out                      ; -1.655 ; -1.655        ;
-; tryThis                                                        ; -1.040 ; -5.198        ;
+; Clock_divider:scoreClockDivider|clock_out                      ; -4.886 ; -4.886        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -3.142 ; -26.240       ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -3.142 ; -12.568       ;
+; gravityClockDivder:gravityDivider|clock_out                    ; -2.871 ; -31.033       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -2.752 ; -108.126      ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -2.102 ; -42.428       ;
+; Clock_divider:powerupClock|clock_out                           ; -2.008 ; -10.040       ;
+; btn_up                                                         ; -1.635 ; -13.080       ;
+; tryThis                                                        ; -0.737 ; -3.509        ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -202,15 +202,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+-------+---------------+
 ; Clock                                                          ; Slack ; End Point TNS ;
 +----------------------------------------------------------------+-------+---------------+
-; tryThis                                                        ; 1.040 ; 0.000         ;
-; Clock_divider:scoreClockDivider|clock_out                      ; 1.689 ; 0.000         ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 1.727 ; 0.000         ;
-; btn_up                                                         ; 1.775 ; 0.000         ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 1.908 ; 0.000         ;
-; Clock_divider:powerupClock|clock_out                           ; 1.915 ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out                    ; 1.967 ; 0.000         ;
-; pipeClockDivider:pipeDivider|clock_out                         ; 2.070 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 2.299 ; 0.000         ;
+; tryThis                                                        ; 0.779 ; 0.000         ;
+; btn_up                                                         ; 1.677 ; 0.000         ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; 1.813 ; 0.000         ;
+; Clock_divider:powerupClock|clock_out                           ; 1.958 ; 0.000         ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 2.309 ; 0.000         ;
+; pipeClockDivider:pipeDivider|clock_out                         ; 2.415 ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out                    ; 2.483 ; 0.000         ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 3.056 ; 0.000         ;
+; Clock_divider:scoreClockDivider|clock_out                      ; 4.889 ; 0.000         ;
 +----------------------------------------------------------------+-------+---------------+
 
 
@@ -219,17 +219,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
+; clkin                                                          ; -3.000 ; -192.405      ;
 ; btn_up                                                         ; -3.000 ; -14.224       ;
 ; rst                                                            ; -3.000 ; -3.000        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -1.403 ; -57.523       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -1.403 ; -58.926       ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -1.403 ; -46.299       ;
 ; tryThis                                                        ; -1.403 ; -22.448       ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; -1.403 ; -15.433       ;
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -1.403 ; -14.030       ;
 ; Clock_divider:powerupClock|clock_out                           ; -1.403 ; -7.015        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.403 ; -5.612        ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; -1.403 ; -1.403        ;
-; clkin                                                          ; 9.624  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 19.735 ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -244,37 +244,37 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                     ; Note                                           ;
 +------------+-----------------+----------------------------------------------------------------+------------------------------------------------+
-; 92.22 MHz  ; 92.22 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ;                                                ;
-; 130.92 MHz ; 130.92 MHz      ; clkin                                                          ;                                                ;
-; 165.37 MHz ; 165.37 MHz      ; pipeClockDivider:pipeDivider|clock_out                         ;                                                ;
-; 166.42 MHz ; 166.42 MHz      ; gravityClockDivder:gravityDivider|clock_out                    ;                                                ;
-; 244.56 MHz ; 244.56 MHz      ; btn_up                                                         ;                                                ;
-; 246.06 MHz ; 246.06 MHz      ; Clock_divider:powerupClock|clock_out                           ;                                                ;
-; 248.45 MHz ; 248.45 MHz      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ;                                                ;
-; 250.44 MHz ; 250.44 MHz      ; tryThis                                                        ;                                                ;
-; 716.85 MHz ; 416.15 MHz      ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; limit due to minimum period restriction (tmin) ;
+; 143.78 MHz ; 143.78 MHz      ; clkin                                                          ;                                                ;
+; 148.83 MHz ; 148.83 MHz      ; VGAClockDivider:vgaClockDivider|clock_out                      ;                                                ;
+; 173.79 MHz ; 173.79 MHz      ; gravityClockDivder:gravityDivider|clock_out                    ;                                                ;
+; 196.97 MHz ; 196.97 MHz      ; pipeClockDivider:pipeDivider|clock_out                         ;                                                ;
+; 220.75 MHz ; 220.75 MHz      ; tryThis                                                        ;                                                ;
+; 231.48 MHz ; 231.48 MHz      ; btn_up                                                         ;                                                ;
+; 248.69 MHz ; 248.69 MHz      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ;                                                ;
+; 490.44 MHz ; 416.15 MHz      ; Clock_divider:powerupClock|clock_out                           ; limit due to minimum period restriction (tmin) ;
+; 846.74 MHz ; 416.15 MHz      ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; limit due to minimum period restriction (tmin) ;
 ; 1567.4 MHz ; 416.15 MHz      ; Clock_divider:scoreClockDivider|clock_out                      ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+----------------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                                                       ;
-+----------------------------------------------------------------+---------+---------------+
-; Clock                                                          ; Slack   ; End Point TNS ;
-+----------------------------------------------------------------+---------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -10.983 ; -124.538      ;
-; gravityClockDivder:gravityDivider|clock_out                    ; -5.849  ; -62.989       ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -5.047  ; -198.158      ;
-; clkin                                                          ; -4.721  ; -127.932      ;
-; Clock_divider:powerupClock|clock_out                           ; -4.136  ; -17.153       ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -4.062  ; -38.553       ;
-; btn_up                                                         ; -3.603  ; -28.824       ;
-; rst                                                            ; -3.425  ; -14.953       ;
-; Clock_divider:scoreClockDivider|clock_out                      ; -3.022  ; -3.022        ;
-; tryThis                                                        ; -2.993  ; -39.894       ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -0.988  ; -3.952        ;
-+----------------------------------------------------------------+---------+---------------+
++-----------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                                      ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -9.302 ; -149.108      ;
+; clkin                                                          ; -6.224 ; -527.548      ;
+; btn_up                                                         ; -5.093 ; -40.744       ;
+; gravityClockDivder:gravityDivider|clock_out                    ; -4.754 ; -51.823       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -4.077 ; -109.228      ;
+; tryThis                                                        ; -3.530 ; -41.132       ;
+; rst                                                            ; -3.219 ; -14.521       ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -3.021 ; -26.410       ;
+; Clock_divider:scoreClockDivider|clock_out                      ; -2.672 ; -2.672        ;
+; Clock_divider:powerupClock|clock_out                           ; -2.094 ; -9.801        ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -0.222 ; -0.888        ;
++----------------------------------------------------------------+--------+---------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -282,17 +282,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; clkin                                                          ; -0.489 ; -0.489        ;
-; Clock_divider:powerupClock|clock_out                           ; 0.311  ; 0.000         ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.311  ; 0.000         ;
+; clkin                                                          ; -0.702 ; -1.171        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; 0.311  ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out                    ; 0.311  ; 0.000         ;
 ; pipeClockDivider:pipeDivider|clock_out                         ; 0.311  ; 0.000         ;
+; Clock_divider:powerupClock|clock_out                           ; 0.312  ; 0.000         ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.312  ; 0.000         ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.312  ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out                    ; 0.312  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0.342  ; 0.000         ;
 ; btn_up                                                         ; 0.354  ; 0.000         ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; 0.355  ; 0.000         ;
-; tryThis                                                        ; 0.597  ; 0.000         ;
-; rst                                                            ; 1.909  ; 0.000         ;
+; tryThis                                                        ; 0.686  ; 0.000         ;
+; rst                                                            ; 1.467  ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -301,15 +301,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -2.770 ; -23.812       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -2.622 ; -42.041       ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -2.124 ; -81.648       ;
-; gravityClockDivder:gravityDivider|clock_out                    ; -1.980 ; -21.706       ;
-; Clock_divider:powerupClock|clock_out                           ; -1.968 ; -9.372        ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.673 ; -6.692        ;
-; btn_up                                                         ; -1.634 ; -13.072       ;
-; Clock_divider:scoreClockDivider|clock_out                      ; -1.496 ; -1.496        ;
-; tryThis                                                        ; -1.074 ; -5.362        ;
+; Clock_divider:scoreClockDivider|clock_out                      ; -4.367 ; -4.367        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -2.819 ; -23.517       ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -2.802 ; -11.208       ;
+; gravityClockDivder:gravityDivider|clock_out                    ; -2.545 ; -27.495       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -2.450 ; -96.060       ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -1.914 ; -38.648       ;
+; Clock_divider:powerupClock|clock_out                           ; -1.784 ; -8.920        ;
+; btn_up                                                         ; -1.539 ; -12.312       ;
+; tryThis                                                        ; -0.784 ; -3.754        ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -318,15 +318,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+-------+---------------+
 ; Clock                                                          ; Slack ; End Point TNS ;
 +----------------------------------------------------------------+-------+---------------+
-; tryThis                                                        ; 0.986 ; 0.000         ;
-; btn_up                                                         ; 1.579 ; 0.000         ;
-; Clock_divider:scoreClockDivider|clock_out                      ; 1.620 ; 0.000         ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 1.711 ; 0.000         ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 1.882 ; 0.000         ;
-; Clock_divider:powerupClock|clock_out                           ; 1.887 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 1.888 ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out                    ; 1.944 ; 0.000         ;
-; pipeClockDivider:pipeDivider|clock_out                         ; 2.021 ; 0.000         ;
+; tryThis                                                        ; 0.764 ; 0.000         ;
+; btn_up                                                         ; 1.486 ; 0.000         ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; 1.811 ; 0.000         ;
+; Clock_divider:powerupClock|clock_out                           ; 1.922 ; 0.000         ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 2.273 ; 0.000         ;
+; pipeClockDivider:pipeDivider|clock_out                         ; 2.383 ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out                    ; 2.445 ; 0.000         ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 2.964 ; 0.000         ;
+; Clock_divider:scoreClockDivider|clock_out                      ; 4.625 ; 0.000         ;
 +----------------------------------------------------------------+-------+---------------+
 
 
@@ -335,17 +335,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
+; clkin                                                          ; -3.000 ; -192.405      ;
 ; btn_up                                                         ; -3.000 ; -14.224       ;
 ; rst                                                            ; -3.000 ; -3.000        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -1.403 ; -57.523       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -1.403 ; -58.926       ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -1.403 ; -46.299       ;
 ; tryThis                                                        ; -1.403 ; -22.448       ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; -1.403 ; -15.433       ;
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -1.403 ; -14.030       ;
 ; Clock_divider:powerupClock|clock_out                           ; -1.403 ; -7.015        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.403 ; -5.612        ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; -1.403 ; -1.403        ;
-; clkin                                                          ; 9.649  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 19.708 ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -360,17 +360,17 @@ No synchronizer chains to report.
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -5.129 ; -58.657       ;
-; gravityClockDivder:gravityDivider|clock_out                    ; -2.758 ; -28.536       ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -2.513 ; -94.774       ;
-; rst                                                            ; -1.705 ; -7.649        ;
-; Clock_divider:powerupClock|clock_out                           ; -1.630 ; -6.086        ;
-; clkin                                                          ; -1.609 ; -39.852       ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -1.596 ; -15.003       ;
-; btn_up                                                         ; -1.211 ; -9.688        ;
-; Clock_divider:scoreClockDivider|clock_out                      ; -1.110 ; -1.110        ;
-; tryThis                                                        ; -0.821 ; -10.027       ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.032  ; 0.000         ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -3.986 ; -56.245       ;
+; clkin                                                          ; -2.359 ; -166.495      ;
+; btn_up                                                         ; -1.937 ; -15.496       ;
+; gravityClockDivder:gravityDivider|clock_out                    ; -1.857 ; -20.221       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -1.635 ; -38.792       ;
+; rst                                                            ; -1.609 ; -7.415        ;
+; tryThis                                                        ; -1.058 ; -10.608       ;
+; Clock_divider:scoreClockDivider|clock_out                      ; -0.973 ; -0.973        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -0.807 ; -6.102        ;
+; Clock_divider:powerupClock|clock_out                           ; -0.504 ; -2.184        ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.395  ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -379,17 +379,17 @@ No synchronizer chains to report.
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; clkin                                                          ; -0.423 ; -0.423        ;
-; Clock_divider:powerupClock|clock_out                           ; 0.151  ; 0.000         ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.151  ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out                    ; 0.151  ; 0.000         ;
+; clkin                                                          ; -0.488 ; -0.889        ;
+; tryThis                                                        ; 0.104  ; 0.000         ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; 0.131  ; 0.000         ;
 ; pipeClockDivider:pipeDivider|clock_out                         ; 0.151  ; 0.000         ;
+; Clock_divider:powerupClock|clock_out                           ; 0.152  ; 0.000         ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.152  ; 0.000         ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.152  ; 0.000         ;
-; tryThis                                                        ; 0.163  ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out                    ; 0.152  ; 0.000         ;
 ; btn_up                                                         ; 0.169  ; 0.000         ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; 0.170  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0.211  ; 0.000         ;
-; rst                                                            ; 1.549  ; 0.000         ;
+; rst                                                            ; 1.338  ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -398,15 +398,15 @@ No synchronizer chains to report.
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -1.498 ; -12.714       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -1.461 ; -23.974       ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -1.183 ; -45.556       ;
-; Clock_divider:powerupClock|clock_out                           ; -1.064 ; -5.004        ;
-; gravityClockDivder:gravityDivider|clock_out                    ; -1.012 ; -11.105       ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -0.843 ; -3.372        ;
-; Clock_divider:scoreClockDivider|clock_out                      ; -0.803 ; -0.803        ;
-; btn_up                                                         ; -0.181 ; -1.448        ;
-; tryThis                                                        ; 0.103  ; 0.000         ;
+; Clock_divider:scoreClockDivider|clock_out                      ; -2.455 ; -2.455        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -1.525 ; -12.486       ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.502 ; -6.008        ;
+; gravityClockDivder:gravityDivider|clock_out                    ; -1.400 ; -15.092       ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -1.342 ; -52.172       ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -0.949 ; -19.040       ;
+; Clock_divider:powerupClock|clock_out                           ; -0.900 ; -4.500        ;
+; btn_up                                                         ; -0.117 ; -0.936        ;
+; tryThis                                                        ; 0.200  ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -415,15 +415,15 @@ No synchronizer chains to report.
 +----------------------------------------------------------------+-------+---------------+
 ; Clock                                                          ; Slack ; End Point TNS ;
 +----------------------------------------------------------------+-------+---------------+
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.469 ; 0.000         ;
-; tryThis                                                        ; 0.526 ; 0.000         ;
-; gravityClockDivder:gravityDivider|clock_out                    ; 0.540 ; 0.000         ;
-; Clock_divider:powerupClock|clock_out                           ; 0.551 ; 0.000         ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.567 ; 0.000         ;
-; Clock_divider:scoreClockDivider|clock_out                      ; 0.595 ; 0.000         ;
-; pipeClockDivider:pipeDivider|clock_out                         ; 0.618 ; 0.000         ;
-; btn_up                                                         ; 0.751 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0.814 ; 0.000         ;
+; tryThis                                                        ; 0.425 ; 0.000         ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; 0.451 ; 0.000         ;
+; Clock_divider:powerupClock|clock_out                           ; 0.504 ; 0.000         ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 0.650 ; 0.000         ;
+; pipeClockDivider:pipeDivider|clock_out                         ; 0.679 ; 0.000         ;
+; gravityClockDivder:gravityDivider|clock_out                    ; 0.690 ; 0.000         ;
+; btn_up                                                         ; 0.727 ; 0.000         ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 0.977 ; 0.000         ;
+; Clock_divider:scoreClockDivider|clock_out                      ; 1.970 ; 0.000         ;
 +----------------------------------------------------------------+-------+---------------+
 
 
@@ -432,17 +432,17 @@ No synchronizer chains to report.
 +----------------------------------------------------------------+--------+---------------+
 ; Clock                                                          ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------+--------+---------------+
-; btn_up                                                         ; -3.000 ; -13.136       ;
-; rst                                                            ; -3.000 ; -3.068        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; -1.000 ; -41.000       ;
+; clkin                                                          ; -3.000 ; -161.230      ;
+; btn_up                                                         ; -3.000 ; -12.848       ;
+; rst                                                            ; -3.000 ; -3.049        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; -1.000 ; -42.000       ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; -1.000 ; -33.000       ;
 ; tryThis                                                        ; -1.000 ; -16.000       ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; -1.000 ; -11.000       ;
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -1.000 ; -10.000       ;
 ; Clock_divider:powerupClock|clock_out                           ; -1.000 ; -5.000        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.000 ; -4.000        ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; -1.000 ; -1.000        ;
-; clkin                                                          ; 9.303  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 19.769 ; 0.000         ;
 +----------------------------------------------------------------+--------+---------------+
 
 
@@ -457,30 +457,30 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                                           ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                ; -12.380  ; -0.573 ; -3.130   ; 0.469   ; -3.000              ;
-;  Clock_divider:powerupClock|clock_out                           ; -4.502   ; 0.151  ; -2.186   ; 0.551   ; -1.403              ;
-;  Clock_divider:scoreClockDivider|clock_out                      ; -3.367   ; 0.170  ; -1.655   ; 0.595   ; -1.403              ;
-;  btn_up                                                         ; -4.030   ; 0.169  ; -1.725   ; 0.751   ; -3.000              ;
-;  clkin                                                          ; -5.202   ; -0.573 ; N/A      ; N/A     ; 9.303               ;
-;  gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -4.420   ; 0.151  ; -3.068   ; 0.567   ; -1.403              ;
-;  gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.139   ; 0.152  ; -1.832   ; 0.469   ; -1.403              ;
-;  gravityClockDivder:gravityDivider|clock_out                    ; -6.200   ; 0.151  ; -2.207   ; 0.540   ; -1.403              ;
-;  pipeClockDivider:pipeDivider|clock_out                         ; -5.439   ; 0.151  ; -2.391   ; 0.618   ; -1.403              ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -12.380  ; 0.211  ; -3.130   ; 0.814   ; 19.708              ;
-;  rst                                                            ; -3.872   ; 1.549  ; N/A      ; N/A     ; -3.000              ;
-;  tryThis                                                        ; -3.322   ; 0.163  ; -1.074   ; 0.526   ; -1.403              ;
-; Design-wide TNS                                                 ; -726.56  ; -0.573 ; -232.139 ; 0.0     ; -140.688            ;
-;  Clock_divider:powerupClock|clock_out                           ; -18.876  ; 0.000  ; -10.394  ; 0.000   ; -7.015              ;
-;  Clock_divider:scoreClockDivider|clock_out                      ; -3.367   ; 0.000  ; -1.655   ; 0.000   ; -1.403              ;
-;  btn_up                                                         ; -32.240  ; 0.000  ; -13.800  ; 0.000   ; -14.224             ;
-;  clkin                                                          ; -142.983 ; -0.573 ; N/A      ; N/A     ; 0.000               ;
-;  gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -42.133  ; 0.000  ; -26.381  ; 0.000   ; -14.030             ;
-;  gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -4.556   ; 0.000  ; -7.328   ; 0.000   ; -5.612              ;
-;  gravityClockDivder:gravityDivider|clock_out                    ; -67.623  ; 0.000  ; -24.177  ; 0.000   ; -15.433             ;
-;  pipeClockDivider:pipeDivider|clock_out                         ; -213.078 ; 0.000  ; -91.730  ; 0.000   ; -57.523             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; -140.329 ; 0.000  ; -51.476  ; 0.000   ; 0.000               ;
-;  rst                                                            ; -17.084  ; 0.000  ; N/A      ; N/A     ; -3.068              ;
-;  tryThis                                                        ; -44.291  ; 0.000  ; -5.362   ; 0.000   ; -22.448             ;
+; Worst-case Slack                                                ; -10.187  ; -0.703 ; -4.886   ; 0.425   ; -3.000              ;
+;  Clock_divider:powerupClock|clock_out                           ; -2.358   ; 0.152  ; -2.008   ; 0.504   ; -1.403              ;
+;  Clock_divider:scoreClockDivider|clock_out                      ; -3.027   ; 0.170  ; -4.886   ; 1.970   ; -1.403              ;
+;  VGAClockDivider:vgaClockDivider|clock_out                      ; -10.187  ; 0.131  ; -2.102   ; 0.451   ; -1.403              ;
+;  btn_up                                                         ; -5.644   ; 0.169  ; -1.635   ; 0.727   ; -3.000              ;
+;  clkin                                                          ; -6.887   ; -0.703 ; N/A      ; N/A     ; -3.000              ;
+;  gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -3.383   ; 0.152  ; -3.142   ; 0.650   ; -1.403              ;
+;  gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -0.339   ; 0.152  ; -3.142   ; 0.977   ; -1.403              ;
+;  gravityClockDivder:gravityDivider|clock_out                    ; -5.183   ; 0.152  ; -2.871   ; 0.690   ; -1.403              ;
+;  pipeClockDivider:pipeDivider|clock_out                         ; -4.569   ; 0.151  ; -2.752   ; 0.679   ; -1.403              ;
+;  rst                                                            ; -3.665   ; 1.338  ; N/A      ; N/A     ; -3.000              ;
+;  tryThis                                                        ; -3.854   ; 0.104  ; -0.784   ; 0.425   ; -1.403              ;
+; Design-wide TNS                                                 ; -1077.41 ; -1.263 ; -251.91  ; 0.0     ; -380.795            ;
+;  Clock_divider:powerupClock|clock_out                           ; -11.072  ; 0.000  ; -10.040  ; 0.000   ; -7.015              ;
+;  Clock_divider:scoreClockDivider|clock_out                      ; -3.027   ; 0.000  ; -4.886   ; 0.000   ; -1.403              ;
+;  VGAClockDivider:vgaClockDivider|clock_out                      ; -164.865 ; 0.000  ; -42.428  ; 0.000   ; -46.299             ;
+;  btn_up                                                         ; -45.152  ; 0.000  ; -13.080  ; 0.000   ; -14.224             ;
+;  clkin                                                          ; -583.387 ; -1.263 ; N/A      ; N/A     ; -192.405            ;
+;  gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; -29.848  ; 0.000  ; -26.240  ; 0.000   ; -14.030             ;
+;  gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; -1.356   ; 0.000  ; -12.568  ; 0.000   ; -5.612              ;
+;  gravityClockDivder:gravityDivider|clock_out                    ; -56.503  ; 0.000  ; -31.033  ; 0.000   ; -15.433             ;
+;  pipeClockDivider:pipeDivider|clock_out                         ; -120.347 ; 0.000  ; -108.126 ; 0.000   ; -58.926             ;
+;  rst                                                            ; -16.617  ; 0.000  ; N/A      ; N/A     ; -3.049              ;
+;  tryThis                                                        ; -45.236  ; 0.000  ; -3.754   ; 0.000   ; -22.448             ;
 +-----------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -731,41 +731,42 @@ No synchronizer chains to report.
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; clkin                                                          ; 1321     ; 1        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; clkin                                                          ; 2344     ; 1        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
 ; Clock_divider:powerupClock|clock_out                           ; Clock_divider:powerupClock|clock_out                           ; 21       ; 0        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; Clock_divider:powerupClock|clock_out                           ; 5        ; 0        ; 0        ; 0        ;
 ; pipeClockDivider:pipeDivider|clock_out                         ; Clock_divider:powerupClock|clock_out                           ; 6        ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; Clock_divider:powerupClock|clock_out                           ; 5        ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; Clock_divider:powerupClock|clock_out                           ; 5        ; 0        ; 0        ; 0        ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 451      ; 0        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 0        ; 0        ; 0        ;
 ; Clock_divider:powerupClock|clock_out                           ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 4        ; 0        ; 0        ; 0        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 10       ; 0        ; 0        ; 0        ;
 ; btn_up                                                         ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 540      ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; gravityClockDivder:gravityDivider|clock_out                    ; 1122     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 0        ; 0        ; 0        ;
-; btn_up                                                         ; pipeClockDivider:pipeDivider|clock_out                         ; 0        ; 42       ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out                    ; pipeClockDivider:pipeDivider|clock_out                         ; 42       ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; pipeClockDivider:pipeDivider|clock_out                         ; 807      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; pipeClockDivider:pipeDivider|clock_out                         ; 42       ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 0        ; 0        ; 0        ;
+; btn_up                                                         ; pipeClockDivider:pipeDivider|clock_out                         ; 0        ; 43       ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out                    ; pipeClockDivider:pipeDivider|clock_out                         ; 43       ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; pipeClockDivider:pipeDivider|clock_out                         ; 844      ; 0        ; 0        ; 0        ;
 ; rst                                                            ; pipeClockDivider:pipeDivider|clock_out                         ; 1        ; 1        ; 0        ; 0        ;
 ; tryThis                                                        ; pipeClockDivider:pipeDivider|clock_out                         ; 1        ; 1        ; 0        ; 0        ;
-; btn_up                                                         ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0        ; 1815     ; 0        ; 0        ;
-; Clock_divider:powerupClock|clock_out                           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 12       ; 0        ; 0        ; 0        ;
-; Clock_divider:scoreClockDivider|clock_out                      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 4        ; 0        ; 0        ; 0        ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 132      ; 0        ; 0        ; 0        ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 11       ; 0        ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 3314     ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 225      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 3499     ; 0        ; 0        ; 0        ;
-; rst                                                            ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 7372     ; 3692     ; 0        ; 0        ;
-; tryThis                                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0        ; 44504    ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; pipeClockDivider:pipeDivider|clock_out                         ; 43       ; 0        ; 0        ; 0        ;
 ; tryThis                                                        ; rst                                                            ; 0        ; 55       ; 0        ; 0        ;
 ; rst                                                            ; tryThis                                                        ; 0        ; 0        ; 84       ; 45       ;
 ; tryThis                                                        ; tryThis                                                        ; 0        ; 0        ; 0        ; 353      ;
+; btn_up                                                         ; VGAClockDivider:vgaClockDivider|clock_out                      ; 0        ; 1815     ; 0        ; 0        ;
+; Clock_divider:powerupClock|clock_out                           ; VGAClockDivider:vgaClockDivider|clock_out                      ; 12       ; 0        ; 0        ; 0        ;
+; Clock_divider:scoreClockDivider|clock_out                      ; VGAClockDivider:vgaClockDivider|clock_out                      ; 4        ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; VGAClockDivider:vgaClockDivider|clock_out                      ; 132      ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; VGAClockDivider:vgaClockDivider|clock_out                      ; 11       ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out                    ; VGAClockDivider:vgaClockDivider|clock_out                      ; 3313     ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; VGAClockDivider:vgaClockDivider|clock_out                      ; 225      ; 0        ; 0        ; 0        ;
+; rst                                                            ; VGAClockDivider:vgaClockDivider|clock_out                      ; 7372     ; 3692     ; 0        ; 0        ;
+; tryThis                                                        ; VGAClockDivider:vgaClockDivider|clock_out                      ; 0        ; 44504    ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; VGAClockDivider:vgaClockDivider|clock_out                      ; 3626     ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -783,41 +784,42 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; clkin                                                          ; 1321     ; 1        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; clkin                                                          ; 2344     ; 1        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; clkin                                                          ; 1        ; 1        ; 0        ; 0        ;
 ; Clock_divider:powerupClock|clock_out                           ; Clock_divider:powerupClock|clock_out                           ; 21       ; 0        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; Clock_divider:powerupClock|clock_out                           ; 5        ; 0        ; 0        ; 0        ;
 ; pipeClockDivider:pipeDivider|clock_out                         ; Clock_divider:powerupClock|clock_out                           ; 6        ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; Clock_divider:powerupClock|clock_out                           ; 5        ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; Clock_divider:powerupClock|clock_out                           ; 5        ; 0        ; 0        ; 0        ;
 ; Clock_divider:scoreClockDivider|clock_out                      ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; Clock_divider:scoreClockDivider|clock_out                      ; 1        ; 0        ; 0        ; 0        ;
 ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 451      ; 0        ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 0        ; 0        ; 0        ;
 ; Clock_divider:powerupClock|clock_out                           ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 4        ; 0        ; 0        ; 0        ;
 ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 10       ; 0        ; 0        ; 0        ;
 ; btn_up                                                         ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 540      ; 0        ; 0        ;
 ; gravityClockDivder:gravityDivider|clock_out                    ; gravityClockDivder:gravityDivider|clock_out                    ; 1122     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 0        ; 0        ; 0        ;
-; btn_up                                                         ; pipeClockDivider:pipeDivider|clock_out                         ; 0        ; 42       ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out                    ; pipeClockDivider:pipeDivider|clock_out                         ; 42       ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; pipeClockDivider:pipeDivider|clock_out                         ; 807      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; pipeClockDivider:pipeDivider|clock_out                         ; 42       ; 0        ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 0        ; 0        ; 0        ;
+; btn_up                                                         ; pipeClockDivider:pipeDivider|clock_out                         ; 0        ; 43       ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out                    ; pipeClockDivider:pipeDivider|clock_out                         ; 43       ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; pipeClockDivider:pipeDivider|clock_out                         ; 844      ; 0        ; 0        ; 0        ;
 ; rst                                                            ; pipeClockDivider:pipeDivider|clock_out                         ; 1        ; 1        ; 0        ; 0        ;
 ; tryThis                                                        ; pipeClockDivider:pipeDivider|clock_out                         ; 1        ; 1        ; 0        ; 0        ;
-; btn_up                                                         ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0        ; 1815     ; 0        ; 0        ;
-; Clock_divider:powerupClock|clock_out                           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 12       ; 0        ; 0        ; 0        ;
-; Clock_divider:scoreClockDivider|clock_out                      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 4        ; 0        ; 0        ; 0        ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 132      ; 0        ; 0        ; 0        ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 11       ; 0        ; 0        ; 0        ;
-; gravityClockDivder:gravityDivider|clock_out                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 3314     ; 0        ; 0        ; 0        ;
-; pipeClockDivider:pipeDivider|clock_out                         ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 225      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 3499     ; 0        ; 0        ; 0        ;
-; rst                                                            ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 7372     ; 3692     ; 0        ; 0        ;
-; tryThis                                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 0        ; 44504    ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; pipeClockDivider:pipeDivider|clock_out                         ; 43       ; 0        ; 0        ; 0        ;
 ; tryThis                                                        ; rst                                                            ; 0        ; 55       ; 0        ; 0        ;
 ; rst                                                            ; tryThis                                                        ; 0        ; 0        ; 84       ; 45       ;
 ; tryThis                                                        ; tryThis                                                        ; 0        ; 0        ; 0        ; 353      ;
+; btn_up                                                         ; VGAClockDivider:vgaClockDivider|clock_out                      ; 0        ; 1815     ; 0        ; 0        ;
+; Clock_divider:powerupClock|clock_out                           ; VGAClockDivider:vgaClockDivider|clock_out                      ; 12       ; 0        ; 0        ; 0        ;
+; Clock_divider:scoreClockDivider|clock_out                      ; VGAClockDivider:vgaClockDivider|clock_out                      ; 4        ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; VGAClockDivider:vgaClockDivider|clock_out                      ; 132      ; 0        ; 0        ; 0        ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; VGAClockDivider:vgaClockDivider|clock_out                      ; 11       ; 0        ; 0        ; 0        ;
+; gravityClockDivder:gravityDivider|clock_out                    ; VGAClockDivider:vgaClockDivider|clock_out                      ; 3313     ; 0        ; 0        ; 0        ;
+; pipeClockDivider:pipeDivider|clock_out                         ; VGAClockDivider:vgaClockDivider|clock_out                      ; 225      ; 0        ; 0        ; 0        ;
+; rst                                                            ; VGAClockDivider:vgaClockDivider|clock_out                      ; 7372     ; 3692     ; 0        ; 0        ;
+; tryThis                                                        ; VGAClockDivider:vgaClockDivider|clock_out                      ; 0        ; 44504    ; 0        ; 0        ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; VGAClockDivider:vgaClockDivider|clock_out                      ; 3626     ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -833,9 +835,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; rst        ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 10       ; 0        ; 0        ;
 ; rst        ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 4        ; 4        ; 0        ; 0        ;
 ; rst        ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 11       ; 0        ; 0        ;
-; rst        ; pipeClockDivider:pipeDivider|clock_out                         ; 40       ; 40       ; 0        ; 0        ;
-; rst        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 21       ; 21       ; 0        ; 0        ;
+; rst        ; pipeClockDivider:pipeDivider|clock_out                         ; 41       ; 41       ; 0        ; 0        ;
 ; rst        ; tryThis                                                        ; 0        ; 0        ; 5        ; 5        ;
+; rst        ; VGAClockDivider:vgaClockDivider|clock_out                      ; 21       ; 21       ; 0        ; 0        ;
 +------------+----------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -851,9 +853,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; rst        ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; 10       ; 10       ; 0        ; 0        ;
 ; rst        ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; 4        ; 4        ; 0        ; 0        ;
 ; rst        ; gravityClockDivder:gravityDivider|clock_out                    ; 11       ; 11       ; 0        ; 0        ;
-; rst        ; pipeClockDivider:pipeDivider|clock_out                         ; 40       ; 40       ; 0        ; 0        ;
-; rst        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; 21       ; 21       ; 0        ; 0        ;
+; rst        ; pipeClockDivider:pipeDivider|clock_out                         ; 41       ; 41       ; 0        ; 0        ;
 ; rst        ; tryThis                                                        ; 0        ; 0        ; 5        ; 5        ;
+; rst        ; VGAClockDivider:vgaClockDivider|clock_out                      ; 21       ; 21       ; 0        ; 0        ;
 +------------+----------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -884,23 +886,23 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                                                                      ;
-+----------------------------------------------------------------+----------------------------------------------------------------+-----------+-------------+
-; Target                                                         ; Clock                                                          ; Type      ; Status      ;
-+----------------------------------------------------------------+----------------------------------------------------------------+-----------+-------------+
-; Clock_divider:powerupClock|clock_out                           ; Clock_divider:powerupClock|clock_out                           ; Base      ; Constrained ;
-; Clock_divider:scoreClockDivider|clock_out                      ; Clock_divider:scoreClockDivider|clock_out                      ; Base      ; Constrained ;
-; btn_up                                                         ; btn_up                                                         ; Base      ; Constrained ;
-; clkin                                                          ; clkin                                                          ; Base      ; Constrained ;
-; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; Base      ; Constrained ;
-; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; Base      ; Constrained ;
-; gravityClockDivder:gravityDivider|clock_out                    ; gravityClockDivder:gravityDivider|clock_out                    ; Base      ; Constrained ;
-; pipeClockDivider:pipeDivider|clock_out                         ; pipeClockDivider:pipeDivider|clock_out                         ; Base      ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]           ; Generated ; Constrained ;
-; rst                                                            ; rst                                                            ; Base      ; Constrained ;
-; tryThis                                                        ; tryThis                                                        ; Base      ; Constrained ;
-+----------------------------------------------------------------+----------------------------------------------------------------+-----------+-------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                                 ;
++----------------------------------------------------------------+----------------------------------------------------------------+------+-------------+
+; Target                                                         ; Clock                                                          ; Type ; Status      ;
++----------------------------------------------------------------+----------------------------------------------------------------+------+-------------+
+; Clock_divider:powerupClock|clock_out                           ; Clock_divider:powerupClock|clock_out                           ; Base ; Constrained ;
+; Clock_divider:scoreClockDivider|clock_out                      ; Clock_divider:scoreClockDivider|clock_out                      ; Base ; Constrained ;
+; VGAClockDivider:vgaClockDivider|clock_out                      ; VGAClockDivider:vgaClockDivider|clock_out                      ; Base ; Constrained ;
+; btn_up                                                         ; btn_up                                                         ; Base ; Constrained ;
+; clkin                                                          ; clkin                                                          ; Base ; Constrained ;
+; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; gameOverAnimationClockDivider:gameOverclkdiv|clock_out         ; Base ; Constrained ;
+; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out ; Base ; Constrained ;
+; gravityClockDivder:gravityDivider|clock_out                    ; gravityClockDivder:gravityDivider|clock_out                    ; Base ; Constrained ;
+; pipeClockDivider:pipeDivider|clock_out                         ; pipeClockDivider:pipeDivider|clock_out                         ; Base ; Constrained ;
+; rst                                                            ; rst                                                            ; Base ; Constrained ;
+; tryThis                                                        ; tryThis                                                        ; Base ; Constrained ;
++----------------------------------------------------------------+----------------------------------------------------------------+------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -1015,7 +1017,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Tue Mar 29 13:48:40 2022
+    Info: Processing started: Thu Mar 31 14:25:04 2022
 Info: Command: quartus_sta EECS3216Final -c EECS3216Final
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1024,20 +1026,18 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'EECS3216Final.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
-Info (332110): Deriving PLL clocks
-    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name clkin clkin
-    Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 2 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[0]} {pll_inst|altpll_component|auto_generated|pll1|clk[0]}
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name VGAClockDivider:vgaClockDivider|clock_out VGAClockDivider:vgaClockDivider|clock_out
     Info (332105): create_clock -period 1.000 -name gravityClockDivder:gravityDivider|clock_out gravityClockDivder:gravityDivider|clock_out
     Info (332105): create_clock -period 1.000 -name btn_up btn_up
+    Info (332105): create_clock -period 1.000 -name clkin clkin
+    Info (332105): create_clock -period 1.000 -name Clock_divider:powerupClock|clock_out Clock_divider:powerupClock|clock_out
+    Info (332105): create_clock -period 1.000 -name pipeClockDivider:pipeDivider|clock_out pipeClockDivider:pipeDivider|clock_out
     Info (332105): create_clock -period 1.000 -name tryThis tryThis
     Info (332105): create_clock -period 1.000 -name rst rst
-    Info (332105): create_clock -period 1.000 -name pipeClockDivider:pipeDivider|clock_out pipeClockDivider:pipeDivider|clock_out
-    Info (332105): create_clock -period 1.000 -name Clock_divider:powerupClock|clock_out Clock_divider:powerupClock|clock_out
-    Info (332105): create_clock -period 1.000 -name Clock_divider:scoreClockDivider|clock_out Clock_divider:scoreClockDivider|clock_out
     Info (332105): create_clock -period 1.000 -name gameOverAnimationClockDivider:gameOverclkdiv|clock_out gameOverAnimationClockDivider:gameOverclkdiv|clock_out
+    Info (332105): create_clock -period 1.000 -name Clock_divider:scoreClockDivider|clock_out Clock_divider:scoreClockDivider|clock_out
     Info (332105): create_clock -period 1.000 -name gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -1045,218 +1045,218 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -12.380
+Info (332146): Worst-case setup slack is -10.187
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.380            -140.329 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -6.200             -67.623 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -5.439            -213.078 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -5.202            -142.983 clkin 
-    Info (332119):    -4.502             -18.876 Clock_divider:powerupClock|clock_out 
-    Info (332119):    -4.420             -42.133 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):    -4.030             -32.240 btn_up 
-    Info (332119):    -3.872             -17.084 rst 
-    Info (332119):    -3.367              -3.367 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):    -3.322             -44.291 tryThis 
-    Info (332119):    -1.139              -4.556 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-Info (332146): Worst-case hold slack is -0.573
+    Info (332119):   -10.187            -164.865 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):    -6.887            -583.387 clkin 
+    Info (332119):    -5.644             -45.152 btn_up 
+    Info (332119):    -5.183             -56.503 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -4.569            -120.347 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -3.854             -45.236 tryThis 
+    Info (332119):    -3.665             -16.617 rst 
+    Info (332119):    -3.383             -29.848 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -3.027              -3.027 Clock_divider:scoreClockDivider|clock_out 
+    Info (332119):    -2.358             -11.072 Clock_divider:powerupClock|clock_out 
+    Info (332119):    -0.339              -1.356 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+Info (332146): Worst-case hold slack is -0.703
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.573              -0.573 clkin 
+    Info (332119):    -0.703              -1.263 clkin 
     Info (332119):     0.347               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):     0.347               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
     Info (332119):     0.347               0.000 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):     0.347               0.000 pipeClockDivider:pipeDivider|clock_out 
     Info (332119):     0.348               0.000 Clock_divider:powerupClock|clock_out 
+    Info (332119):     0.348               0.000 VGAClockDivider:vgaClockDivider|clock_out 
     Info (332119):     0.393               0.000 Clock_divider:scoreClockDivider|clock_out 
     Info (332119):     0.393               0.000 btn_up 
-    Info (332119):     0.423               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.646               0.000 tryThis 
-    Info (332119):     2.162               0.000 rst 
-Info (332146): Worst-case recovery slack is -3.130
+    Info (332119):     0.556               0.000 tryThis 
+    Info (332119):     1.712               0.000 rst 
+Info (332146): Worst-case recovery slack is -4.886
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.130             -51.476 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -3.068             -26.381 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):    -2.391             -91.730 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -2.207             -24.177 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -2.186             -10.394 Clock_divider:powerupClock|clock_out 
-    Info (332119):    -1.832              -7.328 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):    -1.725             -13.800 btn_up 
-    Info (332119):    -1.655              -1.655 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):    -1.040              -5.198 tryThis 
-Info (332146): Worst-case removal slack is 1.040
+    Info (332119):    -4.886              -4.886 Clock_divider:scoreClockDivider|clock_out 
+    Info (332119):    -3.142             -26.240 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -3.142             -12.568 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+    Info (332119):    -2.871             -31.033 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -2.752            -108.126 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -2.102             -42.428 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):    -2.008             -10.040 Clock_divider:powerupClock|clock_out 
+    Info (332119):    -1.635             -13.080 btn_up 
+    Info (332119):    -0.737              -3.509 tryThis 
+Info (332146): Worst-case removal slack is 0.779
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.040               0.000 tryThis 
-    Info (332119):     1.689               0.000 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     1.727               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):     1.775               0.000 btn_up 
-    Info (332119):     1.908               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):     1.915               0.000 Clock_divider:powerupClock|clock_out 
-    Info (332119):     1.967               0.000 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):     2.070               0.000 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):     2.299               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.779               0.000 tryThis 
+    Info (332119):     1.677               0.000 btn_up 
+    Info (332119):     1.813               0.000 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):     1.958               0.000 Clock_divider:powerupClock|clock_out 
+    Info (332119):     2.309               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):     2.415               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     2.483               0.000 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):     3.056               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+    Info (332119):     4.889               0.000 Clock_divider:scoreClockDivider|clock_out 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -192.405 clkin 
     Info (332119):    -3.000             -14.224 btn_up 
     Info (332119):    -3.000              -3.000 rst 
-    Info (332119):    -1.403             -57.523 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.403             -58.926 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.403             -46.299 VGAClockDivider:vgaClockDivider|clock_out 
     Info (332119):    -1.403             -22.448 tryThis 
     Info (332119):    -1.403             -15.433 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):    -1.403             -14.030 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):    -1.403              -7.015 Clock_divider:powerupClock|clock_out 
     Info (332119):    -1.403              -5.612 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
     Info (332119):    -1.403              -1.403 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     9.624               0.000 clkin 
-    Info (332119):    19.735               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.983
+Info (332146): Worst-case setup slack is -9.302
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.983            -124.538 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -5.849             -62.989 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -5.047            -198.158 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -4.721            -127.932 clkin 
-    Info (332119):    -4.136             -17.153 Clock_divider:powerupClock|clock_out 
-    Info (332119):    -4.062             -38.553 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):    -3.603             -28.824 btn_up 
-    Info (332119):    -3.425             -14.953 rst 
-    Info (332119):    -3.022              -3.022 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):    -2.993             -39.894 tryThis 
-    Info (332119):    -0.988              -3.952 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-Info (332146): Worst-case hold slack is -0.489
+    Info (332119):    -9.302            -149.108 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):    -6.224            -527.548 clkin 
+    Info (332119):    -5.093             -40.744 btn_up 
+    Info (332119):    -4.754             -51.823 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -4.077            -109.228 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -3.530             -41.132 tryThis 
+    Info (332119):    -3.219             -14.521 rst 
+    Info (332119):    -3.021             -26.410 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -2.672              -2.672 Clock_divider:scoreClockDivider|clock_out 
+    Info (332119):    -2.094              -9.801 Clock_divider:powerupClock|clock_out 
+    Info (332119):    -0.222              -0.888 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+Info (332146): Worst-case hold slack is -0.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.489              -0.489 clkin 
-    Info (332119):     0.311               0.000 Clock_divider:powerupClock|clock_out 
-    Info (332119):     0.311               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -0.702              -1.171 clkin 
+    Info (332119):     0.311               0.000 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):     0.311               0.000 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):     0.311               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.312               0.000 Clock_divider:powerupClock|clock_out 
+    Info (332119):     0.312               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):     0.312               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):     0.312               0.000 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):     0.342               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     0.354               0.000 btn_up 
     Info (332119):     0.355               0.000 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     0.597               0.000 tryThis 
-    Info (332119):     1.909               0.000 rst 
-Info (332146): Worst-case recovery slack is -2.770
+    Info (332119):     0.686               0.000 tryThis 
+    Info (332119):     1.467               0.000 rst 
+Info (332146): Worst-case recovery slack is -4.367
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.770             -23.812 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):    -2.622             -42.041 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -2.124             -81.648 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -1.980             -21.706 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -1.968              -9.372 Clock_divider:powerupClock|clock_out 
-    Info (332119):    -1.673              -6.692 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):    -1.634             -13.072 btn_up 
-    Info (332119):    -1.496              -1.496 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):    -1.074              -5.362 tryThis 
-Info (332146): Worst-case removal slack is 0.986
+    Info (332119):    -4.367              -4.367 Clock_divider:scoreClockDivider|clock_out 
+    Info (332119):    -2.819             -23.517 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -2.802             -11.208 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+    Info (332119):    -2.545             -27.495 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -2.450             -96.060 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.914             -38.648 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):    -1.784              -8.920 Clock_divider:powerupClock|clock_out 
+    Info (332119):    -1.539             -12.312 btn_up 
+    Info (332119):    -0.784              -3.754 tryThis 
+Info (332146): Worst-case removal slack is 0.764
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.986               0.000 tryThis 
-    Info (332119):     1.579               0.000 btn_up 
-    Info (332119):     1.620               0.000 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     1.711               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):     1.882               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):     1.887               0.000 Clock_divider:powerupClock|clock_out 
-    Info (332119):     1.888               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     1.944               0.000 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):     2.021               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.764               0.000 tryThis 
+    Info (332119):     1.486               0.000 btn_up 
+    Info (332119):     1.811               0.000 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):     1.922               0.000 Clock_divider:powerupClock|clock_out 
+    Info (332119):     2.273               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):     2.383               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     2.445               0.000 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):     2.964               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+    Info (332119):     4.625               0.000 Clock_divider:scoreClockDivider|clock_out 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -192.405 clkin 
     Info (332119):    -3.000             -14.224 btn_up 
     Info (332119):    -3.000              -3.000 rst 
-    Info (332119):    -1.403             -57.523 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.403             -58.926 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.403             -46.299 VGAClockDivider:vgaClockDivider|clock_out 
     Info (332119):    -1.403             -22.448 tryThis 
     Info (332119):    -1.403             -15.433 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):    -1.403             -14.030 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):    -1.403              -7.015 Clock_divider:powerupClock|clock_out 
     Info (332119):    -1.403              -5.612 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
     Info (332119):    -1.403              -1.403 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     9.649               0.000 clkin 
-    Info (332119):    19.708               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.129
+Info (332146): Worst-case setup slack is -3.986
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.129             -58.657 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -2.758             -28.536 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -2.513             -94.774 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -1.705              -7.649 rst 
-    Info (332119):    -1.630              -6.086 Clock_divider:powerupClock|clock_out 
-    Info (332119):    -1.609             -39.852 clkin 
-    Info (332119):    -1.596             -15.003 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):    -1.211              -9.688 btn_up 
-    Info (332119):    -1.110              -1.110 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):    -0.821             -10.027 tryThis 
-    Info (332119):     0.032               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-Info (332146): Worst-case hold slack is -0.423
+    Info (332119):    -3.986             -56.245 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):    -2.359            -166.495 clkin 
+    Info (332119):    -1.937             -15.496 btn_up 
+    Info (332119):    -1.857             -20.221 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -1.635             -38.792 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.609              -7.415 rst 
+    Info (332119):    -1.058             -10.608 tryThis 
+    Info (332119):    -0.973              -0.973 Clock_divider:scoreClockDivider|clock_out 
+    Info (332119):    -0.807              -6.102 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -0.504              -2.184 Clock_divider:powerupClock|clock_out 
+    Info (332119):     0.395               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+Info (332146): Worst-case hold slack is -0.488
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.423              -0.423 clkin 
-    Info (332119):     0.151               0.000 Clock_divider:powerupClock|clock_out 
-    Info (332119):     0.151               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):     0.151               0.000 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -0.488              -0.889 clkin 
+    Info (332119):     0.104               0.000 tryThis 
+    Info (332119):     0.131               0.000 VGAClockDivider:vgaClockDivider|clock_out 
     Info (332119):     0.151               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.152               0.000 Clock_divider:powerupClock|clock_out 
+    Info (332119):     0.152               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):     0.152               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):     0.163               0.000 tryThis 
+    Info (332119):     0.152               0.000 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):     0.169               0.000 btn_up 
     Info (332119):     0.170               0.000 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     0.211               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     1.549               0.000 rst 
-Info (332146): Worst-case recovery slack is -1.498
+    Info (332119):     1.338               0.000 rst 
+Info (332146): Worst-case recovery slack is -2.455
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.498             -12.714 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):    -1.461             -23.974 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -1.183             -45.556 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):    -1.064              -5.004 Clock_divider:powerupClock|clock_out 
-    Info (332119):    -1.012             -11.105 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):    -0.843              -3.372 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):    -0.803              -0.803 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):    -0.181              -1.448 btn_up 
-    Info (332119):     0.103               0.000 tryThis 
-Info (332146): Worst-case removal slack is 0.469
+    Info (332119):    -2.455              -2.455 Clock_divider:scoreClockDivider|clock_out 
+    Info (332119):    -1.525             -12.486 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):    -1.502              -6.008 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+    Info (332119):    -1.400             -15.092 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):    -1.342             -52.172 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -0.949             -19.040 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):    -0.900              -4.500 Clock_divider:powerupClock|clock_out 
+    Info (332119):    -0.117              -0.936 btn_up 
+    Info (332119):     0.200               0.000 tryThis 
+Info (332146): Worst-case removal slack is 0.425
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.469               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
-    Info (332119):     0.526               0.000 tryThis 
-    Info (332119):     0.540               0.000 gravityClockDivder:gravityDivider|clock_out 
-    Info (332119):     0.551               0.000 Clock_divider:powerupClock|clock_out 
-    Info (332119):     0.567               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
-    Info (332119):     0.595               0.000 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     0.618               0.000 pipeClockDivider:pipeDivider|clock_out 
-    Info (332119):     0.751               0.000 btn_up 
-    Info (332119):     0.814               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.425               0.000 tryThis 
+    Info (332119):     0.451               0.000 VGAClockDivider:vgaClockDivider|clock_out 
+    Info (332119):     0.504               0.000 Clock_divider:powerupClock|clock_out 
+    Info (332119):     0.650               0.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
+    Info (332119):     0.679               0.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):     0.690               0.000 gravityClockDivder:gravityDivider|clock_out 
+    Info (332119):     0.727               0.000 btn_up 
+    Info (332119):     0.977               0.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
+    Info (332119):     1.970               0.000 Clock_divider:scoreClockDivider|clock_out 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -13.136 btn_up 
-    Info (332119):    -3.000              -3.068 rst 
-    Info (332119):    -1.000             -41.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -3.000            -161.230 clkin 
+    Info (332119):    -3.000             -12.848 btn_up 
+    Info (332119):    -3.000              -3.049 rst 
+    Info (332119):    -1.000             -42.000 pipeClockDivider:pipeDivider|clock_out 
+    Info (332119):    -1.000             -33.000 VGAClockDivider:vgaClockDivider|clock_out 
     Info (332119):    -1.000             -16.000 tryThis 
     Info (332119):    -1.000             -11.000 gravityClockDivder:gravityDivider|clock_out 
     Info (332119):    -1.000             -10.000 gameOverAnimationClockDivider:gameOverclkdiv|clock_out 
     Info (332119):    -1.000              -5.000 Clock_divider:powerupClock|clock_out 
     Info (332119):    -1.000              -4.000 gameOverAnimationClockDivider:powerUpAnimationClkDiv|clock_out 
     Info (332119):    -1.000              -1.000 Clock_divider:scoreClockDivider|clock_out 
-    Info (332119):     9.303               0.000 clkin 
-    Info (332119):    19.769               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4936 megabytes
-    Info: Processing ended: Tue Mar 29 13:48:42 2022
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4930 megabytes
+    Info: Processing ended: Thu Mar 31 14:25:07 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
 

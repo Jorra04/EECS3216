@@ -31,10 +31,11 @@ always_comb begin
 //		4'b0011 : count_threshold =  32'd99999;
 //		default : count_threshold =  32'd49999;
 
-		4'b0000 : count_threshold =  32'd199999;
-		4'b0001 : count_threshold =  32'd133333;
-		4'b0010 : count_threshold =  32'd99999;
-		default : count_threshold =  32'd59999;
+		4'b0000 : count_threshold =  32'd133333; //Level 0
+		4'b0001 : count_threshold =  32'd99999; //Level 1
+		4'b0010 : count_threshold =  32'd79999; //Level 2
+		4'b0011 : count_threshold =  32'd49999; //Level 3
+		default : count_threshold =  32'd39999; //Level 4 onwards (maintain this difficulty)
 		
 	endcase
 
